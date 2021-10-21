@@ -1,0 +1,483 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>
+	Child Care - Child Care	</title>
+<meta content="" name="Keywords"/>
+<meta content="" name="description"/>
+<meta content="SoZDM+QtVh8r0ydLs2su5u7CvZKyPetcLOw3sbCvJrw=" name="verify-v1"/>
+<link href="https://www.oldcolonyymca.org/images/favicon.ico" rel="shortcut icon"/>
+<script src="https://www.oldcolonyymca.org/scripts/jquery.js" type="text/javascript"></script>
+<script src="https://www.oldcolonyymca.org/scripts/jquery.easing.js" type="text/javascript"></script>
+<script src="https://www.oldcolonyymca.org/scripts/jquery.modal.js" type="text/javascript"></script>
+<script src="https://www.oldcolonyymca.org/scripts/swfobject2.js" type="text/javascript"></script>
+<script language="JavaScript" src="https://www.oldcolonyymca.org/scripts/menu.js" type="text/javascript"></script>
+<script src="https://www.oldcolonyymca.org/scripts/ajaxhandler.php" type="text/javascript"></script>
+<script language="JavaScript" type="text/JavaScript">
+	<!--
+	$(document).ready(function() {
+		
+		
+		$('#showModal').jqm(
+			{
+				  ajax: '@href'
+				, trigger: 'a.getModal'
+				, onLoad:function(hash) {
+					
+					var thisTrigger = hash.t;
+					
+					var whichVideo = $(thisTrigger).attr('id')
+					
+					switch( whichVideo ) {
+					
+						case "choices":
+						case "iraimi":
+							
+							loadVideo( whichVideo );
+							
+						break;
+						
+						default:
+	
+							loadVideo("noVideo");
+
+						break;
+					}
+					
+					
+				}
+			}
+		);
+	
+			
+	});
+	
+	function detectMacXFF2() {
+
+	  var userAgent = navigator.userAgent.toLowerCase();
+	
+	  if (/firefox[\/\s](\d+\.\d+)/.test(userAgent)) {
+	
+		var ffversion = new Number(RegExp.$1);
+	
+		if (ffversion < 3 && userAgent.indexOf('mac') != -1) {
+	
+		  return true;
+	
+		} else {
+		
+			 return false;
+			 
+		}
+	
+	  } else {
+	
+		 return false;
+		 
+	  }
+	
+	}
+	
+	function closeModalWindow() {
+		
+		$('#showModal').jqmHide();
+		$("#showModal").html("Please Wait...");
+		
+	}
+	
+	function loadVideo(whichVideo) {
+		
+		var d = detectMacXFF2();
+			
+		if(d) {
+			
+			$(".jqmOverlay").css({opacity:1});
+		
+		}
+			
+		if( whichVideo === "noVideo" ) {
+		
+			alert( 'No video file found' );
+		
+		} else {
+				
+			var videoPath = "http://www.oldcolonyymca.org/uploads/uploads/Images/";
+			//var videoPath = "http://local.ymca.oldcolony.dev/uploads/uploads/Images/";
+			// base:"http://local.ymca.oldcolony.dev/uploads/uploads/Images/"
+			
+			var flashvars = {
+				movieURL: whichVideo + ".flv"
+			};
+			var params = {
+			  menu: "false",
+			  quality: "high",
+			  wmode:"transparent",
+			  base:"http://www.oldcolonyymca.org/uploads/uploads/Images/"
+			};
+			
+			var attributes = {
+			  id: "oldcolonyVideo",
+			  name: "oldcolonyVideo"
+			};
+			
+			swfobject.embedSWF( videoPath + "oldcolonyVideo.swf", "flashContent", "320", "277", "8.0.0","expressInstall.swf", flashvars, params, attributes);
+		
+		}
+		
+	}
+
+
+	//gallery page
+	function showGallery_cb(galleryContent) {
+		
+		//$('#showGallery').css("display", "block");
+		
+		$('#showGallery').fadeIn(500)
+		
+		document.getElementById("showGallery").innerHTML = galleryContent;
+		
+	}
+	  
+	function showGallery(galleryID, pageID) {
+		
+	
+		x_showGallery(galleryID, pageID, showGallery_cb);
+	
+	}
+		
+	//calendar
+	function getCalendar_cb(calContent) {
+		
+		document.getElementById("showCal").innerHTML = calContent;
+	}
+	  
+	function getCalendar(chosenDate, chosenSchedule, chosenLocation, chosenSubject) {
+				
+		x_scheduleCalendar(chosenDate, chosenSchedule, chosenLocation, chosenSubject, getCalendar_cb);
+	
+	}
+	
+	
+		
+		//funfacts
+		function getfunfact_cb(funfact) {
+			
+			document.getElementById("funfacts").innerHTML = funfact;
+		}
+		
+		function getfunfact(siteID, page) {
+			
+			
+			x_funfacts(siteID, page, getfunfact_cb);
+		}
+	
+		
+	//gallery
+	function getgallery_cb(gallery) {
+		
+		var galLoading = document.getElementById("galloader");
+		galLoading.style.display = "none";
+		
+		document.getElementById("photogal").innerHTML = gallery;
+		
+	}
+	
+	function getGalleries(galID, pageID) {
+		
+		var galLoading = document.getElementById("galloader");
+		galLoading.style.display = "block";
+		
+		x_galleries(galID, pageID, getgallery_cb);
+	}
+	
+	function newWindow(consent_demo, o_height, w_height){
+	
+		consentWindow=window.open(consent_demo,'peWin', 'WIDTH=' + o_height + ',HEIGHT=' + w_height + ',SCROLLBARS=yes, resizable=yes')
+		consentWindow.focus()
+	
+	}
+	
+	//initiate gallery and funfacts
+	function init() {
+	
+		
+        
+				
+					
+									
+					//getfunfact(28, 1);
+				
+							
+				
+	}
+	
+	window.onload = init;
+	
+	
+	//-->
+	</script>
+<link href="http://web.archive.org/web/20120617201543cs_/http://www.oldcolonyymca.org/siteTemplates/microsites/screen.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120617201543cs_/http://www.oldcolonyymca.org/css/jqModal.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120617201543cs_/http://www.oldcolonyymca.org/css/print.css" media="print" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="frame">
+<div id="header">
+<div id="header_l">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td width="315"><a><img alt="Old Colony YMCA" border="0" height="49" src="http://web.archive.org/web/20120617201543im_/http://www.oldcolonyymca.org/siteTemplates/mainSite/images/logo.main.gif" width="299"/></a></td>
+<td id="sitename"> <h1>Youth-Brockton</h1> </td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- end div.header_l -->
+<div id="header_r">
+<form action="/search.php" method="post">
+<p><input name="siteID" type="hidden" value="28"/> <input name="pageID" type="hidden" value="1"/> <input name="type" type="hidden" value="simplesearch"/> <input alt="search" id="searchfield" maxlength="20" name="searchfield" onblur="if(this.value=='') this.value='Search by keyword...';" onfocus="if(this.value=='Search by keyword...') this.value='';" size="20" type="text" value="Search by keyword..."/> <input class="alignmiddle" name="submit" src="https://www.oldcolonyymca.org/siteTemplates/mainSite/images/button.search.go.gif" type="image" value="Submit"/></p>
+<p> A branch of the <a>Old Colony YMCA</a></p>
+</form>
+</div>
+<!-- end div.header_r -->
+</div>
+<!-- end div.header -->
+<div id="navbar">
+<div id="navbar_l">
+<div id="navbar_r">
+<div id="navbar-inner" style="width:980px; height:3em;">
+<!--<ul id="menulist_root_ymca" class="mainlevel-ymca-horizontal" > -->
+<ul id="nav">
+<li class="homelink"><a>Home</a> </li>
+<li><a>Our Branch</a> </li>
+<li><a>Programs</a>
+<ul>
+<li><a>Kidz Konnect</a></li>
+<li><a>Big Sister Big Brother</a></li>
+<li><a>Families</a></li>
+<li><a>Sports</a></li>
+<li><a>Health and Wellness</a></li>
+<li><a>Birthday Parties</a></li>
+<li><a>Fitness</a></li>
+</ul> </li>
+<li><a>Membership</a> </li>
+<li><a>Schedules</a> </li>
+<li><a>Child Care</a> </li>
+<li><a>Camp</a> </li>
+<li><a>Contact Us</a>
+<ul>
+<li><a>Directions</a></li>
+</ul> </li>
+</ul>
+</div>
+</div>
+<!-- end div.navbar_r -->
+</div>
+<!-- end div.navbar_l -->
+</div>
+<!-- end div.navbar -->
+<div class="internal" id="layout">
+<div id="layout_l">
+<div id="layout_r">
+<div id="layout_inner" style="padding-top:3px;">
+<div id="layout-content1">
+<h1>Child Care</h1>
+</div>
+<div id="layout-content2">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td align="left" id="layout-content2_r" valign="top" width="272">
+<div id="secnav">
+<div id="secnavContent">
+</div>
+<div id="secnavBottom">
+<img alt="SecNav Bottom" height="58" src="http://web.archive.org/web/20120617201543im_/http://www.oldcolonyymca.org/siteTemplates/microsites/images/background.intnav.bottom.png" width="272"/>
+</div>
+</div>
+<div id="sideItems">
+<div class="bucket">
+<h2><img alt="PDF File" border="0" height="16" src="http://web.archive.org/web/20120617201543im_/http://www.oldcolonyymca.org/images/pdf.gif" width="16"/> Downloads</h2>
+<p><a target="_blank">Spring 2012 Program Guide</a><br/> <em><span class="smaller">(PDF FILE: 2450 kb)</span></em></p>
+<p><a target="_blank">Valentine's Dance</a><br/> <em><span class="smaller">(PDF FILE: 247 kb)</span></em></p>
+<p><a target="_blank">Spring 2012 Programs</a><br/> <em><span class="smaller">(PDF FILE: 137 kb)</span></em></p>
+<p><a target="_blank">Youth Basketball League</a><br/> <em><span class="smaller">(PDF FILE: 249 kb)</span></em></p>
+<p><a target="_blank">Fall 2011 Program Guide</a><br/> <em><span class="smaller">(PDF FILE: 117 kb)</span></em></p>
+<p><a target="_blank">Volunteer Application</a><br/> <em><span class="smaller">(PDF FILE: 69 kb)</span></em></p>
+<p><a target="_blank">Youth Branch Membership Application</a><br/> <em><span class="smaller">(PDF FILE: 41 kb)</span></em></p>
+<p><a target="_blank">Strong Kids Campaign - Youth</a><br/> <em><span class="smaller">(PDF FILE: 1542 kb)</span></em></p>
+</div>
+<div class="bucket">
+<a> <img alt="Send to a friend" border="0" height="84" src="http://web.archive.org/web/20120617201543im_/http://www.oldcolonyymca.org/images/sendtoafriend.gif" width="100"/> </a>
+</div>
+</div> </td>
+<td align="left" id="layout-content2_l" valign="top">
+<div id="breadcrumbs">
+<a>Child Care</a>
+</div>
+<div id="contentContainer">
+<div id="content-main" style="float:left; width:440px;">
+<div id="content-main-l">
+<div id="content-main-r">
+<div id="content">
+<h2>Child Care</h2>
+<p> <img alt="Child Care Group" border="1" height="230" hspace="10" src="http://web.archive.org/web/20120617201543im_/http://www.oldcolonyymca.org/uploads/uploads/Images/YouthBranch_ChildCareWebsite_istock.jpg" width="335"/> </p>
+<p> The Old Colony YMCA is the largest provider of child care and after school programs in the region.  We offer a variety of programs that provide safe, fun and nurturing environments with exciting, hands-on activities.  We offer child care options to suit the needs of families.  All our child care programs are licensed by the Department of Early Education and Care (EEC).  Programs offered include: </p>
+<ul>
+<li>Before school care</li>
+<li>After school care</li>
+<li>School Vacation Programs and Early Release Care</li>
+<li>Summer Camp Programs</li>
+</ul>
+<p> Our programs feature an emphasis on health, development and enjoyment.  While programs for small children are focused on strong caring, development, and safety; programs for older children add home work assistance, character development, health and wellness programming and social development. </p>
+<p> For additional information about the Youth Branch child care offerings, please contact Heather Shruhan, Child Care Director, at (508) 587-4242 or <a>e-mail</a>. </p>
+<h3>Hours of Operation:</h3>
+<ul class="unIndentedList">
+<li>Monday - Friday year round</li>
+<li>Before School: 6:30 am to 8:30 am - Breakfast is provided</li>
+<li>After School: 2:30 pm to 6:00 pm - Snack is provided</li>
+<li>Half school days: 12 noon to 6:00 pm - Lunch and snack is provided</li>
+<li>No School/Vacation Weeks: 6:30 am to 6:00 pm - Breakfast, Lunch, and a Snack is provided </li>
+</ul>
+<h3>Offerings:</h3>
+<ul class="unIndentedList">
+<li>We provide transportation to and from Brockton Elementary and Middle Schools for our Before School Program and our After School Program. (<em>Please contact us regarding which school your child attends for additional information.</em>) </li>
+<li>Homework Help</li>
+<li>Youth Fitness Center</li>
+<li>Swimming - The Youth Branch has two pools that the children in our School Age Program utilize regularly!</li>
+<li>Gymnasium/Physical Recreation </li>
+<li>Computer Lab - with internet access to assist children with education projects and homework.</li>
+<li>Programs and Curriculum - geared toward age appropriate learning</li>
+<li>Field Trips</li>
+<li>Complimentary Youth Membership - offering all member benefits  </li>
+</ul>
+<h3>Our Old Colony YMCA Youth Branch<br/> Child Care Team:</h3>
+<p> Heather Shruhan<br/> Child Care Director<br/> (508) 587-4242<br/> <a>e-mail</a> </p>
+<p> Latoya Washington<br/> Administrative/Billing<br/> (508) 587-4242 Ext. 20   <br/> <a>e-mail</a> </p>
+</div>
+</div>
+</div>
+</div>
+<div id="content-right">
+<div id="spotlights">
+<h3>Don't miss these!</h3>
+<p><a target="_blank">Valentine Dance</a><br/> Join us for a Valentine Dance perfect for the whole family! There will be games, dance contests, and lots more! Follow the link for more information! We hope to see you there!</p>
+<p><a target="_blank">Volunteer Application</a><br/> Would you like to volunteer your time? We have all types of opportunities available including becoming a sports coach or referee. Apply today!</p>
+<p><a target="_blank">Are you an Asset Builder?</a><br/> Why is the YMCA so interested in Developmental Assets? Follow the link to learn more!</p>
+</div>
+</div>
+</div> </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="colorBandBottom"></div>
+<div id="layout-content3">
+<div class="calloutCell">
+<table border="0" cellpadding="0" cellspacing="0" width="200">
+<tbody>
+<tr>
+<td valign="top" width="125"> <a><img alt="Donate Now!" class="outline" src="http://web.archive.org/web/20120617201543im_/http://www.oldcolonyymca.org/uploads/images_Callouts/T_sampleCallout_Image.jpg"/></a> </td>
+</tr>
+<tr>
+<td valign="top"> <h2><a target="_self">Donate Now!</a></h2> <p>More than $1 million in scholarships, camperships and financial aid was provided to individuals and families through our Strong Kids Campaign and other charitable sources this year.</p> </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="calloutCell">
+<table border="0" cellpadding="0" cellspacing="0" width="200">
+<tbody>
+<tr>
+<td valign="top" width="125"> <a><img alt="Register Online!" class="outline" src="http://web.archive.org/web/20120617201543im_/http://www.oldcolonyymca.org/uploads/images_Callouts/T_register1.jpg"/></a> </td>
+</tr>
+<tr>
+<td valign="top"> <h2><a target="_blank">Register Online!</a></h2> <p>Program registration is just one click away with our easy online registration system. Click here to get started!</p> </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="calloutCell">
+<table border="0" cellpadding="0" cellspacing="0" width="200">
+<tbody>
+<tr>
+<td valign="top" width="125"> <a class="getModal" id="choices"><img alt="View Our Video" class="outline" src="http://web.archive.org/web/20120617201543im_/http://www.oldcolonyymca.org/uploads/uploads/Images/videoScreenShot.jpg"/></a> </td>
+</tr>
+<tr>
+<td valign="top"> <h2> <a class="getModal" id="choices">Watch our video</a></h2> <p>Watch the Old Colony YMCA Video, "Choices".</p> </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="quicklinkCell">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td width="52"> <img alt="QuickLinks" height="150" src="http://web.archive.org/web/20120617201543im_/http://www.oldcolonyymca.org/siteTemplates/microsites/images/title.home.quicklinks.gif" width="48"/> </td>
+<td valign="top">
+<ul>
+<li><a>Strengthening Families Building Assets</a></li>
+<li><a>Ethics Point</a></li>
+<li><a>Membership for All</a></li>
+<li><a>Work at the Y</a></li>
+<li><a>Contact Us</a></li>
+<li><a>Reciprocity Program</a></li>
+</ul> </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="clr"></div>
+</div>
+</div>
+<!-- end div.content_int -->
+</div>
+<!-- end div.content_r -->
+</div>
+<!-- end div.content_l -->
+</div>
+<!-- end div.content -->
+<div id="footer">
+<div id="footer_l">
+<div id="footer_r">
+       
+     </div>
+<!-- end div.footer_r -->
+</div>
+<!-- end div.footer_l -->
+</div>
+<!-- end div.footer -->
+<div id="copyright">
+<p>Youth-Brockton  <a>View Sitemap</a></p>
+<p>A branch of the <a>Old Colony YMCA</a></p>
+<p>Â© Copyright 2008 Old Colony YMCA </p>
+</div>
+<!-- end div.footer -->
+<!-- end div.footer -->
+</div>
+<!-- end div.frame -->
+<div class="jqmModal" id="showModal">
+   Please wait...
+  </div>
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl <https://ssl/> ." : "http://www <http://www/> .");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js <http://google-analytics.com/ga.js> ' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+<script type="text/javascript">
+	try {
+	var pageTracker = _gat._getTracker("UA-6609563-1");
+	pageTracker._trackPageview();
+	} catch(err) {}</script>
+<!--[if lt IE 7]>
+    <script type="text/javascript" src="/scripts/jquery.pngfix.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+		$("img[@src$=png], #secnavContent_alt, #secnavContent").pngfix();
+      });
+    </script>
+    <![endif]-->
+</body>
+</html>

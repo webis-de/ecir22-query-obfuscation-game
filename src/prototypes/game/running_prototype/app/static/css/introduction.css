@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Bebas+Neue&family=Orbitron:wght@400;900&family=Permanent+Marker&family=Press+Start+2P&family=Righteous&family=Staatliches&family=Train+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
+:root {
+  --opacity_setting: 0.6;
+}
+
+html body {
+    background-color: black;
+    font-family: 'Orbitron';
+    overflow: auto;
+}
+
+/* container for the data and background image */
+#container {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+#container::after {
+    content: "";
+    background-image: url("../data/images/blue-city.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    opacity: var(--opacity_setting);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+/* Container for the game name and buttons */
+#content_container {
+  position: fixed;
+  width: fit-content;
+  height: fit-content;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  margin: 5% auto;
+}
+
+/* Design for the name of the game */
+.game_name {
+    font-weight: 900;
+    color: white;
+    font-size: 130px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    line-height: 1.2;
+}
+
+/* Design for the buttons */
+button:focus {
+    outline: none;
+}
+
+button {
+    border: none;
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: bold;
+    margin: 20px 0px 0px 0px;
+    color: black;
+    background-color: #03B7DF;
+    box-shadow: 0px 0px 20px 2px #03B7DF;
+}
+
+#button_container {
+    margin: 100px 0px 0px 0px;
+}
+
+button:hover {
+    box-shadow: 0px 0px 40px 2px #03B7DF;
+}
+
+#game {
+    margin: 0px 0px 0px 5%;
+}
+
+.watch {
+    margin: 2px 0px 0px 15px;
+    font-size: 18px;
+}
+
+#skip {
+    margin: 2px 0px 0px 5px;
+    font-size: 20px;
+}
+
+.icon {
+    color: black;
+}
+
+#play {
+    display: none;
+}
+
+#story_container {
+    font-family: 'Manrope';
+    font-weight: 700;
+    display: none;
+    padding: 2% 22% 0px 22%;
+    text-align: left;
+}
+
+/* Design for the tutorial display */
+#story {
+    line-break: auto;
+    color: white;
+    font-size: 29px;
+    line-height: 1.8;
+}
+
+#icon_container {
+    float: right;
+    margin: 0px 2% 0px 0px;
+    cursor: pointer;
+}
+
+#next_icon {
+    color: white;
+    font-size: 60px;
+}
+
+#picture_link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+    font-size: 11px;
+    text-decoration: none;
+    font-family: 'Manrope';
+}

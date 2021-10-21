@@ -1,0 +1,509 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Wedding Budget Calculator</title>
+<link href="https://www.mlc.com.au/images/favicon.png" rel="icon" type="image/png"/>
+<link href="https://www.mlc.com.au/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<link href="https://www.mlc.com.au/lib/styles.min.css" rel="stylesheet"/>
+<!--[if IE]>
+			<meta http-equiv="imagetoolbar" content="no"/>
+			<meta http-equiv="X-UA-Compatible" content="IE=8" />
+		<![endif]-->
+<!--[if lte IE 7]>
+			<link rel="stylesheet" href="lib/styles_ie.min.css" />
+		<![endif]-->
+<!--[if lte IE 8]>
+			<link rel="stylesheet" href="lib/styles_ie8.min.css" />
+		<![endif]-->
+<script src="https://www.mlc.com.au/lib/mlc-essential-life-all.min.js"></script>
+</head>
+<body>
+<script language="Javascript" src="https://www.mlc.com.au/lib/weddingPlanner.js" type="Text/Javascript"></script>
+<script language="Javascript" src="https://www.mlc.com.au/lib/formatter.js" type="Text/Javascript"></script>
+<div id="bodySection">
+<div id="bodyHeader">
+<h1 id="headerTitle">Wedding Budget Calculator</h1>
+<a id="headerLogo"><img alt="MLC" src="https://www.mlc.com.au/images/headerLogo.png"/></a>
+</div>
+<div id="bodyArticle">
+<form name="weddingPlanner" onreset="return confirm('Do you really want to erase ALL the data and start again?')">
+<p class="intro">Planning a wedding can be expensive. See how much it might cost.</p>
+<p class="smallIntro"><img alt="Calculator Icon" src="https://www.mlc.com.au/images/icon_small_calculator.gif"/> Click the calculator icons for help calculating each amount.</p>
+<div class="articleLeft">
+<!-- start: articleLeft -->
+<div class="articleBorder">
+<h2 class="articleTitle">Rings</h2>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="brideRing">Bride</label>
+<nobr>
+         $ 
+         <input id="brideRing" name="brideRing" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="genderInput">
+<label class="inputTitle" for="groomRing">Groom</label>
+<nobr>
+         $ 
+         <input id="groomRing" name="groomRing" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-issmoker">
+<label class="inputTitle" for="ringInsurance">Insurance</label>
+<nobr>
+         $ 
+         <input id="ringInsurance" name="ringInsurance" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+</div>
+<div class="articleBorder">
+<h2 class="articleTitle">Pre-wedding celebrations</h2>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="announcements">Announcements</label>
+<nobr>
+         $ 
+         <input id="announcements" name="announcements" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="engagementVenue">Engagement (venue and entertainment)</label>
+<nobr>
+         $ 
+         <input id="engagementVenue" name="engagementVenue" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="engagementFood">Engagement (food and drink)</label>
+<nobr>
+         $ 
+         <input id="engagementFood" name="engagementFood" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="bridalShower">Bridal Shower</label>
+<nobr>
+         $ 
+         <input id="bridalShower" name="bridalShower" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="hensNight">Hen's night</label>
+<nobr>
+         $ 
+         <input id="hensNight" name="hensNight" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="bucksNight">Buck's night</label>
+<nobr>
+         $ 
+         <input id="bucksNight" name="bucksNight" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+</div>
+<div class="articleBorder">
+<h2 class="articleTitle">Fashion</h2>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="bridesDress">Bride (dress, accessories, lingerie, shoes)</label>
+<nobr>
+         $ 
+         <input id="bridesDress" name="bridesDress" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+<a><img alt="Calculate brides total" src="https://www.mlc.com.au/images/icon_small_calculator.gif"/></a>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="bridesmaidsDresses">Bridesmaids (dress, accessories, shoes)</label>
+<nobr>
+         $ 
+         <input id="bridesmaidsDresses" name="bridesmaidsDresses" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+<a><img alt="Calculate bridesmaids total" src="https://www.mlc.com.au/images/icon_small_calculator.gif"/></a>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="groomSuit">Groom (suit, shirt, accessories, shoes)</label>
+<nobr>
+         $ 
+         <input id="groomSuit" name="groomSuit" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+<a><img alt="Calculate grooms total" src="https://www.mlc.com.au/images/icon_small_calculator.gif"/></a>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="groomsmenSuits">Groomsmen (suit, accessories, shoes)</label>
+<nobr>
+         $ 
+         <input id="groomsmenSuits" name="groomsmenSuits" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+<a><img alt="Calculate groomsmen total" src="https://www.mlc.com.au/images/icon_small_calculator.gif"/></a>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="flowergirlDresses">Flowergirls (dress, accessories, shoes)</label>
+<nobr>
+         $ 
+         <input id="flowergirlDresses" name="flowergirlDresses" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="pageboySuit">Pageboy (suit, shirt, accessories, shoes)</label>
+<nobr>
+         $ 
+         <input id="pageboySuit" name="pageboySuit" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="drycleaning">Bride's dress drycleaning and preservation</label>
+<nobr>
+         $ 
+         <input id="drycleaning" name="drycleaning" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+</div>
+<div class="articleBorder">
+<h2 class="articleTitle">Ceremony</h2>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="ceremonyLocationHire">Location hire/insurance</label>
+<nobr>
+         $ 
+         <input id="ceremonyLocationHire" name="ceremonyLocationHire" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="genderInput">
+<label class="inputTitle" for="minister">Minister/celebrant</label>
+<nobr>
+         $ 
+         <input id="minister" name="minister" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-issmoker">
+<label class="inputTitle" for="marriageLicence">Marriage licence</label>
+<nobr>
+         $ 
+         <input id="marriageLicence" name="marriageLicence" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-issmoker">
+<label class="inputTitle" for="church">Church</label>
+<nobr>
+         $ 
+         <input id="church" name="church" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+</div>
+<div class="articleBorder">
+<h2 class="articleTitle">Reception</h2>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="receptionLocationHire">Location hire</label>
+<nobr>
+         $ 
+         <input id="receptionLocationHire" name="receptionLocationHire" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="reception">Reception - use the icon to help you calculate a per head amount</label>
+<nobr>
+         $ 
+         <input id="reception" name="reception" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+<a><img alt="Calculate reception cost" src="https://www.mlc.com.au/images/icon_small_calculator.gif"/></a>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="furnitureHire">Furniture hire</label>
+<nobr>
+         $ 
+         <input id="furnitureHire" name="furnitureHire" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="utensils">Linen / Eating utensils</label>
+<nobr>
+         $ 
+         <input id="utensils" name="utensils" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="waitingStaff">Waiting staff</label>
+<nobr>
+         $ 
+         <input id="waitingStaff" name="waitingStaff" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="receptionFood">Food</label>
+<nobr>
+         $ 
+         <input id="receptionFood" name="receptionFood" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="receptionDrinks">Drinks</label>
+<nobr>
+         $ 
+         <input id="receptionDrinks" name="receptionDrinks" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+</div>
+<div class="articleBorder">
+<h2 class="articleTitle">Invitations and bomboniere</h2>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="engagementInvites">Engagement (invitations, thank you notes, envelopes, postage)</label>
+<nobr>
+         $ 
+         <input id="engagementInvites" name="engagementInvites" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="genderInput">
+<label class="inputTitle" for="weddingInvites">Wedding (invitations, thank you notes, envelopes, postage)</label>
+<nobr>
+         $ 
+         <input id="weddingInvites" name="weddingInvites" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-issmoker">
+<label class="inputTitle" for="receptionPlacecards">Reception (placecards, bomboniere)</label>
+<nobr>
+         $ 
+         <input id="receptionPlacecards" name="receptionPlacecards" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+</div>
+</div>
+<!-- end:articleLeft -->
+<div id="articleMiddle"></div>
+<!-- start: articleRight -->
+<div class="articleRight">
+<div class="articleBorder">
+<h2 class="articleTitle">Transport</h2>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="transportCeremony">To / From ceremony</label>
+<nobr>
+         $ 
+         <input id="transportCeremony" name="transportCeremony" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="transportReception">To / From reception</label>
+<nobr>
+         $ 
+         <input id="transportReception" name="transportReception" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+</div>
+<div class="articleBorder">
+<h2 class="articleTitle">Flowers and decorations</h2>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="brideBouquet">Bride (bouquet, hairpiece, preserving)</label>
+<nobr>
+         $ 
+         <input id="brideBouquet" name="brideBouquet" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="bridesmaidsBouquets">Bridesmaids (bouquets, hairpiece)</label>
+<nobr>
+         $ 
+         <input id="bridesmaidsBouquets" name="bridesmaidsBouquets" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="flowergirlBouquets">Flowergirls (bouquets, hairpiece)</label>
+<nobr>
+         $ 
+         <input id="flowergirlBouquets" name="flowergirlBouquets" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="buttonHoles">Groom, groomsmen, parents - button holes</label>
+<nobr>
+         $ 
+         <input id="buttonHoles" name="buttonHoles" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="ceremonyFlowers">Ceremony</label>
+<nobr>
+         $ 
+         <input id="ceremonyFlowers" name="ceremonyFlowers" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="receptionFlowers">Reception</label>
+<nobr>
+         $ 
+         <input id="receptionFlowers" name="receptionFlowers" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+</div>
+<div class="articleBorder">
+<h2 class="articleTitle">Music and entertainment</h2>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="ceremonyEntertainment">Ceremony</label>
+<nobr>
+         $ 
+         <input id="ceremonyEntertainment" name="ceremonyEntertainment" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="receptionEntertainment">Reception</label>
+<nobr>
+         $ 
+         <input id="receptionEntertainment" name="receptionEntertainment" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+</div>
+<div class="articleBorder">
+<h2 class="articleTitle">Photography and video</h2>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="photography">Photography package</label>
+<nobr>
+         $ 
+         <input id="photography" name="photography" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="albums">Albums</label>
+<nobr>
+         $ 
+         <input id="albums" name="albums" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="videographer">Videographer</label>
+<nobr>
+         $ 
+         <input id="videographer" name="videographer" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="copies">Copies</label>
+<nobr>
+         $ 
+         <input id="copies" name="copies" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+</div>
+<div class="articleBorder">
+<h2 class="articleTitle">Wedding cake</h2>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="weddingCake">Wedding cake</label>
+<nobr>
+         $ 
+         <input id="weddingCake" name="weddingCake" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="servingCake">Serving cake</label>
+<nobr>
+         $ 
+         <input id="servingCake" name="servingCake" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="cakeBoxes">Cake boxes</label>
+<nobr>
+         $ 
+         <input id="cakeBoxes" name="cakeBoxes" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+</div>
+<div class="articleBorder">
+<h2 class="articleTitle">Beauty</h2>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="hairdresser">Hairdresser</label>
+<nobr>
+         $ 
+         <input id="hairdresser" name="hairdresser" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="makeup">Make-up</label>
+<nobr>
+         $ 
+         <input id="makeup" name="makeup" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="facials">Facials</label>
+<nobr>
+         $ 
+         <input id="facials" name="facials" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="manicures">Manicures</label>
+<nobr>
+         $ 
+         <input id="manicures" name="manicures" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="bridalParty">Bridal party</label>
+<nobr>
+         $ 
+         <input id="bridalParty" name="bridalParty" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+</div>
+<div class="articleBorder">
+<h2 class="articleTitle">Honeymoon</h2>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="firstNight">First night</label>
+<nobr>
+         $ 
+         <input id="firstNight" name="firstNight" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="holidays">Holiday</label>
+<nobr>
+         $ 
+         <input id="holidays" name="holidays" onchange="JavaScript:calculate()" onclick="clearField(this)" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+</div>
+<div id="placeholder">
+<strong>TOTALS:</strong>
+</div>
+<div class="articleBorder">
+<h2 class="articleTitle">Sub Totals</h2>
+<div class="inputElement" id="input-isresident">
+<label class="inputTitle" for="grandTotal">Grand total</label>
+<nobr>
+         $ 
+         <input id="grandTotal" name="grandTotal" onfocus="this.blur()" size="10" type="text" value="0.00"/>
+</nobr>
+</div>
+</div>
+<div id="placeholder">
+        
+      </div>
+<p> </p>
+<a onclick="document.weddingPlanner.reset()"><button id="startOverButton" tabindex="10"><span>Start Over</span></button></a>
+<a onclick="javascript:window.print();"><button id="printButton" tabindex="10"><span>Print</span></button></a>
+</div>
+<!-- end:articleRight -->
+</form>
+</div>
+<div id="bodyAside">
+<div class="asideBanner">
+<img alt="Planning a wedding can be expensive. See how much it might cost" height="550" src="https://www.mlc.com.au/images/side_image.jpg" width="165"/>
+</div>
+</div>
+<div id="bodyFooter">
+<ul id="footerMenu">
+<li><a>Advice warning &amp; disclaimer</a></li>
+<!--<li><a href="disclaimer.html">Essential Life Calculator disclaimer</a></li> -->
+<li><a target="_blank">Product Disclosure Statement</a></li>
+</ul>
+<div id="footerCopyright">
+     Copyright © MLC
+    </div>
+</div>
+</div>
+<!-- WebAnalytics library loads -->
+<script src="https://www.mlc.com.au/resources/MLC/Scripts/cviewWT.js" type="text/javascript"></script>
+<script src="https://www.mlc.com.au/resources/MLC/Scripts/webtrends.js" type="text/javascript"></script>
+<script type="text/javascript"> var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E")); </script>
+<!-- page hit calls -->
+<script src="https://www.mlc.com.au/resources/MLC/Scripts/web_analytics.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: wstud-thesis-libera
+  namespace: webisservices
+spec:
+  type: ExternalName
+  externalName: wstud-thesis-libera.webisstud.svc.cluster.local
+  clusterIP:
+  ports:
+    - port: 5000
+      targetPort: 5000
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/introduction.css') }}">
+    <title>City of Rebellion</title>
+    <script>
+        var url_prefix = {{ url_prefix|tojson }};
+        var provide_introduction = {{ provide_introduction|tojson }};
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="content_container">
+            <div id="header">
+                <p id="first" class="game_name">City</p>
+                <p id="second" class="game_name">of</p>
+                <p id="third" class="game_name">Rebellion</p>
+            </div>
+            <div id="button_container">
+                <button id="introduction">
+                    <span>Watch Intro</span>
+                    <span><i class="fas fa-play icon watch"></i></span>
+                </button>
+                <button id="game">
+                    <span id="start_game">Skip Intro</span>
+                    <span><i id="skip" class="fas fa-angle-double-right icon"></i></span>
+                </button>
+                <button id="play">
+                    <span id="play_game">Start Game</span>
+                    <span><i class="fas fa-play icon watch"></i></span>
+                </button>
+            </div>
+            <div id="story_container">
+                <div id="story">
+                    <p>Welcome to the rebellion! <br>
+                        From now on, you are part of our resistance movement against the
+                        dystopia we are currently living in. <br>
+                        As you know, a few years ago the government passed a law
+                        that changed our time radically.
+                        The law abolished data protection completely, and our nation
+                        became a police state.
+                        They even keep a watch on every search query people submit to search engines.
+                        To prevent this from going on, our resistance group is secretly
+                        helping web users to obfuscate their private search queries, rendering the surveillance of the
+                        government useless.
+                        We will need all the help and creativity we can get.<br>
+                        Let the rebellion start!
+                    </p>
+                </div>
+                <div id="icon_container">
+                    <i id="next_icon" class="far fa-arrow-alt-circle-right"></i>
+                </div>
+            </div>
+        </div>
+        <a id="picture_link" href='https://www.freepik.com/free-photos-vectors/background'>Background vector created by coolvector -
+    www.freepik.com</a>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/introduction.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+Ã¯Â»Â¿
+Ã¯Â»Â¿SELECT Max(QuestionDate) As QuestionDate FROM Questions WHERE PageId=480-->
+<html>
+<head>
+<title>Sore Throat Cures Questions</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="Sore Throat Cures from the Earth Clinic Community of Healers and Readers." name="description"/>
+<meta content="Sore, Throat, virus, infection, irritation, bacteria, contagious, flu, cold, mono, mononucleosis, strep, antibiotics, mycoplasma, hemophilus, Earth Clinic, cure, remedy, natural, safe, effective, home, herbal, folk, medicine, treatment, ailment, illness, health, holistic, alternative" name="keywords"/>
+<link href="https://www.earthclinic.com/favicon.ico" rel="Shortcut Icon"/>
+<link href="http://web.archive.org/web/20120303052401cs_/http://www.earthclinic.com/maincss.css" media="all" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+<!--
+.style24 {font-style: italic}
+
+-->
+</style>
+<script language="javascript">
+<!--
+
+function replyToPost(pageId, postId, postTitle, postType)
+{
+	var url = "/contactus.php?action=" + postType + "&pid=" + pageId + "&id=" + postId + "&title=" + postTitle;
+	var options = 'width=800,height=650,status:0,toolbar:0,menubar:0,location:0,scrollbars=yes,resizable=yes';
+	var myWindow=window.open(url,"",options);
+	myWindow.focus(); 
+}
+
+function printPost(postId, postTitle, postType)
+{
+	var url = "/printpost.php?action=" + postType + "&id=" + postId + "&title=" + postTitle;
+	//alert(url);
+	var options = 'width=800,height=650,status:0,toolbar:0,menubar:0,location:0,scrollbars=yes,resizable=yes';
+	var myWindow=window.open(url,"",options);
+	myWindow.focus(); 
+}
+
+function mailPost(postId, postTitle, postType)
+{
+	var url = "/mail.php?action=" + postType + "&id=" + postId + "&title=" + postTitle;
+	var options = 'width=800,height=650,status:0,toolbar:0,menubar:0,location:0,scrollbars=yes,resizable=yes';
+	var myWindow=window.open(url,"",options);
+	myWindow.focus(); 
+}
+
+-->
+</script>
+</head>
+<body>
+<div id="wrapper-outer">
+<script language="javascript">
+function postRequest(strURL){
+var xmlHttp;
+if(window.XMLHttpRequest){ // For Mozilla, Safari, ...
+var xmlHttp = new XMLHttpRequest();
+}
+else if(window.ActiveXObject){ // For Internet Explorer
+
+var xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+}
+xmlHttp.open('POST', strURL, true);
+xmlHttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+xmlHttp.onreadystatechange = function(){
+if (xmlHttp.readyState == 4){
+updatepage(xmlHttp.responseText);
+}
+}
+xmlHttp.send(strURL);
+}
+
+function updatepage(str){
+if(str!="no"){
+load("login-proccess.php", "signin");
+window.location.reload( true );
+}
+else{
+alert("Invalid Login! Please try again!");
+}
+}
+
+function call_login(){
+var username = window.document.f1.username.value;
+var password = window.document.f1.password.value;
+var url = "/login.php?username=" + username + "&password=" +password ;
+postRequest(url);
+} 
+
+function ahah(url, target) {
+  document.getElementById(target).innerHTML = ' Fetching data...';
+  if (window.XMLHttpRequest) {
+    req = new XMLHttpRequest();
+  } else if (window.ActiveXObject) {
+    req = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  if (req != undefined) {
+    req.onreadystatechange = function() {ahahDone(url, target);};
+    req.open("GET", url, true);
+    req.send("");
+  }
+}  
+
+function ahahDone(url, target) {
+  if (req.readyState == 4) { // only if req is "loaded"
+    if (req.status == 200) { // only if "OK"
+      document.getElementById(target).innerHTML = req.responseText;
+    } else {
+      //document.getElementById(target).innerHTML=" AHAH Error:\n"+ req.status + "\n" +req.statusText;
+      document.getElementById(target).innerHTML="Thank You.";
+    }
+  }
+}
+
+function load(name, div) {
+	ahah(name,div);
+	return false;
+}
+</script>
+<script type="text/javascript">
+<!--
+function replyToPost(pageId, postId, postTitle, postType)
+{
+	var url = "/contactus.php?action=" + postType + "&pid=" + pageId + "&id=" + postId + "&title=" + postTitle;
+	var options = 'width=1025,height=750,status:0,toolbar:0,menubar:0,location:0,scrollbars=yes,resizable=yes';
+	var myWindow=window.open(url,"",options);
+	myWindow.focus(); 
+}
+
+function followThis(pid, aid)
+{
+LeftPosition = (screen.width) ? (screen.width-200)/2 : 0;
+TopPosition = (screen.height) ? (screen.height-100)/2 : 0;
+	var url = "/follow.php?pid=" + pid + "&aid=" + aid;
+	var options = 'width=850,height=175,top='+TopPosition+',left='+LeftPosition+',status:0,toolbar:0,menubar:0,location:0,scrollbars=no,resizable=no';
+	var myWindow=window.open(url,"",options);
+	myWindow.focus(); 
+}
+
+function followThisQuestion(pid, aid)
+{
+LeftPosition = (screen.width) ? (screen.width-200)/2 : 0;
+TopPosition = (screen.height) ? (screen.height-100)/2 : 0;
+	var url = "/followquestion.php?pid=" + pid + "&aid=" + aid;
+	var options = 'width=850,height=174,top='+TopPosition+',left='+LeftPosition+',status:0,toolbar:0,menubar:0,location:0,scrollbars=no,resizable=no';
+	var myWindow=window.open(url,"",options);
+	myWindow.focus(); 
+}
+
+function flagPost(pageId, postId, postTitle, postType)
+{
+	var url = "/flag.php?action=" + postType + "&pid=" + pageId + "&id=" + postId + "&title=" + postTitle;
+	var options = 'width=400,height=120,status:0,toolbar:0,menubar:0,location:0,scrollbars=yes,resizable=yes';
+	var myWindow=window.open(url,"",options);
+	myWindow.focus(); 
+}
+
+function flagQuestion(pageId, postId, postTitle, postType)
+{
+	var url = "/flagquestion.php?action=" + postType + "&pid=" + pageId + "&id=" + postId + "&title=" + postTitle;
+	var options = 'width=400,height=120,status:0,toolbar:0,menubar:0,location:0,scrollbars=yes,resizable=yes';
+	var myWindow=window.open(url,"",options);
+	myWindow.focus(); 
+}
+
+function printPost(postId, postTitle, postType)
+{
+	var url = "/printpost.php?action=" + postType + "&id=" + postId + "&title=" + postTitle;
+	var options = 'width=800,height=650,status:0,toolbar:0,menubar:0,location:0,scrollbars=yes,resizable=yes';
+	var myWindow=window.open(url,"",options);
+	myWindow.focus(); 
+}
+
+function mailPost(postId, postTitle, postType)
+{
+	var url = "/mail.php?action=" + postType + "&id=" + postId + "&title=" + postTitle;
+	var options = 'width=800,height=650,status:0,toolbar:0,menubar:0,location:0,scrollbars=yes,resizable=yes';
+	var myWindow=window.open(url,"",options);
+	myWindow.focus(); 
+}
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+<link href="http://web.archive.org/web/20120303052401cs_/http://www.earthclinic.com/headernav.css" media="all" rel="stylesheet" type="text/css"/>
+<div id="header-outer">
+<div align="center">
+<div style="width:900px; height:50px;">
+<div class="headermenu" style="list-style-type: none; float:right;">
+<li><a>About Earth Clinic</a>
+<ul>
+<li><a>Contact Us</a></li>
+<li><a>Who We Are</a></li>
+<li><a>What People Say</a></li>
+<li><a>Website Help</a></li>
+<li><a>Donate</a></li>
+</ul> </li>
+<li><a>Marketplace</a>
+<ul>
+<li><a>Publications</a></li>
+<li><a>T-shirts</a></li>
+</ul> </li>
+<li><a>Healers</a>
+<ul>
+<li><a>Healers Database</a></li>
+<li><a>Recommended Books</a></li>
+<li><a>Prayer &amp; Meditation</a></li>
+</ul> </li>
+<li><a>Submit Post</a>
+<ul>
+<li><a>Submit Feedback</a></li>
+<li><a>Guidelines &amp; Tips</a></li>
+</ul> </li>
+<li><a target="_new">Register</a>
+<ul>
+<li><a target="_new">Signup</a></li>
+<li><a>Help</a></li>
+<li><a>Newsletter Signup</a></li>
+</ul> </li>
+<li> <a>Login</a>
+<ul>
+<li>
+<form id="loginform" name="f1" onsubmit="return call_login();">
+<div id="signin">
+<div style="color:white; font-size:11px; text-align:left; padding-left:7px;">
+             Email:
+            </div>
+<input id="username" name="username" size="17" type="text" value=""/>
+<div style="color:white; font-size:11px; text-align:left; padding-left:7px;">
+             Password:
+            </div>
+<input name="password" size="17" type="password" value=""/>
+<br/>
+<input name="a1" onclick="call_login();" style="font-size:9px;" type="button" value="Sign In"/>
+</div>
+</form></li>
+<li><a onclick="MM_openBrWindow('/register.php','','scrollbars=1')">Not registered?</a></li>
+<li><a onclick="MM_openBrWindow('/forgotpassword.php','','scrollbars=1,width=450,height=400')">Forgot Password?</a></li>
+<li><a onclick="MM_openBrWindow('/signin.php','','scrollbars=1,width=400,height=350')"><img alt="Secure Login" border="0" height="25" src="http://web.archive.org/web/20120303052401im_/http://earthclinic.com/images/icon_lock_key.png" title="Click Here For Secure Login" width="25"/></a></li>
+</ul> </li>
+</div>
+</div>
+</div>
+<div id="header">
+<div id="header-inner">
+<a title="earth clinic"><h1>Folk Remedies and Holistic Cures - EARTHCLINIC.COM</h1></a>
+<div id="header-search">
+<!-- SiteSearch Google -->
+<div id="srch-box">
+<!-- SiteSearch Google -->
+<form action="http://www.earthclinic.com/search.php" id="cse-search-box">
+<input name="cx" type="hidden" value="partner-pub-2476760853251960:x02k6x73rw9"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<span class="search-label">Search:</span>
+<input class="srch-input" name="q" size="22" type="text"/>
+<input class="srch-submit" name="sa" type="submit" value=""/>
+<div class="search-options" style="padding-left:90px;">
+<input name="echl" title="Highlight search terms" type="checkbox"/>
+<span style="font-size:10px;">Highlight search terms</span>
+<span style="font-size:10px;color:#fff;"><input name="sitesearch" type="radio" value=""/>Web</span>
+<span style="font-size:10px;color:#fff;"><input checked="" name="sitesearch" type="radio" value="earthclinic.com"/>Earth Clinic</span>
+</div>
+</form>
+<script src="https://www.google.com/cse/brand?form=cse-search-box&amp;lang=en" type="text/javascript"></script>
+<script src="https://www.google.com/cse/brand?form=cse-search-box&amp;lang=en" type="text/javascript"></script>
+<!-- EOF SiteSearch Google -->
+</div>
+</div>
+<div align="right" style="padding-top:90px; padding-right:15px;">
+<a><img alt="Smaller Font" border="0" src="http://web.archive.org/web/20120303052401im_/http://www.earthclinic.com/images/fnormal.gif"/></a>
+<a><img alt="Smaller Font" border="0" src="http://web.archive.org/web/20120303052401im_/http://www.earthclinic.com/images/fsmaller.gif"/></a>
+<a><img alt="Bigger Font" border="0" src="http://web.archive.org/web/20120303052401im_/http://www.earthclinic.com/images/fbigger.gif"/></a>
+</div>
+</div>
+</div>
+</div>
+<div id="sidetabs">
+<a class="feedback_share" title="Share your feedback"></a>
+<a class="feedback_donate" title="Donate"></a>
+</div>
+<script>
+var min=9;
+var max=17;
+function normalFontSize() {
+   var p = document.getElementsByTagName('font');
+   for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 12;
+      }
+      if(s!=max) {
+         s += 1;
+      }
+      p[i].style.fontSize = 11+"px"
+   }
+   var d = document.getElementsByTagName('div');
+   for(i=0;i<d.length;i++) {
+      if(d[i].style.fontSize) {
+         var s = parseInt(d[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 12;
+      }
+      if(s!=max) {
+         s += 1;
+      }
+      d[i].style.fontSize = 11+"px"
+   }
+}
+function increaseFontSize() {
+   var p = document.getElementsByTagName('font');
+   for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 12;
+      }
+      if(s!=max) {
+         s += 1;
+      }
+      p[i].style.fontSize = 17+"px"
+   }
+   var d = document.getElementsByTagName('div');
+   for(i=0;i<d.length;i++) {
+      if(d[i].style.fontSize) {
+         var s = parseInt(d[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 12;
+      }
+      if(s!=max) {
+         s += 1;
+      }
+      d[i].style.fontSize = 17+"px"
+   }
+}
+function decreaseFontSize() {
+   var p = document.getElementsByTagName('font');
+   for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 12;
+      }
+      if(s!=min) {
+         s -= 1;
+      }
+      p[i].style.fontSize = 14+"px"
+   }   
+   var d = document.getElementsByTagName('div');
+   for(i=0;i<d.length;i++) {
+      if(d[i].style.fontSize) {
+         var s = parseInt(d[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 12;
+      }
+      if(s!=min) {
+         s -= 1;
+      }
+      d[i].style.fontSize = 14+"px"
+   }   
+}
+</script>
+<div id="page-wrapper">
+<div id="pageBody">
+<div id="mainNav-new">
+<ul>
+<li class="tab-home-off"><a title="Earth Clinic Home"><img alt="Home" border="0" src="http://web.archive.org/web/20120303052401im_/http://www.earthclinic.com/template_img/house-ico.png"/></a></li>
+<li class="tab-off"><a title="Remedies">REMEDIES</a></li>
+<li class="tab-on"><a title="Ailments">AILMENTS</a></li>
+<li class="tab-off"><a title="Supplements">SUPPLEMENTS</a></li>
+<li class="tab-off"><a title="Pets">PETS</a></li>
+<li class="tab-off"><a title="Latest Posts">LATEST POSTS</a></li>
+</ul>
+</div>
+<!-- BOF page main content -->
+<div id="content-top">
+       
+     </div>
+<div id="content">
+<div id="content-inner">
+<div class="rightcol">
+<br/>
+<br/>
+<script type="text/javascript"><!--
+google_ad_client = "pub-2476760853251960";
+/* 300x250, created 5/1/08 */
+google_ad_slot = "4915084990";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script src="https://pagead2.googlesyndication.com/pagead/show_ads.js" type="text/javascript">
+</script>
+<br/>
+</div>
+<!-- EOF rightcol -->
+<a name="#top"></a>
+<h1 align="left">Sore Throat Cures Questions</h1>
+<p align="left"><a name="top"></a> <span class="title8">Updated: 02/09/2012</span></p>
+<p align="left">*<span class="style24"><a>Ted</a>, an independent contributor, offers information and opinions on Earth Clinic, not as a substitute for professional medical prevention, diagnosis, or treatment. Please consult with your physician, pharmacist, or health care provider before taking any home remedies or supplements or following any treatment suggested by Ted or by anyone on this site. Only your health care provider, personal physician, or pharmacist can provide you with advice on what is safe and effective for your unique needs or diagnose your particular medical history.</span><br/> <br/><br/> <script type="text/javascript"><!--
+google_ad_client = "pub-2476760853251960";
+/* 336x280, created 11/17/10 */
+google_ad_slot = "5947398832";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script> <script src="https://pagead2.googlesyndication.com/pagead/show_ads.js" type="text/javascript">
+</script> </p>
+<!-- Table of Contents comes here -->
+<table border="0" cellpadding="3" width="397">
+<tbody>
+<tr>
+<td bgcolor="#99CCFF" valign="top" width="387"> <font face="Verdana" size="-1"> <strong><span class="style22"> <a>RETURN TO MAIN SECTION</a> </span></strong></font></td>
+</tr>
+<tr>
+<td bgcolor="#F2F2EC" valign="top" width="387"> <strong><span class="style22"><a>WHAT CAN I DO FOR MY SORE THROAT?</a></span></strong></td>
+</tr>
+<tr>
+<td bgcolor="#F2F2EC" valign="top" width="387"> <strong><span class="style22"><a>REMEDIES FOR SORE THROAT NOT WORKING - NEEDS HELP</a></span></strong></td>
+</tr>
+</tbody>
+</table>
+<!-- Questions starts here -->
+<font color="#000000" face="Verdana" size="-1"> <p align="left"><br/> <a id="Question_3737" name="Question_3737"></a> <strong><span class="style22"><br/> WHAT CAN I DO FOR MY SORE THROAT? </span></strong><br/> 02/09/2012: Rick from Old Monroe, Mo writes: "I also am getting that lump in the throat feeling. I have to take Benadryl at least 4 times a day then it eases up. I have been through a lot lately. Do you think stress plays a part in this and what do you think I can do for this? Thank you, Rick"</p></font>
+<p class="BackToTop"></p>
+<table align="left" border="0">
+<tbody>
+<tr>
+<td width="123px"><a onclick="replyToPost('480', '3737', 'WHAT CAN I DO FOR MY SORE THROAT?', 'Question');" style="text-decoration:none; color:#999999; font-size:9px;"><img align="absmiddle" alt="Reply to this Question" border="0" src="http://web.archive.org/web/20120303052401im_/http://www.earthclinic.com/images/reply_to_post.gif" title="Reply to this Question"/> Reply to this Thread</a> </td>
+<td width="52px"><a onclick="mailPost('3737', 'WHAT CAN I DO FOR MY SORE THROAT?', 'Question');" style="text-decoration:none; color:#999999; font-size:9px;"><img align="absmiddle" alt="Email this Question" border="0" src="http://web.archive.org/web/20120303052401im_/http://www.earthclinic.com/images/email_post.png" title="E-mail this Question"/> Email</a> </td>
+<td width="46px"><a onclick="printPost('3737', 'WHAT CAN I DO FOR MY SORE THROAT?', 'Question');" style="text-decoration:none; color:#999999; font-size:9px;"><img align="absmiddle" alt="Print this Question" border="0" src="http://web.archive.org/web/20120303052401im_/http://www.earthclinic.com/images/print_post.png" title="Print this Question"/> Print</a> </td>
+<td width="80px"><a style="text-decoration:none; color:#999999; font-size:9px;"><img align="absmiddle" alt="Back to Top" border="0" src="http://web.archive.org/web/20120303052401im_/http://www.earthclinic.com/images/back_to_top.png" title="Back to Top"/> Back to Top</a></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<font color="#000000" face="Verdana" size="-1"> <p align="left"><br/> <a id="Question_2330" name="Question_2330"></a> <strong><span class="style22"><br/> REMEDIES FOR SORE THROAT NOT WORKING - NEEDS HELP </span></strong><br/> 09/30/2008: Jeff from Lancaster, PA writes: "I have suffered with Asthma for about 22 years. Typically it only flares up when I get a sinus infection, sore throat etc. I have tried the Apple Cider Vinegar in all forms, a regular regiment of salt water gargle and nasal rinse and the Cayenne Pepper thing. And of those three the only one that brought mild relief is the Nasal rinse. Which has to be stopped once it's clear that there is an infection. My latest bout has gone on about 24 days. In the beginning I did get an antibiotic which stemmed the tide for a little. But the last 4 days have found me with a terrible sore throat. The Cayenne or Apple Cider has had little if any effect on that. Anything else worth trying?"</p></font>
+<blockquote>
+         09/30/2008: Ted from Bangkok, Thailand replies: "Yes, usually it's alkalization, improved bowel movements and zinc &amp; magnesium supplements.
+        <br/>
+<br/>The primary way I used to reduce sore throat is to first alkalized, reduce congestion, improve bowel movements and avoid common acid forming food. Primarily if nasal rinse is working it appears to be a bacterial or fungal colonies that exists along that area from acidity, and circulation congestions in those area.
+        <br/>
+<br/>A mixture of xylitol solution with some sea salt is often used as a nasal wash. Frequently concentration of 10% to 20% xylitol is used. Interestingly in a sinus congestion I found acid saliva and throat area to be the primary issue which acts almost like fertilizer for the pathogens to persist causing sore throat. Certain muscle cramps may occur that induced poor circulation and be removed somewhat by relaxing muscles through magnesium chloride or magnesium citrate supplements, about 250-500 mg per day for about a couple of weeks.
+        <br/>
+<br/>To alkalize the throat and nasal area, one simple way is to take potassium bicarbonate (or potassium citrate - technical name is tripotassium citrate) which is a more effective form of alkalizing the area. The remedy can be prepared such as 1/4 teaspoon of baking soda plus 1/4 teaspoon potassium bicarbonate (or a stronger form tripotassium citrate) is mixed in a 1/2 glass of water taken three times a day. 
+        <br/>
+<br/>Sodium ascorbate vitamin C (without the calcium) 1000 mg is taken either twice a day to three times a day. Vitamn C increases nitric oxide production which is anti fungal in nature. What is interesting is the addition of zinc supplements such as the use of zinc chloride mouthwash, or zinc supplements such as 25-50 mg of zinc gluconate is taken only for 5 days to raise antibacterial by raising the blood zinc levels. 
+        <br/>
+<br/>It is quite common that a sore throat clears up almost immediately after bowel movements. Normal bowel movement is most clear with alkalization, but it is important to avoid fried foods, meats, common table salt and carbohydrates and concentrate more on vegetables. The clearest normal bowel movement is seen when potassium bicarbonate or potassium citrate is added, while sodium bicarbonate (baking soda) is a weaker form. The baking soda and potassium bicarbonate mix added with xylitol can also be used as a mouthwash, along with flossing seems to reduce the number of colonies whereby there is reduction in the organism causing the sore throat. Sometimes certain viruses exists that constantly caused persistent sore throat and I may sometimes get quick relieft from 1-3 drops of peppermint oil or sometimes eucalyptus oils if it still remains unresponsive. 
+        <br/>
+<br/>A traditional remedy of removing toxins from the intestinal area helped most often with me when taking too much vitamin C to cause a diarrhea, or magnesium chloride for example. A simpler way to induce loose stools such as 1/2 teaspoon of sea salt and 1/2 teaspoon of baking soda in 1/2 glass of water may also help if there is irregular bowel movements or constipation. The accumulation of toxins from intestinal area is a frequent problem towards nasal and throat problems besides the excess acidity as mentioned. Other than this I have found liver congestion to be a problem and to reduce that, one tablespoon of granulated lecithin is taken before and after meals to allow the liver to detox. 
+        <br/>
+<br/>Once there is less toxin in the body, the body's immune system is no longer overtaxed. However, eating a large meals without water, or heavy meals, and not enough vegetables is the most frequently encountered problems. The most problems I encountered with a nasal and sore throat problem is often sugar, artificial sugar, exposure to hydrocarbons, but also of snacks, meats and processed foods which causes the body's enzyme to be reduced or used up so quickly that instead of it being used as part of immune system, the body's immunity is reduced too.
+        <br/>
+<br/>Ted"
+        <br/>
+<br/>
+</blockquote>
+<blockquote>
+         09/30/2008: Jeff from Lancaster, PA replies: "Thanks for the information. The bowel movement issue seems to be running (literally) hand in hand with all this. So I don't need to loosen things up at all. So now I'm a little unclear as to what to do. I have not tried the other things you mentioned for fear that I will make the bowel movement problem worse. As for the lecithin, I've never taken that and I'm not sure what to expect. I think I'm more confused than before and really don't know what to do now."
+        <br/>
+<br/>
+</blockquote>
+<p class="BackToTop"></p>
+<table align="left" border="0">
+<tbody>
+<tr>
+<td width="123px"><a onclick="replyToPost('480', '2330', 'REMEDIES FOR SORE THROAT NOT WORKING - NEEDS HELP', 'Question');" style="text-decoration:none; color:#999999; font-size:9px;"><img align="absmiddle" alt="Reply to this Question" border="0" src="http://web.archive.org/web/20120303052401im_/http://www.earthclinic.com/images/reply_to_post.gif" title="Reply to this Question"/> Reply to this Thread</a> </td>
+<td width="52px"><a onclick="mailPost('2330', 'REMEDIES FOR SORE THROAT NOT WORKING - NEEDS HELP', 'Question');" style="text-decoration:none; color:#999999; font-size:9px;"><img align="absmiddle" alt="Email this Question" border="0" src="http://web.archive.org/web/20120303052401im_/http://www.earthclinic.com/images/email_post.png" title="E-mail this Question"/> Email</a> </td>
+<td width="46px"><a onclick="printPost('2330', 'REMEDIES FOR SORE THROAT NOT WORKING - NEEDS HELP', 'Question');" style="text-decoration:none; color:#999999; font-size:9px;"><img align="absmiddle" alt="Print this Question" border="0" src="http://web.archive.org/web/20120303052401im_/http://www.earthclinic.com/images/print_post.png" title="Print this Question"/> Print</a> </td>
+<td width="80px"><a style="text-decoration:none; color:#999999; font-size:9px;"><img align="absmiddle" alt="Back to Top" border="0" src="http://web.archive.org/web/20120303052401im_/http://www.earthclinic.com/images/back_to_top.png" title="Back to Top"/> Back to Top</a></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p align="center"> <br/> <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2476760853251960";
+/* Bottom of Page */
+google_ad_slot = "0190102619";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> <script src="https://pagead2.googlesyndication.com/pagead/show_ads.js" type="text/javascript">
+</script> </p>
+<br/>
+<form action="http://www.google.com/cse" id="cse-search-box" target="_blank">
+<div>
+<div align="center">
+<input name="cx" type="hidden" value="partner-pub-2476760853251960:e2s0aw4vhqg"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="q" size="55" type="text"/>
+<input name="sa" type="submit" value="Search"/>
+</div>
+</div>
+</form>
+<script src="https://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en" type="text/javascript"></script>  
+       <p></p>
+<p align="center"> </p>
+<p align="center"><a><img border="0" src="http://web.archive.org/web/20120303052401im_/http://www.earthclinic.com/images/btnPlease.gif"/></a></p>
+</div>
+</div>
+<!--<div style="position: absolute; top: 60px; margin-left: 760px; text-align:right; width: 182px;"><a href="http://planet.earthclinic.com/latest_posts.html"><img src="/images/bntSwitchPlanet.gif" width="91" border="0" height="84"></a><a href="http://www.earthclinic.com/prayer_group.html"><img src="/images/bntSwitchPlayer.gif" width="90" height="84" border="0"></a></div>-->
+<!-- EOF content -->
+<div id="contentBottom">
+       
+     </div>
+</div>
+<!-- EOF pageBody block -->
+<!-- BOF page Footer -->
+<style type="text/css">
+<!--
+.style2 {color: #666666}
+.style3 {color: #000000}
+-->
+</style>
+<div id="footer">
+<blockquote>
+<p align="center"><a>Copyright Â© 2012</a> <span class="style3">|</span> <a target="_blank" title="Terms of Service">Terms of Service</a>  | <a title="Privacyt Policy">Privacy Policy</a> | <a>About Us</a> |<a target="_blank" title="Contact Us"> Contact Us</a> | <a title="Search">Search</a> <br/> <a>Web Portal by Brite Global</a> <br/> </p>
+</blockquote>
+</div>
+<!-- EOF page Footer -->
+</div>
+<!-- EOF page-wrapper -->
+</div>
+<!-- EOF wrapper-outer -->
+<script src="https://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-257479-3";
+urchinTracker();
+</script>
+</body>
+</html>

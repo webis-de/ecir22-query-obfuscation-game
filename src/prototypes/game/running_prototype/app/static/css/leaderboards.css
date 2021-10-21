@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Bebas+Neue&family=Orbitron:wght@400;900&family=Permanent+Marker&family=Press+Start+2P&family=Righteous&family=Staatliches&family=Train+One&display=swap');
+
+body {
+	background-color: #05131B;
+	font-family: 'Orbitron';
+	padding: 10px 60px 0px 0px;
+}
+
+/* Design the container for the leaderboards */
+#leaderboards_container {
+    display: flex;
+    margin: 150px 0px 0px 0px;
+}
+
+#leaderboards_container > div{
+    flex: 1;
+}
+
+/* General design for the three different leaderboards */
+.board {
+    width: 330px;
+    height: 700px;
+    color: white;
+    overflow: auto;
+    margin: 0px 0px 0px 60px;
+}
+
+.leaderboard_list {
+    list-style: none;
+    padding: 0px 0px 0px 0px;
+}
+
+.list_element {
+    margin: 0px 0px 0px 0px;
+    padding: 12px 10px 12px 10px;
+    font-size: 20px;
+    border-bottom: 1px solid #808080;
+    position: relative;
+}
+
+.cell {
+    display: table-cell;
+}
+
+/* Header of the leaderboards */
+.leaderboard_header {
+    top: 160px;
+    margin-bottom: -90px;
+    height: 70px;
+    width: 533px;
+    text-align: center;
+    color: black;
+    font-size: 34px;
+    position: fixed;
+    border-radius: 50px;
+    padding: 10px 0px 10px 0px;
+}
+
+/* Design for the scrollbars of the leaderboards */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #05131B;
+}
+
+/* Handle */
+#squid::-webkit-scrollbar-thumb {
+  background: #81e6fd;
+  border-radius: 40px;
+}
+
+#squid::-webkit-scrollbar-thumb:hover {
+  background: #03B7DF;
+}
+
+#chameleon::-webkit-scrollbar-thumb {
+  background: #ffb3ff;
+  border-radius: 40px;
+}
+
+#chameleon::-webkit-scrollbar-thumb:hover {
+  background: #ff00ff;
+}
+
+#total::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 40px;
+}
+
+#total::-webkit-scrollbar-thumb:hover {
+  background: white;
+}
+
+/* Design of the individual leaderboards */
+#squid {
+    border-left: 3px solid transparent;
+    border-image: linear-gradient(to bottom, #05131B 0%, #05131B 40%, #03B7DF, 40%, #03B7DF 100%);
+    border-image-slice: 1;
+    border-bottom: 3px solid #03B7DF;
+}
+
+#chameleon {
+    border-left: 3px solid transparent;
+    border-image: linear-gradient(to bottom, #05131B 0%, #05131B 50%, #ff00ff, 50%, #ff00ff 100%);
+    border-image-slice: 1;
+    border-bottom: 3px solid #ff00ff;
+}
+
+#total{
+    border-left: 3px solid transparent;
+    border-image: linear-gradient(to bottom, #05131B 0%, #05131B 50%, white, 50%, white 100%);
+    border-image-slice: 1;
+    border-bottom: 3px solid white;
+}
+
+#squid_header {
+    border: 1px solid #03B7DF;
+    box-shadow: 0px 0px 20px 0px #03B7DF;
+    color: #03B7DF !important;
+}
+
+#chameleon_header {
+    border: 1px solid #ff00ff;
+    box-shadow: 0px 0px 20px 0px #ff00ff;
+    color: #ff00ff !important;
+}
+
+#total_header {
+    border: 1px solid white;
+    box-shadow: 0px 0px 20px 0px white;
+    color: white !important;
+}
+
+/* Leaderboard headline */
+#header {
+    font-size: 60px;
+    margin: 5px 0px 0px 0px;
+    color: white;
+    text-align: center;
+}
+
+/* Entries of the leaderboards */
+.points {
+    text-align: right;
+    width: fit-content;
+    float: right;
+    margin-right: 10px;
+    margin-top: -26px;
+}
+
+.first {
+    color: #ffcc00;
+    margin-left: 20px;
+    font-size: 24px;
+}
+
+.position {
+    margin-right: 10px;
+    min-width: 30px;
+}
+
+.user_id {
+    text-align: center;
+    padding-left: 10px;
+}
+
+

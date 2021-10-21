@@ -1,0 +1,855 @@
+{
+   "_id": "",
+   "user_name": "",
+   "total_points": 0,
+   "total_points_level_one": 0,
+   "total_points_level_two": 0,
+   "game_round": 0,
+   "total_points_game": 0,
+   "second_level": 0,
+   "introduction": true,
+   "introduction_second_level": false,
+   "introduction_second_level_was_played": false,
+   "statistics": {},
+   "queries":
+   {
+      "health": {
+         "num_successful_queries": [0, 0],
+         "angular cheilitis": [
+            0,
+            0
+         ],
+         "best long term care insurance": [
+            0,
+            0
+         ],
+         "bph treatment": [
+            0,
+            0
+         ],
+         "carotid cavernous fistula treatment": [
+            0,
+            0
+         ],
+         "carpal tunnel syndrome": [
+            0,
+            0
+         ],
+         "causes of military suicide": [
+            0,
+            0
+         ],
+         "cornea infection": [
+            0,
+            0
+         ],
+         "dark chocolate health benefits": [
+            0,
+            0
+         ],
+         "diabetes education": [
+            0,
+            0
+         ],
+         "disorders of the immune system": [
+            0,
+            0
+         ],
+         "folk remedies sore throat": [
+            0,
+            0
+         ],
+         "foods have vitamin d": [
+            0,
+            0
+         ],
+         "forearm pain": [
+            0,
+            0
+         ],
+         "getting over anorexia": [
+            0,
+            0
+         ],
+         "hepatitis b vaccine safety infants": [
+            0,
+            0
+         ],
+         "hormone therapy symptoms": [
+            0,
+            0
+         ],
+         "how to take optygen": [
+            0,
+            0
+         ],
+         "identifying spider bites": [
+            0,
+            0
+         ],
+         "infection in blood": [
+            0,
+            0
+         ],
+         "ketogenic diet": [
+            0,
+            0
+         ],
+         "lower heart rate": [
+            0,
+            0
+         ],
+         "lump in throat": [
+            0,
+            0
+         ],
+         "male menopause": [
+            0,
+            0
+         ],
+         "medicine to drop blood pressure": [
+            0,
+            0
+         ],
+         "ocd": [
+            0,
+            0
+         ],
+         "physicians role in a diabetic patient": [
+            0,
+            0
+         ],
+         "preparing for bird flu": [
+            0,
+            0
+         ],
+         "psychiatric disorders": [
+            0,
+            0
+         ],
+         "psychological evaluation": [
+            0,
+            0
+         ],
+         "quit smoking": [
+            0,
+            0
+         ],
+         "rapid release of histamine": [
+            0,
+            0
+         ],
+         "reducing hot flashes using home remedies": [
+            0,
+            0
+         ],
+         "rehabs": [
+            0,
+            0
+         ],
+         "sore throat": [
+            0,
+            0
+         ],
+         "std free testing": [
+            0,
+            0
+         ],
+         "surgery center fees": [
+            0,
+            0
+         ],
+         "symptoms multiple sclerosis": [
+            0,
+            0
+         ],
+         "symptoms of heart attack": [
+            0,
+            0
+         ],
+         "symptoms of mad cow disease in humans": [
+            0,
+            0
+         ],
+         "upper respiratory resistance syndrome": [
+            0,
+            0
+         ],
+         "veterans clinics": [
+            0,
+            0
+         ],
+         "vldl levels": [
+            0,
+            0
+         ],
+         "von willebrand disease": [
+            0,
+            0
+         ],
+         "what is deep vein thrombosis": [
+            0,
+            0
+         ],
+         "what is rubella disease": [
+            0,
+            0
+         ],
+         "suicide": [
+            0,
+            0
+         ],
+         "rehabilitation center": [
+            0,
+            0
+         ],
+         "optometric surgery": [
+            0,
+            0
+         ],
+         "kidney dialysis": [
+            0,
+            0
+         ],
+         "chiropractor": [
+            0,
+            0
+         ],
+         "parasites": [
+            0,
+            0
+         ],
+         "facial burns": [
+            0,
+            0
+         ],
+         "tourettes syndrome": [
+            0,
+            0
+         ],
+         "urine test": [
+            0,
+            0
+         ],
+         "food to avoid when pregnant": [
+            0,
+            0
+         ],
+         "cause sensitivity to light": [
+            0,
+            0
+         ],
+         "hypertonicity": [
+            0,
+            0
+         ],
+         "kidney stones and high white blood count": [
+            0,
+            0
+         ],
+         "bladder polyps": [
+            0,
+            0
+         ],
+         "diabetes diet": [
+            0,
+            0
+         ],
+         "heart fluttering": [
+            0,
+            0
+         ],
+         "stress test": [
+            0,
+            0
+         ],
+         "knee pain": [
+            0,
+            0
+         ],
+         "side effects of metformin": [
+            0,
+            0
+         ],
+         "sepsis": [
+            0,
+            0
+         ]
+      },
+      "law": {
+         "num_successful_queries": [0, 0],
+         "police misconduct attorneys": [
+            0,
+            0
+         ],
+         "pregnancy discrimination laws": [
+            0,
+            0
+         ],
+         "prohibited act": [
+            0,
+            0
+         ],
+         "racial discrimination": [
+            0,
+            0
+         ],
+         "unpaid parking tickets": [
+            0,
+            0
+         ],
+         "protection from job dismissal": [
+            0,
+            0
+         ],
+         "legal smoke": [
+            0,
+            0
+         ],
+         "guardianship laws": [
+            0,
+            0
+         ],
+         "employee rights": [
+            0,
+            0
+         ],
+         "divorce law": [
+            0,
+            0
+         ],
+         "defamation of character": [
+            0,
+            0
+         ],
+         "criminal lawyer": [
+            0,
+            0
+         ],
+         "consumers rights": [
+            0,
+            0
+         ],
+         "civil attorney": [
+            0,
+            0
+         ],
+         "building violation": [
+            0,
+            0
+         ]
+      },
+      "politics": {
+         "num_successful_queries": [0, 0],
+         "Artists Against Fracking": [
+            0,
+            0
+         ],
+         "border protection": [
+            0,
+            0
+         ],
+         "consumer boycott": [
+            0,
+            0
+         ],
+         "diversity": [
+            0,
+            0
+         ],
+         "illinois state tax": [
+            0,
+            0
+         ],
+         "military car rental benefits": [
+            0,
+            0
+         ],
+         "nurses against unions": [
+            0,
+            0
+         ],
+         "political opposition": [
+            0,
+            0
+         ],
+         "political resistance": [
+            0,
+            0
+         ],
+         "tangible personal property tax": [
+            0,
+            0
+         ],
+         "texas border patrol": [
+            0,
+            0
+         ],
+         "threaten strike action": [
+            0,
+            0
+         ],
+         "weapon exports": [
+            0,
+            0
+         ],
+         "revolution": [
+            0,
+            0
+         ],
+         "veterans benefits": [
+            0,
+            0
+         ]
+      },
+      "personal": {
+         "num_successful_queries": [0, 0],
+         "baby names": [
+            0,
+            0
+         ],
+         "balding cure": [
+            0,
+            0
+         ],
+         "becoming a paralegal": [
+            0,
+            0
+         ],
+         "capital gains tax rate": [
+            0,
+            0
+         ],
+         "celebrity pictures": [
+            0,
+            0
+         ],
+         "cheating husbands": [
+            0,
+            0
+         ],
+         "credit card debt": [
+            0,
+            0
+         ],
+         "culpeper national cemetery": [
+            0,
+            0
+         ],
+         "dog heat": [
+            0,
+            0
+         ],
+         "donation of body parts": [
+            0,
+            0
+         ],
+         "dreams interpretation": [
+            0,
+            0
+         ],
+         "equal opportunity employer": [
+            0,
+            0
+         ],
+         "erection problems": [
+            0,
+            0
+         ],
+         "fitness models": [
+            0,
+            0
+         ],
+         "loans for young farmers": [
+            0,
+            0
+         ],
+         "local dating": [
+            0,
+            0
+         ],
+         "lymphoma in dogs": [
+            0,
+            0
+         ],
+         "new life baptist church": [
+            0,
+            0
+         ],
+         "night shifts work": [
+            0,
+            0
+         ],
+         "race cars": [
+            0,
+            0
+         ],
+         "romantic love letters": [
+            0,
+            0
+         ],
+         "wedding budget calculator": [
+            0,
+            0
+         ],
+         "work from home free money": [
+            0,
+            0
+         ],
+         "how to file a grievance": [
+            0,
+            0
+         ],
+         "online casino": [
+            0,
+            0
+         ],
+         "how to get a loan": [
+            0,
+            0
+         ],
+         "plastic surgery": [
+            0,
+            0
+         ],
+         "buy car plates": [
+            0,
+            0
+         ],
+         "i want to be a nun": [
+            0,
+            0
+         ],
+         "bankruptcy": [
+            0,
+            0
+         ],
+         "satanism": [
+            0,
+            0
+         ],
+         "anti gay": [
+            0,
+            0
+         ],
+         "weight loss program": [
+            0,
+            0
+         ],
+         "auto locator": [
+            0,
+            0
+         ],
+         "college saving plans": [
+            0,
+            0
+         ],
+         "baby shower ideas": [
+            0,
+            0
+         ],
+         "security": [
+            0,
+            0
+         ],
+         "loan calculator": [
+            0,
+            0
+         ],
+         "weight watcher": [
+            0,
+            0
+         ],
+         "life insurance": [
+            0,
+            0
+         ],
+         "non allergenic dogs": [
+            0,
+            0
+         ],
+         "child care": [
+            0,
+            0
+         ],
+         "horse racing": [
+            0,
+            0
+         ],
+         "how to win lotto": [
+            0,
+            0
+         ],
+         "parental controls": [
+            0,
+            0
+         ]
+      },
+      "knowledge": {
+         "num_successful_queries": [0, 0],
+         "absorption of poison": [
+            0,
+            0
+         ],
+         "controlling acid rain": [
+            0,
+            0
+         ],
+         "dangers of asbestos": [
+            0,
+            0
+         ],
+         "electronic personnel folder": [
+            0,
+            0
+         ],
+         "erikson stages of development": [
+            0,
+            0
+         ],
+         "evidence for evolution": [
+            0,
+            0
+         ],
+         "hazardous materials": [
+            0,
+            0
+         ],
+         "how to evict someone": [
+            0,
+            0
+         ],
+         "human factors in aircraft maintenance": [
+            0,
+            0
+         ],
+         "interview thank you": [
+            0,
+            0
+         ],
+         "iowa food stamp program": [
+            0,
+            0
+         ],
+         "medical records and storage": [
+            0,
+            0
+         ],
+         "police scanner": [
+            0,
+            0
+         ],
+         "radar detection see through walls": [
+            0,
+            0
+         ],
+         "sat - scholastic assesment test": [
+            0,
+            0
+         ],
+         "septic system design": [
+            0,
+            0
+         ],
+         "sit and reach test": [
+            0,
+            0
+         ],
+         "tv on computer": [
+            0,
+            0
+         ],
+         "usda food pyramid": [
+            0,
+            0
+         ],
+         "what is a wiki": [
+            0,
+            0
+         ],
+         "What is gentrification?": [
+            0,
+            0
+         ],
+         "wikileaks": [
+            0,
+            0
+         ],
+         "genetic engineering": [
+            0,
+            0
+         ],
+         "stroke meeting": [
+            0,
+            0
+         ],
+         "sales psychology": [
+            0,
+            0
+         ],
+         "ruined felt fabric": [
+            0,
+            0
+         ],
+         "brain dead test": [
+            0,
+            0
+         ],
+         "apocryphal books": [
+            0,
+            0
+         ],
+         "abortion statistics": [
+            0,
+            0
+         ],
+         "research on adhd": [
+            0,
+            0
+         ],
+         "what is huntington's disease": [
+            0,
+            0
+         ],
+         "vietnam war": [
+            0,
+            0
+         ],
+         "radium metal": [
+            0,
+            0
+         ],
+         "auschwitz": [
+            0,
+            0
+         ],
+         "world war ii death tolls": [
+            0,
+            0
+         ]
+      },
+      "crime": {
+         "num_successful_queries": [0, 0],
+         "anthrax and bioterrorism": [
+            0,
+            0
+         ],
+         "car radar detectors": [
+            0,
+            0
+         ],
+         "child kidnapping": [
+            0,
+            0
+         ],
+         "child protective service": [
+            0,
+            0
+         ],
+         "cocaine smuggling": [
+            0,
+            0
+         ],
+         "Global Opium Production": [
+            0,
+            0
+         ],
+         "gun racks": [
+            0,
+            0
+         ],
+         "How to pick locks": [
+            0,
+            0
+         ],
+         "identity theft protection": [
+            0,
+            0
+         ],
+         "illegal drugs": [
+            0,
+            0
+         ],
+         "Organized crime": [
+            0,
+            0
+         ],
+         "Password Hacking": [
+            0,
+            0
+         ],
+         "spy software": [
+            0,
+            0
+         ],
+         "welfare fraud": [
+            0,
+            0
+         ],
+         "terrorism": [
+            0,
+            0
+         ],
+         "Rohypnol": [
+            0,
+            0
+         ],
+         "forged passports": [
+            0,
+            0
+         ],
+         "sniper rifles": [
+            0,
+            0
+         ],
+         "countries that don't have extradition with the United States": [
+            0,
+            0
+         ],
+         "how do i find a sex offender": [
+            0,
+            0
+         ],
+         "gang territories": [
+            0,
+            0
+         ],
+         "internet fraud": [
+            0,
+            0
+         ],
+         "handguns holster": [
+            0,
+            0
+         ],
+         "bikini murder": [
+            0,
+            0
+         ],
+         "criminal reports": [
+            0,
+            0
+         ],
+         "signs of abuse": [
+            0,
+            0
+         ],
+         "rape crisis center": [
+            0,
+            0
+         ],
+         "crime pays": [
+            0,
+            0
+         ],
+         "lsd": [
+            0,
+            0
+         ],
+         "sex offender registry": [
+            0,
+            0
+         ]
+      }
+}
+}

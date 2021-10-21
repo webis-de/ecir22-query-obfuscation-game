@@ -1,0 +1,145 @@
+body {
+    background-color: #05131B;
+    font-family: 'Orbitron';
+    padding-top: 10px;
+}
+
+/* Design for the menu */
+#close_menu {
+    color: white;
+    font-size: 40px;
+    position: fixed;
+    margin: 10px 0px 0px 510px;
+    display: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Design for the input of the user name */
+#input_container {
+    margin: auto;
+    margin-top: 300;
+    margin-left: 28%;
+    color: white;
+    text-align: center;
+    width: 800px;
+}
+
+#input_header {
+    font-size: 24px;
+    margin: 0px 0px 20px 0px;
+}
+
+#username_form {
+    width: 100%;
+    height: 70px;
+    padding: 5px 15px 5px 15px;
+    background-color: #081e2b;
+    border: none;
+    z-index: 3;
+    font-size: 20px;
+}
+
+input:focus{
+    outline: none;
+}
+
+::placeholder {
+   color: #bfbfbf !important;
+   font-size: 20px;
+}
+
+#user_input::before {
+    content: "";
+    display: inline-block;
+    width: 200px;
+    height: 70px;
+    border-left: 3px solid #99ffcc;
+    border-bottom: 3px solid #99ffcc;
+    position: absolute;
+    cursor: text;
+}
+
+.standard::after {
+    content: "";
+    display: inline-block;
+    width: 200px;
+    height: 70px;
+    border-right: 3px solid #99ffcc;
+    border-top: 3px solid #99ffcc;
+    position: absolute;
+    margin: -70px 0px 0px 120px;
+    cursor: text;
+}
+
+.fix::after {
+    content: "";
+    display: inline-block;
+    width: 200px;
+    height: 70px;
+    border-right: 3px solid #99ffcc;
+    border-top: 3px solid #99ffcc;
+    position: absolute;
+    margin: -125px 0px 0px 120px;
+    cursor: text;
+}
+
+/* Headline */
+#header {
+    font-size: 60px;
+    width: 100%;
+    color: white;
+    margin: auto;
+    margin-bottom: 10%;
+    text-align: center;
+    display:inline-block;
+}
+
+/* Design of the possible errors and notifications*/
+#taken_error {
+    display: none;
+}
+
+#length_error {
+    display: none;
+}
+
+#empty_error {
+    display: none;
+}
+
+#notification {
+    font-size: 20px;
+    margin: 25px 0px 0px 0px;
+    display: none;
+}
+
+.error_display {
+    font-size: 20px;
+    margin: 25px 0px 0px 0px;
+    color: #ef3038;
+}
+
+.alert_icon {
+    color: #ef3038;
+    font-size: 22px;
+    margin: 0px 10px 0px 0px;
+}
+
+/* Design of the submit button for the input form */
+#submit_button {
+    margin: 80px 0px 0px 0px;
+    background-color: #99ffcc;
+    color: #05131B;
+    width: 20%;
+    height: 10%;
+    padding: 10px 20px 10px 20px;
+    border-radius: 50px;
+    font-size: 18px;
+    box-shadow: 0px 0px 15px 0px #99ffcc;
+    border: none;
+}
+
+#submit_button:hover {
+    box-shadow: 0px 0px 40px 0px #99ffcc;
+}

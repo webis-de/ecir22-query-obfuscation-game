@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!-- InstanceBegin template="/Templates/Interior_2column.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Loan Calculators - Student Loan Calculator</title>
+<!-- InstanceEndEditable -->
+<script language="javascript" src="https://www.gsmr.org/scripts/root_level.js" type="text/javascript"></script>
+<!-- InstanceBeginEditable name="head" -->
+<meta content="financial calculators, calculator, college cost, expected family contribution, award letter, financial aid, loan repayment, consolidation" name="Keywords"/>
+<meta content="Helpful financial calculators to help student loan borrowers evaluate financial aid and manage their money during student loan repayment." name="Description"/>
+<script language="javaScript1.2" src="https://www.gsmr.org/scripts/formvalidate.js" type="text/JavaScript"></script>
+<script language="JavaScript" type="text/JavaScript">
+function formReset()
+{
+	window.location = "calc_loanrepayment.asp";
+}
+
+function ValidateForm()
+{
+var err
+err = false
+	hideAllErrors();
+
+	var pos, bresult
+	for(i=0; i<10; i++)
+	{
+		// i represents each field in the form from top to bottom
+		switch (i){// field validation 
+			case 0: 
+				if (  (document.form1.elements[i].value <= 0) || (IsNumeric(document.form1.elements[i].value) == false)  )   {
+					//	 error error0 Amount of Loan: must be greater than 0.
+					document.getElementById("error0").style.display = "inline";
+					document.getElementById("amount").select();
+					document.getElementById("amount").focus();
+					err = true;
+				}
+				break;
+			case 1: 
+				if ( (IsNumeric(document.form1.elements[i].value) == false) || (document.form1.elements[i].value < 0) || (document.form1.elements[i].value >= 100)   )   {
+					//	 error error1 Annual Interest Rate: must be between 0 and 100.
+					document.getElementById("error1").style.display = "inline";
+					document.getElementById("rate").select();
+					document.getElementById("rate").focus();
+					err = true;
+				}
+				break;
+			case 2: 
+				if (  IsNumeric(document.form1.elements[i].value) == false)  {
+				//	 error error2a Term of Loan: must be an integer.
+					document.getElementById("error2a").style.display = "inline";
+					document.getElementById("term").select();
+					document.getElementById("term").focus();
+					err = true;
+				} 
+			
+				if (  (document.form1.elements[i].value <= 0) || (IsNumeric(document.form1.elements[i].value) == false)  )   {
+					//	 error error2 Term of Loan: must be greater than 0.
+					document.getElementById("error2").style.display = "inline";
+					document.getElementById("term").select();
+					document.getElementById("term").focus();
+					err = true;
+				}
+				break;					
+			case 3: 
+				if (  (document.form1.elements[i].value=="" == true) || (document.form1.elements[i].value < 0) || (IsNumeric(document.form1.elements[i].value) == false)  )   {
+					//	 error error3 Minimum Monthly Payment: cannot be negative
+					document.getElementById("error3").style.display = "inline";
+					document.getElementById("min").select();
+					document.getElementById("min").focus();
+					err = true;
+				}
+				break;	
+			//default case
+			default : 
+			} //end switch 
+	}//end loop
+
+
+	if (err == true){
+		document.getElementById("space1").style.display = "inline"
+		document.getElementById("space2").style.display = "inline"
+		return false;
+
+	}
+	else {
+		document.form1.submit();
+		return true;
+	} //end if 
+} //end function
+
+
+
+function hideAllErrors() {
+	document.getElementById("space2").style.display = "none"
+	document.getElementById("error0").style.display = "none"
+	document.getElementById("error1").style.display = "none"
+	document.getElementById("error2").style.display = "none"
+	document.getElementById("error2a").style.display = "none"
+	document.getElementById("error3").style.display = "none"
+}
+
+
+function IsNumeric(sText)
+{
+   var ValidChars = "0123456789.";
+   var IsNumber=true;
+   var Char;
+
+ 
+   for (j = 0; j < sText.length && IsNumber == true; j++) 
+      { 
+      Char = sText.charAt(j); 
+      if (ValidChars.indexOf(Char) == -1) 
+         {
+         IsNumber = false;
+         }
+      }
+   return IsNumber;
+   
+}
+</script>
+<!-- InstanceEndEditable -->
+<link href="http://web.archive.org/web/20130111082836cs_/http://www.gsmr.org/styles/styles.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20130111082836cs_/http://www.gsmr.org/styles/print.css" media="print" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<img alt="Print-friendly version Header" id="printheader" src="http://web.archive.org/web/20130111082836im_/http://www.gsmr.org/images/printheader.jpg"/>
+<div id="sloganheader">
+<br/>Print-friendly version
+   <br/>
+<br/>
+</div>
+<div class="main">
+<p class="skip_menus"><a>Skip to Content</a></p>
+<div class="top_banner">
+<div class="GSMR_logo">
+<a target="_self" title="Granite State Management and Resources"><span class="hide">Return to Home</span></a>
+</div>
+<!-- Google Search Box form -->
+<form action="http://www.gsmr.org/searchresults.asp" id="SearchField">
+<div>
+<input name="cx" type="hidden" value="012634803464554108599:c0lxgimzmvs"/>
+<input name="cof" type="hidden" value="FORID:9"/>
+<input name="ie" type="hidden" value="UTF-8"/>
+<input alt="Google search field" autocomplete="off" class="text" id="query-input" maxlength="80" name="q" onblur="inputBlur();" onfocus="inputFocus();" size="30" title="Search" type="text"/>
+<input alt="Search Button" class="button" name="sa" title="Click here to begin your Google search of our site" type="submit" value="Search"/>
+</div>
+</form>
+<script src="https://www.google.com/cse/brand?form=cse-search-box&amp;lang=en&amp;sitesearch=true" type="text/javascript"></script>
+<!-- Google Search Box form -->
+<ul class="topmenuLinks">
+<li><a target="_self">Contact Us</a> |</li>
+<li><a target="_self">Manage My Account</a> |</li>
+<li><a target="_self">Forms</a> |</li>
+<li><a target="_self">Career Opportunities</a></li>
+</ul>
+<div class="twitter_button">
+<a target="_self"><span class="hide">GSMR Twitter</span></a>
+</div>
+<div class="facebook_button">
+<a target="_self"><span class="hide">GSMR Facebook</span></a>
+</div>
+</div>
+<!-- InstanceBeginEditable name="MainMenu" -->
+<div class="mainmenu">
+<ul>
+<li class="menu1"><a><span class="hide">Know Your Repayment Options</span></a></li>
+<li class="menu2"><a><span class="hide">Plan Your Career</span></a></li>
+<li class="menu3"><a><span class="hide">Manage Your Financial Life</span></a></li>
+<li class="menu4"><a><span class="hide">Webinar Library</span></a></li>
+<li class="menu5_select"><a><span class="hide">Calculators</span></a></li>
+</ul>
+<div class="clear_float"></div>
+</div>
+<!-- InstanceEndEditable -->
+<div class="menu_spacer"></div>
+<div class="content_container">
+<div class="content">
+<!-- InstanceBeginEditable name="LeftMenu" -->
+<div class="leftmenu">
+<div class="leftmenu">
+<p class="vlrg_text">Calculators</p>
+<p><strong>College Funding Calculators</strong></p>
+<p><a target="_self" title="College Cost Calculator">College Cost Calculator </a></p>
+<p><a target="_self" title="College Savings Calculator">College Savings Calculator</a></p>
+<p><a target="_blank" title="Expected Family Contribution Calculator">Expected Family Contribution Calculator </a></p>
+<p><a target="_blank" title="Expected Family Contribution Calculator - Dependent Student">Expected Family Contribution Calculator - Dependent Student </a></p>
+<p><a target="_blank" title="Expected Family Contribution Calculator - Independent Student">Expected Family Contribution Calculator - Independent Student </a></p>
+<p><a target="_self" title="Financial Aid Award Evaluator">Financial Aid Award Evaluator</a></p>
+<br/>
+<p><strong>Loan Calculators</strong></p>
+<p><a target="_self" title="Borrower Benefits Calculator">Borrower Benefits Calculator</a></p>
+<p><a target="_self" title="Student Loan Calculator">Student Loan Calculator</a></p>
+<p><a target="_blank" title="FinAid.org Student Loan Calculators">FinAid.org Student Loan Calculators</a></p>
+<p><a target="_blank" title="FICO Score Estimator">FICO Score Estimator</a></p>
+<p><a target="_self" title="Loan Prepayment">Loan Prepayment</a></p>
+<p><a target="_self" title="Debt to Income">Debt to Income</a></p>
+<p><a target="_self" title="Loan Capitalization">Loan Capitalization</a></p>
+<p><a target="_self" title="Loan Discount Analyzer">Loan Discount Analyzer</a></p>
+<br/>
+<p><strong>College Life Calculators</strong></p>
+<p><a target="_self" title="College Expense Worksheet">College Expense Worksheet</a></p>
+<p><a target="_self" title="Grade Point Average Calculator">Grade Point Average Calculator </a></p>
+<p><a target="_blank" title="Value of College Calculator">Value of College Calculator</a></p>
+<p><a target="_self" title="Net Price Calculator Link">Net Price Calculators</a></p>
+<br/>
+<p><strong>Salary.com Calculators</strong></p>
+<p><a target="_self" title="Salary Wizard">Salary Wizard</a></p>
+<p><a target="_self" title="Cost of Living Wizard">Cost of Living Wizard</a></p>
+<p><a target="_self" title="Job Assessor">Job Assessor</a></p>
+<p><a target="_self" title="College Tuition Planner">College Tuition Planner</a></p>
+<p><a target="_self" title="Executive Compensation Wizard">Executive Compensation Wizard</a></p>
+</div>
+</div>
+<!-- InstanceEndEditable -->
+<a id="skip" name="skip"></a>
+<!-- InstanceBeginEditable name="MainContent" -->
+<div class="maincontent">
+<p class="skip_form"><a>Skip to Results:</a></p>
+<form action="calc_loanrepayment.asp?submitbutton=submit" method="post" name="form1">
+<table border="0" summary="this table used for calculator form layout purposes only" width="480px">
+<tbody>
+<tr>
+<th colspan="5"> <h1>Student Loan Calculator</h1><br/></th>
+</tr>
+<tr>
+<td colspan="2">This calculator helps borrowers understand the financial commitments involved in a particular loan based on the initial amount of the loan, the interest rate and the loan term. By entering this information, you will receive an estimated monthly payment amount that you must pay each month in order to fully satisfy your loan.<br/><br/> When borrowing for college, it is important to know if you are financially able to handle the monthly payments that are required to pay off the loan within the term of the loan. This calculator allows you to determine what the minimum monthly payment will cost you. <br/><br/> </td>
+</tr>
+<tr>
+<td colspan="2">
+<!-- keep updated these error messages (note they are commented in the JS validation code above-->
+<div class="error" id="error0">
+            Amount of Loan (Principal): must be greater than 0.
+            <br/>
+</div>
+<div class="error" id="error1">
+            Annual Interest Rate: must be between 0 and 100.
+            <br/>
+</div>
+<div class="error" id="error2">
+            Term of Loan: must be greater than 0.
+            <br/>
+</div>
+<div class="error" id="error2a">
+            Term of Loan: must be an integer.
+            <br/>
+</div>
+<div class="error" id="error3">
+            Minimum Monthly Payment: cannot be negative
+            <br/>
+</div>
+<div class="error" id="space2">
+<br/>
+</div> </td>
+</tr>
+</tbody>
+</table>
+<table border="0" width="480px">
+<tbody>
+<tr>
+<td colspan="2"><b><label for="amount">Amount of Loan (Principal):</label></b></td>
+<td>$ <input id="amount" maxlength="6" name="amount" size="7" type="text" value="0"/><br/> </td>
+</tr>
+<tr>
+<td colspan="2"><b><label for="rate">Annual Interest Rate:</label></b></td>
+<td>    <input id="rate" maxlength="5" name="rate" size="6" type="text" value="0"/> %<br/> </td>
+</tr>
+<tr>
+<td colspan="2"><b><label for="term">Term of Loan:</label></b></td>
+<td>    <input id="term" maxlength="3" name="term" size="4" type="text" value="0"/> years<br/> </td>
+</tr>
+<tr>
+<td colspan="2"><b><label for="min">Minimum Monthly Payment:</label></b> </td>
+<td>$ <input id="min" maxlength="5" name="min" size="6" type="text" value="0"/></td>
+</tr>
+<tr align="center">
+<td class="style1" colspan="2"> <input id="Submit" name="SubmitButton" onclick="ValidateForm(); return document.MM_returnValue" type="button" value="Submit"/>     <input id="reset" name="ResetButton" onclick="formReset()" type="reset" value="Reset"/> </td>
+<td> <br/><br/><br/><br/></td>
+</tr>
+</tbody>
+</table>
+<p><br/> </p>
+<p align="center"> <a target="_blank">Use of this calculator subject to the Legal Notice section of the Privacy Policy.</a> </p>
+</form>
+</div>
+<div class="clear_float"></div>
+<!-- InstanceEndEditable -->
+</div>
+<div>
+      
+    </div>
+</div>
+<div class="footer">
+<div class="footer_content">
+     Granite State Management and Resources   •   4 Barrell Court   •   Concord, NH 03302-3420   •   
+     <a target="_self" title="Contact Us">Contact Us</a>   •   
+     <a target="_self" title="Site map link">Site Map</a>   •   © 2012
+    </div>
+</div>
+</div>
+<!-- InstanceEnd -->
+</body>
+</html>

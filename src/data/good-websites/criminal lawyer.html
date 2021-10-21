@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-US">
+<head>
+<meta charset="utf-8"/>
+<title>
+Toronto Criminal Defence Lawyer | Criminal Lawyers Toronto</title>
+<link href="https://gmpg.org/xfn/11" rel="profile"/>
+<link href="http://web.archive.org/web/20120424182405cs_/http://www.bestcriminaldefence.com/wp-content/themes/brianRoss/style.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://www.bestcriminaldefence.com/xmlrpc.php" rel="pingback"/>
+<script src="https://www.bestcriminaldefence.com/wp-content/themes/brianRoss/jquery-1.2.6.min.js" type="text/javascript"></script>
+<script>
+
+$(document).ready(function() { 
+
+	 $('#Send').click(function() 
+		 {  
+		 
+				if (document.frm.fname.value == "")
+				{
+					alert("Please enter Name");
+					document.frm.fname.focus();
+					return false;
+				}
+				if (document.frm.phone.value == "")
+				{
+					alert("Please enter Phone");
+					document.frm.phone.focus();
+					return false;
+				}
+				if (document.frm.email.value == "")
+				{
+					alert("Please enter Email Address");
+					document.frm.email.focus();
+					return false;
+				}
+				if(document.frm.email.value != ""){
+					var str=document.frm.email.value;
+					var emailRe = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*\.(\w{2}|(com|net|org|edu|int|mil|gov|arpa|biz|aero|name|coop|info|pro|museum|tv|biz))$/;
+					if(!emailRe.test(str)) 
+					{
+						alert("Please enter valid Email Address.");
+						document.frm.email.focus();
+						return false;
+					}
+				}
+		
+				if (document.frm.message.value == "")
+		
+				{
+					alert("Please enter Message");
+						document.frm.message.focus();
+						return false;
+				}
+				
+				var fname = document.frm.message.value;
+				var email = document.frm.email.value;
+				var phone = document.frm.phone.value;
+				var fname = document.frm.fname.value;
+				var pagename = document.frm.pagename.value;
+				
+				$.post("http://www.bestcriminaldefence.com/wp-content/themes/brianRoss/post.php?"+$("#frm").serialize(), {
+			
+				}, function(response)
+				{
+				//alert(response);
+				if(response==1)
+				{
+					$("#after_submit").html('');
+					//document.frm.action="http://www.bestcriminaldefence.com/wp-content/themes/brianRoss/mail.php";
+					window.location='http://www.bestcriminaldefence.com/thankyou/';
+					return true;
+					$("#Send").after('<label class="success" id="after_submit">Your message has been submitted.</label>');
+					change_captcha();
+					clear_form();
+				}
+				else
+				{
+					//alert(response);
+					
+					$("#after_submit").html('');
+					$("#captchaerror").after('');
+					if(document.getElementById("code").value == '')
+					{
+						alert("Please enter captcha code.")
+					}
+					else
+					{
+						alert("Please enter valid captcha code.")
+					}
+					
+					//$("#captchaerror").after('<div style="width:100%; float:left; text-align:left; color:red;">Please enter captcha code. Make sure it should same <br> as in image shown.</div>');
+				}
+				
+				
+			});
+					
+			return false;
+		 }
+	 );
+	 
+	 // refresh captcha
+	 $('img#refresh').click(function() {  
+			
+			change_captcha();
+	 });
+	 
+	 function change_captcha()
+	 {
+	 	document.getElementById('captcha').src="http://www.bestcriminaldefence.com/wp-content/themes/brianRoss/get_captcha.php?rnd=" + Math.random();
+	 }
+	 
+	 function clear_form()
+	 {
+	 	
+	 }
+});
+ 
+ 
+ 	
+</script>
+<script type="text/javascript">
+
+
+/*** 
+    Simple jQuery Slideshow Script
+    Released by Jon Raasch (jonraasch.com) under FreeBSD license: free to use or modify, not responsible for anything, etc.  Please link out to me if you like it :)
+
+***/
+
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+    $active.addClass('last-active');
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 850, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+
+
+
+
+
+
+$(function() {
+
+
+
+    setInterval( "slideSwitch()", 5000 );
+
+
+
+});
+
+
+
+
+
+
+
+</script>
+<style type="text/css">
+/*** set the width and height to match your images **/
+
+
+
+
+
+
+
+#slideshow {
+	position:relative;
+	width:970px;/*
+
+
+
+	height:350px;*/
+}
+#slideshow .sanjoy {
+	position:absolute;
+	z-index:100;
+	top:69px;
+	left:586px;
+}
+#slideshow .sanjoy h1 {
+	/*font:normal 30px/25px Arial, Helvetica, sans-serif;*/
+
+	font-size:25px;
+	font-weight:normal;
+	padding: 1px 0 5px 20px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#FFF;
+	text-align:right;
+}
+#slideshow .sanjoy span {
+	/*font:normal 16px Arial, Helvetica, sans-serif;*/
+
+	color:#FFF;
+	text-align:right;
+	float:right;
+	line-height:25px;
+	font-size:16px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#slideshow IMG {
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:8;
+	opacity:0.0;
+}
+#slideshow IMG.active {
+	z-index:10;
+	opacity:1.0;
+}
+#slideshow IMG.last-active {
+	z-index:9;
+}
+</style>
+<link href="https://www.bestcriminaldefence.com/feed" rel="alternate" title="Brian Ross » Feed" type="application/rss+xml"/>
+<link href="https://www.bestcriminaldefence.com/comments/feed" rel="alternate" title="Brian Ross » Comments Feed" type="application/rss+xml"/>
+<script src="https://www.bestcriminaldefence.com/wp-includes/js/l10n.js?ver=20101110" type="text/javascript"></script>
+<script src="https://www.bestcriminaldefence.com/wp-includes/js/comment-reply.js?ver=20090102" type="text/javascript"></script>
+<link href="https://www.bestcriminaldefence.com/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+<link href="https://www.bestcriminaldefence.com/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+<link href="https://www.bestcriminaldefence.com/" rel="index" title="Brian Ross"/>
+<link href="https://www.bestcriminaldefence.com/what-i-defend" rel="prev" title="What I Defend"/>
+<link href="https://www.bestcriminaldefence.com/legal-question" rel="next" title="Important Links"/>
+<meta content="WordPress 3.1.1" name="generator"/>
+<!-- metadata inserted by keyword-statistics-plugin 1.7.7 http://www.keyword-statistics.net -->
+<title>Toronto Criminal Lawyer | Criminal defense lawyer | Brian Ross</title>
+<meta content="criminal,toronto,ross,brian,lawyer,charged,offences,lawyers" name="keywords"/>
+<meta content="Criminal Lawyer: Brian Ross Will Defend Your Rights Toronto criminal lawyer, Brian Ross, provides representation for those facing criminal charges including:" name="description"/>
+<meta content="index,follow,noodp,noarchive,noydir" name="robots"/>
+<link href="https://www.bestcriminaldefence.com/" rel="canonical"/>
+<!-- end of metadata -->
+<script charset="utf-8" type="text/javascript">var switchTo5x=true;</script>
+<script charset="utf-8" src="https://w.sharethis.com/button/buttons.js" type="text/javascript"></script>
+<script type="text/javascript">stLight.options({publisher:'wp.7e73d085-9673-4baa-9595-6510020a4236'});var st_type='wordpress3.1.1';</script>
+<script type="text/javascript">
+
+
+
+
+
+
+
+  var _gaq = _gaq || [];
+
+
+
+  _gaq.push(['_setAccount', 'UA-20215186-1']);
+
+
+
+  _gaq.push(['_trackPageview']);
+
+
+
+
+
+
+
+  (function() {
+
+
+
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+
+
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+
+
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+
+
+
+  })();
+
+
+
+
+
+
+
+</script>
+</head>
+<body class="home page page-id-34 page-template page-template-default">
+<div id="bottom-bg">
+<div class="hfeed" id="wrapper">
+<!--header-->
+<div id="header">
+<div id="top">
+<div id="top-left">
+<a title="Brian Ross"><img alt="logo" height="85" src="http://web.archive.org/web/20120424182405im_/http://www.bestcriminaldefence.com/wp-content/themes/brianRoss/images/logo.png" width="310"/></a>
+</div>
+<div id="top-right">
+<span class="toptitle">Toronto Criminal Lawyer | Brian Ross</span>
+<p class="topaddress">36 Lombard Street - suite 100 Toronto, M5C 2X3</p>
+<p class="topaddress">Phone:416.658.5855</p>
+</div>
+</div>
+<!--navigation-->
+<div id="access" role="navigation">
+<div class="skip-link screen-reader-text">
+<a title="Skip to content"> Skip to content </a>
+</div>
+<div class="menu-header">
+<ul class="menu" id="menu-menu1">
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-660" id="menu-item-660"><a>Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-661" id="menu-item-661"><a>About</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-662" id="menu-item-662"><a>What I Defend</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-663" id="menu-item-663"><a>Recent Successes</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-664" id="menu-item-664"><a>Important Links</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-665" id="menu-item-665"><a>Locations</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-668" id="menu-item-668"><a>Toronto</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-669" id="menu-item-669"><a>Brampton</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-670" id="menu-item-670"><a>Newmarket</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-671" id="menu-item-671"><a>Oshawa</a></li>
+</ul> </li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-666" id="menu-item-666"><a>My fees</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-667" id="menu-item-667"><a>Contact</a></li>
+</ul>
+</div>
+</div>
+<!--banner-->
+<div id="banner">
+<div id="slideshow">
+<div class="sanjoy">
+<h1>Toronto Criminal Lawyer<br/> </h1>
+<span>Brian Ross is a founding member of <br/> Canada's largest criminal law firm.</span>
+</div>
+<img alt="Slideshow Image 1" class="active" src="http://web.archive.org/web/20120424182405im_/http://www.bestcriminaldefence.com/wp-content/themes/brianRoss/images/banner-7.png"/>
+<img alt="Slideshow Image 2" src="http://web.archive.org/web/20120424182405im_/http://www.bestcriminaldefence.com/wp-content/themes/brianRoss/images/banner-1.png"/>
+<img alt="Slideshow Image 3" src="http://web.archive.org/web/20120424182405im_/http://www.bestcriminaldefence.com/wp-content/themes/brianRoss/images/banner-2.png"/>
+<img alt="Slideshow Image 4" src="http://web.archive.org/web/20120424182405im_/http://www.bestcriminaldefence.com/wp-content/themes/brianRoss/images/banner-3.png"/>
+<img alt="Slideshow Image 2" src="http://web.archive.org/web/20120424182405im_/http://www.bestcriminaldefence.com/wp-content/themes/brianRoss/images/banner-4.png"/>
+<img alt="Slideshow Image 3" src="http://web.archive.org/web/20120424182405im_/http://www.bestcriminaldefence.com/wp-content/themes/brianRoss/images/banner-5.png"/>
+<img alt="Slideshow Image 4" src="http://web.archive.org/web/20120424182405im_/http://www.bestcriminaldefence.com/wp-content/themes/brianRoss/images/banner-6.png"/>
+</div>
+<!--<div id="banner-txt">
+
+
+
+            	<h2>Your Best Criminal Defense</h2>
+
+
+
+                <p>Brian Ross is a founding member</p>
+
+
+
+                <p><span> of the law firm</span></p>
+
+
+
+            </div>-->
+</div>
+</div>
+<div id="main">
+<div id="container">
+<div id="content" role="main">
+<div class="post-34 page type-page status-publish hentry" id="post-34">
+<div class="entry-content" style="padding:0; margin: 0 2px;">
+<div class="left-top-text">
+<h2>Toronto Criminal Lawyer: Brian Ross Will Defend Your Rights</h2>
+</div>
+<div id="left-txt-bg">
+<p>Toronto criminal lawyer, Brian Ross, provides representation for those facing criminal charges including: ‘drunk driving’ offences, domestic assault, fraud, theft, all drug offences, criminal organization offences, murder, and more.</p>
+<p>Brian Ross is a founding member of the law firm, Rusonik, O’Connor, Robbins, Ross, Gorham &amp; Angelini. In 2010, numerous criminal lawyers in Toronto teamed up to form this powerhouse criminal defense team. The criminal lawyers at this firm banded together as they all take great pride in protecting the rights and freedoms of residents of the GTA who find themselves charged with a criminal offense. When represented by Brian Ross, you will not only have his attention throughout every stage of the court process, but the attention of his firm, a firm of Toronto criminal defense lawyers who know the courts, Crown Attorneys, and judges in the Toronto region.</p>
+<p>Any competent Toronto criminal lawyer must posses certain important qualities. Mr. Ross, a member of the Criminal Lawyers’ Association in Toronto understands that being charged, whatever the charge may be, is an extremely serious and stressful matter for you. He appreciates that you will have many questions about the situation in which you now find yourself and he knows that you require someone to fight for you from beginning to end. Like you, Mr. Ross, indeed his whole team of Toronto criminal lawyers, focuses on results. He demonstrates perseverance, dedication, a commitment to justice, a strong knowledge of the Canadian legal system, a desire to deliver a carefully planned out strategic defense, and of course – fearlessness.</p>
+<p><strong style="font-size: medium;">Experienced Toronto Criminal Defence Lawyer</strong><br/> <br/> The criminal lawyers working with Brian Ross possess a vast amount of experience in all areas of criminal law and have effectively defended individuals charged with every type of criminal offense. Indeed, lawyer Brian Ross has represented people in Toronto charged with everything from possession of marijuana to murder. No case is too small; no case is too big.</p>
+<p>Mr. Ross, your Toronto criminal lawyer will stand beside you, ensuring that your rights are protected, straight through to the end of the trial process.</p>
+<p>Keep the lines of communication open between you and Brian Ross, your Toronto criminal defense lawyer, and in return you can expect skillful professionalism, unbiased representation, sound judgment, personal attention and an aggressive defense strategy. Each of these elements are crucial in ensuring the highest quality legal representation possible.</p>
+<p>Brian Ross and his team of highly experienced criminal lawyers in Toronto, are very well-versed in defending every criminal charge in the Canadian criminal code, including variations of the following:</p>
+<ul>
+<li>Drunk Driving offences (Impaired Driving, Over 80, Refusal to take a breathalyzer)</li>
+<li>Assaults (Domestic, Sexual, Aggravated, and other Assaults)</li>
+<li>Drug Related offences (Possession, Trafficking, Importing, Manufacturing)</li>
+<li>Firearms and other Weapons Related offences)</li>
+<li>Thefts and Frauds</li>
+<li>Murder, Attempted Murder and Manslaughter</li>
+<li>Bail Hearings and Bail Reviews</li>
+<li>Extradition Matters</li>
+<li>Youth Criminal Justice Act offences</li>
+<li>Victim Support and Assistance issues</li>
+</ul>
+<p>Brian Ross, a Toronto criminal defense lawyer is well equipped to ensure the wheels of justice turn smoothly and that the rights of those charged with criminal offences in the greater Toronto area are protected without prejudice.</p>
+<p>Those charged with, or even simply accused of, a criminal matter often report feelings of disparity and isolation. If convicted they face the removal of their civil liberties and face threat of alienation from their family, friends and community. The assistance of a qualified Toronto criminal lawyer is imperative in ensuring that these rights are protected and that the individual charged has access to the very best legal resources.</p>
+<p>Brian Ross and his team of criminal lawyers in Toronto are available to provide a consultation to anyone requiring legal representation in a criminal matter. If you or someone you know has been charged with a criminal offense contact Brian Ross.</p>
+</div>
+<div id="red">
+<ul style="list-style: none;">
+<li><a><img alt="contact" height="46" src="http://web.archive.org/web/20120424182405im_/http://www.bestcriminaldefence.com/wp-content/themes/brianRoss/images/red-buttn1.png" width="183"/></a></li>
+</ul>
+</div>
+</div>
+<!-- .entry-content -->
+</div>
+<!-- #post-## -->
+<div id="comments">
+<p class="nocomments">Comments are closed.</p>
+</div>
+<!-- #comments -->
+</div>
+<!-- #content -->
+</div>
+<!-- #container -->
+<script type="text/JavaScript">
+
+	
+
+
+
+function form_check()
+
+	{
+
+		if (document.frm.Fname.value == "")
+
+		{
+
+			alert("Please enter Name");
+
+			document.frm.Fname.focus();
+
+			return false;
+
+		}
+
+		
+
+		if (document.frm.Phone.value == "")
+
+		{
+
+			alert("Please enter Phone");
+
+			document.frm.Phone.focus();
+
+			return false;
+
+		}
+
+		
+
+		if (document.frm.email.value == "")
+
+		{
+
+			alert("Please enter Email Address");
+
+			document.frm.email.focus();
+
+			return false;
+
+		}
+
+		
+
+		
+
+		if(document.frm.email.value != ""){
+
+			var str=document.frm.email.value;
+
+			var emailRe = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*\.(\w{2}|(com|net|org|edu|int|mil|gov|arpa|biz|aero|name|coop|info|pro|museum|tv|biz))$/;
+
+			if(!emailRe.test(str)) 
+
+			{
+
+				alert("Please enter valid Email Address.");
+
+				document.frm.email.focus();
+
+				return false;
+
+			}
+
+		
+
+		}
+
+		if (document.frm.message.value == "")
+
+		{
+
+			alert("Please enter Message");
+
+			document.frm.message.focus();
+
+			return false;
+
+		}
+
+		
+
+		return true;
+
+	}
+
+	
+
+	
+
+</script>
+<div class="widget-area" id="primary">
+<div id="body-right">
+<form action="http://www.bestcriminaldefence.com/wp-content/themes/brianRoss/mail.php" id="frm" method="post" name="frm">
+<input name="orderpost" type="hidden" value="send"/>
+<input id="pagename" name="pagename" type="hidden" value=""/>
+<div id="right-request-bg">
+<h3 style="padding-top:6px;">Contact Brian Ross</h3>
+<div class="right-request-name2">
+<div class="name">
+            Name: 
+          </div>
+<div class="name-box">
+<input class="namefield" id="fname" name="fname" type="text"/>
+</div>
+</div>
+<div class="right-request-name">
+<div class="name">
+            Phone: 
+          </div>
+<div class="name-box">
+<input class="namefield" id="phone" name="phone" type="text"/>
+</div>
+</div>
+<div class="right-request-name">
+<div class="name">
+            E-mail: 
+          </div>
+<div class="name-box">
+<input class="namefield" id="email" name="email" type="text"/>
+</div>
+</div>
+<div class="right-request-name1">
+<div class="name">
+            Message: 
+          </div>
+<div class="name-box1">
+<textarea class="namefield1" cols="" id="message" name="message" rows=""></textarea>
+</div>
+</div>
+<div class="right-request-name2">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td height="30"></td>
+</tr>
+<tr>
+<td valign="top"> <img align="top" alt="" id="captcha" src="http://web.archive.org/web/20120424182405im_/http://www.bestcriminaldefence.com/wp-content/themes/brianRoss/get_captcha.php"/> </td>
+</tr>
+<tr>
+<td height="12"></td>
+</tr>
+<tr>
+<td> <input class="captcha_box" id="code" name="code" size="10" type="text"/>   <img align="top" alt="" height="20" id="refresh" src="http://web.archive.org/web/20120424182405im_/http://www.bestcriminaldefence.com/wp-content/themes/brianRoss/refresh.png" style="cursor:pointer;" width="20"/> </td>
+</tr>
+<tr>
+<td height="10"></td>
+</tr>
+<tr>
+<td><input id="reset" name="reset" type="reset" value="Reset"/>  <input id="Send" name="submit" style="cursor:pointer;" type="button" value="Send"/></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--  <div class="right-request-name" align="right">
+          <input name="" type="image" src="http://www.bestcriminaldefence.com/wp-content/themes/brianRoss/images/send-buttn.png"  style="margin:6px 0px 0 0;"/>
+        </div>-->
+</div>
+</form>
+<div style="height:18px; width:100%; float:left;">
+         
+       </div>
+<div id="right-bottm">
+<div style="width:155px; float:left; padding-bottom:7px;">
+<h3>What I Defend</h3>
+</div>
+<div style="width:135px; margin-right:20px; float:right;padding-bottom:7px; text-align:right;">
+<span class="st_facebook_large" displaytext="share" st_title="" st_url="http://www.bestcriminaldefence.com/" style="padding-top:5px;"></span>
+<div style="float:right;">
+<a target="_blank"><img border="0" src="http://web.archive.org/web/20120424182405im_/http://www.bestcriminaldefence.com/wp-content/themes/brianRoss/images/twitter.jpg"/></a>
+</div>
+</div>
+<div id="right-bottm-txt">
+<ul>
+<li class="widget-container widget_text" id="text-2">
+<div class="textwidget">
+<ul>
+<li><a>Drinking and Driving Offences</a></li>
+<li><a>Assaults and Threats</a></li>
+<li><a>Domestic Assault</a></li>
+<li><a>Sexual Assault</a></li>
+<li><a>Drug Offences</a></li>
+<li><a>Firearms and Weapons Offences</a></li>
+<li><a>Murder / Manslaughter</a></li>
+<li><a>Robbery</a></li>
+<li><a>Criminal Organization / ”Gang” Offences</a></li>
+<li><a>Thefts / Shoplifting</a></li>
+<li><a>Offences Against the Administration of Justice</a></li>
+<li><a>Frauds and White Collar Crimes</a></li>
+<li><a>Youth Court Cases</a></li>
+<li><a>Bail Hearings</a></li>
+<li><a>Extradition Hearings</a></li>
+</ul>
+</div> </li>
+</ul>
+</div>
+<div class="spacer"></div>
+</div>
+<div align="center" id="recent-cases">
+<a><img alt="recent successes" src="http://web.archive.org/web/20120424182405im_/http://www.bestcriminaldefence.com/wp-content/themes/brianRoss/images/recent-success.png"/></a>
+</div>
+</div>
+<div align="center" id="recent-cases" style="margin:0; width:337px; padding-top:22px;">
+<script src="https://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+	new TWTR.Widget({
+	  version: 2,
+	  type: 'profile',
+	  rpp: 5,
+	  interval: 30000,
+	  width: 250,
+	  height: 300,
+	  theme: {
+		shell: {
+		  background: '#324075',
+		  color: '#ffffff'
+		},
+		tweets: {
+		  background: '#faf5fa',
+		  color: '#050005',
+		  links: '#9c081e'
+		}
+	  },
+	  features: {
+		scrollbar: true,
+		loop: false,
+		live: false,
+		behavior: 'all'
+	  }
+	}).render().setUser('brianrosslaw').start();
+	</script>
+</div>
+</div>
+<!-- #primary .widget-area -->
+</div>
+<!-- #main -->
+<!--footer-->
+<div id="footer">
+<div align="center" class="footer-txt">
+       Brian Ross © | 
+      <a class="mailclas">ross@criminaltriallawyers.ca</a> | 416.658.5855 
+      <ul>
+<li><a>Brampton criminal lawyer</a></li>
+<li>|</li>
+<li><a>Newmarket criminal lawyer</a></li>
+<li>|</li>
+<li><a>Oshawa Criminal Lawyer</a></li>
+<li> | <a>Toronto Criminal Lawyer </a> </li>
+<li> | <a>Blog</a></li>
+<br/>
+<br/>
+</ul>
+<div align="center" style="float:left; width:100%; padding-top:18px; color: #FFFFFF;font: 13px Arial,Helvetica,sans-serif;">
+<a style="text-decoration:underline; color:#fff;" target="_blank">SEO Services</a> by SEO Services Canada™
+      </div>
+</div>
+</div>
+<!--main close-->
+<div class="spacer"></div>
+</div>
+<!-- #wrapper -->
+<br class="spacer"/>
+</div>
+</body>
+</html>

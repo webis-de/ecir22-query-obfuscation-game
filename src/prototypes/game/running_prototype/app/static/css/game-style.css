@@ -1,0 +1,681 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Bebas+Neue&family=Orbitron:wght@400;900&family=Permanent+Marker&family=Press+Start+2P&family=Righteous&family=Staatliches&family=Train+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
+:root {
+  --main_mode_color: #03B7DF;
+  --total_points: #03677d;
+  --next_round: #b4f0fd;
+  --progress_bar_list: #e7fafe;
+}
+
+body {
+    background-color: #05131B;
+    font-family: 'Share Tech Mono',sans-serif;
+}
+
+/* Style for the menu */
+#menu_icon {
+    margin: 10px 0px 0px 10px;
+}
+
+#close_menu {
+    color: white;
+    font-size: 40px;
+    position: fixed;
+    margin: 10px 0px 0px 510px;
+    display: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Design for all buttons */
+.button {
+  border: none;
+  color: #05131B;
+  padding: 2px 30px 2px 30px;
+  min-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: var(--main_mode_color);
+  box-shadow: 0px 0px 10px 0px var(--main_mode_color);
+  border-radius: 3px;
+  font-weight: bold;
+  font-family: 'Orbitron';
+}
+
+.button_icon {
+    margin-left: 10px;
+    font-size: 24px;
+    line-height: 1.8;
+}
+
+/* Style for the display of the points */
+#points_overlay {
+  position: fixed;
+  display: none;
+  width: fit-content;
+  width: -moz-fit-content;
+  height: fit-content;
+  height: -moz-fit-content;
+  min-width: 740px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(5, 19, 27, 1);
+  z-index: 2;
+  border: solid 3px var(--main_mode_color);
+  box-shadow: 0px 0px 20px 2px var(--main_mode_color);
+  padding: 20px 20px 80px 20px;
+}
+
+.chameleon_points {
+    display: none;
+}
+
+#points_header {
+    color: white;
+    text-align: center;
+    margin: 0px 20px 0px 20px;
+    border-bottom: 2px solid var(--main_mode_color);
+    font-size: 45px;
+    font-family: 'Orbitron';
+}
+
+#continue_game {
+    opacity: 0.0;
+}
+
+#retry {
+    opacity: 0.0;
+}
+
+#break_line {
+    border: 1px solid var(--main_mode_color);
+    float: right;
+    width: fit-content;
+    min-width: 740px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#sum_icon {
+    color: var(--main_mode_color);
+    font-size: 24px;
+    float: right;
+    margin-right: 40px;
+}
+
+
+#max_total {
+    font-size: 24px;
+    color: white;
+    float: right;
+    margin-right: 90px;
+}
+
+#total_points_container {
+     clear: both;
+}
+
+#final_total_points_display {
+    width: fit-content;
+    width: -moz-fit-content;
+    min-width: 300px;
+    text-align: center;
+    margin: 80px auto 40px auto;
+    border-bottom: 1px solid var(--main_mode_color);
+    border-top: 1px solid var(--main_mode_color);
+    background-color: var(--total_points);
+    display: block;
+}
+
+#final_total_points {
+  margin-left: 10px;
+}
+
+.points_list {
+    font-size: 24px;
+    list-style: none;
+    padding-top: 30px;
+}
+
+.points_list  li:not(:last-child) {
+   margin-top: 15px;
+   margin-bottom: 15px;
+}
+
+#point_categories_column {
+    color: white;
+    float: left;
+    display: inline;
+    margin-left: -15px;
+}
+
+#computed_points {
+    display: inline;
+    color: white;
+    float: right;
+    margin-right: 90px;
+}
+
+#computed_points li {
+   text-align: right;
+}
+
+.max_points {
+    display: inline;
+}
+
+#next_game_button_container {
+    position: absolute;
+    right: 50px;
+    cursor: pointer;
+}
+
+#retry_button_container {
+    position: absolute;
+    left: 50px;
+    cursor: pointer;
+}
+
+/* Design for the animation of the final points of one round */
+@keyframes shadowPulse {
+    0% {
+        box-shadow: none;
+    }
+
+    50% {
+        box-shadow: 0px 0px 20px 15px var(--main_mode_color);
+    }
+
+    100% {
+        box-shadow: 0px 0px 20px 7px var(--main_mode_color);
+    }
+}
+
+.shadow-pulse {
+    animation-name: shadowPulse;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+/* Design for footer containing progress bar and buttons to skip query and exit game */
+#footer {
+    padding: 20px 50px 0px 50px;
+}
+
+#continue_button {
+    right: 50px;
+    float: right;
+}
+
+#exit_button{
+  float: left;
+  left: 50px;
+}
+
+#next_round {
+    margin-top: 35px;
+    background: linear-gradient(to right, var(--main_mode_color) 50%, var(--next_round) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+.skip {
+    animation-name: progressAnimation;
+    animation-duration: 60s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    cursor: not-allowed;
+}
+
+#exit_game {
+    margin-top: 30px;
+}
+
+.progress {
+    border-radius: 0px !important;
+    animation-name: progressBarAnimation;
+    animation-duration: 0.03s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes progressBarAnimation {
+    0% {
+        background-position: right bottom;
+    }
+    100% {
+        background-position: left bottom;
+    }
+}
+
+@keyframes progressAnimation {
+    0% {
+        background-position: right bottom;
+        cursor: not-allowed;
+    }
+    50% {
+        cursor: not-allowed;
+    }
+    75% {
+        cursor: not-allowed;
+    }
+    90% {
+        cursor: not-allowed;
+    }
+    99% {
+        cursor: not-allowed;
+    }
+    100% {
+        background-position: left bottom;
+        cursor: pointer;
+    }
+}
+
+.next {
+    animation-name: nextAnimation;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes nextAnimation {
+    0% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+#progressbar_container {
+	width: 102%;
+	height: 40px;
+	float: left;
+	margin: 15px 0px 0px -10px;
+	border: 1px solid var(--main_mode_color);
+	border-radius: 20px;
+	padding: 8px 5px 0px 5px;
+	box-shadow: 0px 0px 15px 2px var(--main_mode_color);
+}
+
+#progress_bar li {
+	vertical-align: top;
+	list-style-type: none;
+    width:6px;
+    height:20px;
+    position: absolute;
+    background: linear-gradient(to right, var(--main_mode_color) 50%, var(--progress_bar_list) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transform: skew(-35deg);
+}
+
+#progress_percentage {
+	color: white;
+	font-size: 24px;
+	position:absolute;
+	transform: translate(-34px, -5px);
+}
+
+
+/* Design for the tutorial overlay */
+#intro_overlay {
+    position: fixed;
+    display: none;
+    width: fit-content;
+    width: -moz-fit-content;
+    height: fit-content;
+    height: -moz-fit-content;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 4% 2% 2% 2%;
+    background-color: black;
+    opacity: 1;
+    z-index: 2;
+    box-shadow: 0px 0px 10px 2px white;
+}
+
+.continue {
+    font-size: 40px !important;
+    cursor: pointer;
+}
+
+#play_icon {
+    font-size: 18px !important;
+    margin-left: 5%;
+}
+
+.closure {
+    font-family: "Manrope";
+    font-weight: bold;
+    font-size: 20px;
+    border: 1px solid white;
+    cursor: pointer;
+    padding: 2% 7% 2% 7%;
+    border-radius: 2px;
+    width: fit-content;
+}
+
+.closure:hover {
+    background-color: white !important;
+    color: black !important;
+}
+
+#next_icon {
+    float: right;
+    font-size: 30px;
+}
+
+#icon_container {
+    float: right;
+    margin-top: 4%;
+    color: white;
+    font-size: 22px;
+    min-width: 170px;
+}
+
+#intro_text {
+    color: white;
+    font-size: 24px;
+    font-family: 'Manrope';
+}
+
+/* Style for the website display and keywords*/
+#website_overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+#information_container {
+    display: flex;
+    width: 96%;
+    height: 80%;
+    margin-left: 3%;
+    backdrop-filter: blur(5px);
+}
+
+#gaming_container {
+   background-color: black;
+   padding: 30px 0px 30px 0px;
+   margin: 20px 50px 0px 50px;
+   box-shadow: 0px 0px 20px 2px var(--main_mode_color);
+}
+
+#website {
+    width: 60%;
+    height: 500px;
+    position: relative;
+    border: solid 2px var(--main_mode_color);
+    box-shadow: 0px 0px 30px 5px var(--main_mode_color);
+}
+
+#pdf_tools_container {
+    height: 500px !important;
+}
+
+.pdf_tools {
+    width: 4%;
+    height: 100%;
+    background-color: var(--main_mode_color);
+    float: left;
+    text-align: center;
+    padding 10px 10px 10px 10px;
+}
+
+#document_container {
+    float: right;
+    width: 96%;
+    height: 500px;
+}
+
+#zoomed_document_container {
+    float: right;
+    height: 100%;
+    width: 96%;
+}
+
+#website_pdf {
+    width: 100%;
+    height: 500px;
+}
+
+#zoomed_website_pdf {
+    width: 100%;
+    height: 100%;
+}
+
+.tool_icon {
+    color: black;
+    font-size: 27px;
+    margin: 20px 0px 0px 0px;
+}
+
+#query_container {
+    vertical-align: middle;
+    text-align: center;
+    margin: 0px 20px 0px 20px;
+    border-bottom: 2px solid var(--main_mode_color);
+
+}
+
+#keywords {
+    position: relative;
+    margin: auto;
+	font-size: 21px;
+    width: 30%;
+    float: right;
+    border: solid 3px var(--main_mode_color);
+    box-shadow: 0px 0px 20px 2px var(--main_mode_color);
+    min-height: 450px;
+    max-height: 500px;
+    margin-left: 7%;
+    border-radius: 20px;
+    color: white;
+}
+
+#keywords_list {
+    list-style: none;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#keywords_list li {
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* Design for the header containing the category as a title and the display of the points */
+#header {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 50px 0px 60px;
+    height: 100px;
+    width: calc(100% - 60px);
+    font-family: 'Orbitron';
+}
+
+.accumulated_points {
+    color: white;
+    font-size: 24px;
+    border-left: 4px solid var(--main_mode_color);
+    border-right: 4px solid var(--main_mode_color);
+    padding: 10px 20px 10px 20px;
+}
+
+#total_points_display {
+    float: right;
+    top: 0;
+    box-shadow: -1px 0px 20px 2px var(--main_mode_color);
+    margin: 30px 50px 0px 0px;
+    display: inline-block;
+}
+
+#category_header_container {
+   margin: auto;
+   padding: 10px 0px 0px 0px;
+   display: inline-block;
+}
+
+#category_header {
+    color: white;
+    font-size: 60px;
+    margin-left: 15px;
+}
+
+#category_icon {
+    font-size: 70px;
+    color: var(--main_mode_color);
+}
+
+/* Design of the search input */
+#search_container {
+    padding-top: 80px;
+    height: 30%;
+    width: 100%;
+    margin:auto;
+}
+
+#search_input {
+    margin: auto;
+    color: white;
+    width: 470px;
+    border-bottom: 3px solid var(--main_mode_color);
+}
+
+#html_container a {
+    pointer-events: none;
+}
+
+#search_form {
+    font-weight: bold;
+    font-size: 24px;
+    color: white !important;
+    background-color: black;
+    border: none;
+    width: 420px;
+}
+
+::placeholder {
+   color: white !important;
+}
+
+#search_icon {
+    color: white;
+    font-size: 24px;
+    float: right;
+    margin-top: 0px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+#search_icon_container {
+    background-color: black;
+}
+
+input:focus, button:focus{
+    outline: none;
+}
+
+/* Alert if forbidden words were used or document was not found */
+.box {
+    max-width: 520px;
+    background: #f2f2f2;
+    padding: 13px 13px 13px 35px;
+    font-size: 20px;
+    color: black;
+    position: relative;
+    margin: -80px 50px 0px 0px;
+    border-radius: 10px;
+    display: none;
+    left: 1150px;
+    text-align: center;
+}
+
+.box:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 10px solid #f2f2f2;
+    border-top: 10px solid #f2f2f2;
+    border-bottom: 10px solid transparent;
+    left: -19px;
+    top: 40px;
+}
+
+.box:after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 10px solid #f2f2f2;
+    border-bottom: 10px solid #f2f2f2;
+    border-top: 10px solid transparent;
+    left: -19px;
+    top: 20px;
+}
+
+#alert_icon {
+    color: #cc3300;
+    font-size: 22px;
+    margin: 0px 5px 0px -20px;
+}
+
+/*This is the style for the loading animation*/
+.lds-ripple {
+  display: none;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  margin: 22% 0px 0px 45%;
+  z-index: 2;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 6px solid var(--main_mode_color);
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1.2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.6s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 74px;
+    left: 74px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+  }
+}
+

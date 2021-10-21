@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Bebas+Neue&family=Orbitron:wght@400;900&family=Permanent+Marker&family=Press+Start+2P&family=Righteous&family=Staatliches&family=Train+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
+:root {
+  --mode_color: white;
+  --polygon_stroke: #808080;
+}
+
+body {
+	background-color: #05131B;
+	font-family: 'Orbitron';
+	padding: 10px 0px 0px 0px;
+}
+
+html, body {
+  width: 100%;
+  height: 94%;
+}
+
+
+/* Design for the city svg */
+#city_container {
+	width: 80%;
+	height: 100%;
+	float: left;
+	display: inline-block;
+}
+
+#canvas {
+	height: calc(100% - 20px);
+	width: 100%;
+	display: block;
+}
+
+#city_border {
+	fill: var(--mode_color);
+	stroke: none;
+}
+
+polygon {
+	stroke: var(--polygon_stroke);
+	stroke-width: 1px;
+}
+
+.category_icon {
+    color: white;
+    font-size: 40px;
+}
+
+.category_title {
+    fill: white;
+    font-size: 26px;
+}
+
+.donut_charts {
+    width: 100;
+     height: 100;
+}
+
+#knowledge_icon {
+    font-size: 38px !important;
+}
+
+#law_icon {
+    font-size: 38px !important;
+}
+
+foreignObject {
+    width: 50px;
+    height: 50px;
+}
+
+/* Style for the header containing the name of the game */
+#game_name_container {
+    color: white;
+    width: 1000px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: -20px;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 900;
+    padding: 10px 20px 10px 20px;
+}
+/* Style for the selection of the level */
+#level_selection {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    font-family: 'Orbitron';
+    margin: 0px 0px 20px 0px;
+}
+
+button:focus {
+    outline: none;
+}
+
+#level_selection_container {
+    color: var(--mode_color);
+    border-bottom: 2px solid var(--mode_color);
+    border-top: 2px solid var(--mode_color);
+    display: inline-block;
+    margin: 570px 0px 0px 20px;
+    padding: 20px 0px 40px 0px;
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px 0px var(--mode_color);
+    display: none;
+}
+
+.level_container {
+	text-align: center;
+}
+
+.level_button {
+    border: none;
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: bold;
+    margin: 20px 0px 0px 0px;
+    color: black;
+}
+
+#blue_level {
+    background-color: #03B7DF;
+    box-shadow: 0px 0px 20px 2px #03B7DF;
+}
+
+#red_level {
+    background-color: #ff00ff;
+    box-shadow: 0px 0px 20px 2px #ff00ff;
+}
+
+/* Design for the tutorial */
+#introoverlay {
+    position: fixed;
+    visibility: hidden;
+    width: 60%;
+    height: 75%;
+    margin: 3% 0px 0px 18%;
+}

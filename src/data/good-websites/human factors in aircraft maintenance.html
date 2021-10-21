@@ -1,0 +1,538 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>SHELL Model is the foundation to understanding Human Factors in Aircraft Maintenance | AskBob.aero</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<script type="text/javascript">
+<!--
+  var az_u = "www.askbob.aero/openx/www/delivery/";
+  var az_us = "www.askbob.aero/openx/www/delivery/";
+  var az_js = "ajs.php";
+  var az_wt = "0";
+-->
+</script>
+<link href="https://www.askbob.aero/sites/default/files/askbobc_favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/modules/acquia/views/css/views.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/modules/acquia/cck/theme/content-module.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/modules/acquia/date/date.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/modules/acquia/date/date_popup/themes/datepicker.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/modules/acquia/date/date_popup/themes/timeentry.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/modules/acquia/fivestar/css/fivestar.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/modules/acquia/fivestar/widgets/small/small.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/modules/acquia/tagadelic/tagadelic.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/modules/aggregator/aggregator.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/modules/node/node.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/modules/poll/poll.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/modules/system/defaults.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/modules/system/system.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/modules/system/system-menus.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/modules/user/user.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/sites/all/modules/ctools/css/ctools.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/sites/all/modules/fckeditor/fckeditor.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/sites/all/modules/logintoboggan/logintoboggan.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/sites/all/modules/user_relationships/user_relationships_ui/user_relationships_ui.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/modules/forum/forum.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/modules/acquia/cck/modules/fieldgroup/fieldgroup.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/modules/acquia/print/css/printlinks.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/sites/all/modules/forward/forward.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/modules/comment/comment.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/themes/askbobc/style.css?N" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/themes/askbobc/css/global.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/themes/askbobc/css/standard-3col.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120223104419cs_/http://www.askbob.aero/themes/askbobc/css/modules.css" media="all" rel="stylesheet" type="text/css"/>
+<!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="/themes/askbobc/iestyles/ie6.css" />
+	<![endif]-->
+<!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="/themes/askbobc/iestyles/ie7.css" />
+	<![endif]-->
+<script src="https://www.askbob.aero/misc/jquery.js?N" type="text/javascript"></script>
+<script src="https://www.askbob.aero/misc/drupal.js?N" type="text/javascript"></script>
+<script src="https://www.askbob.aero/modules/acquia/fivestar/js/fivestar.js?N" type="text/javascript"></script>
+<script src="https://www.askbob.aero/sites/all/modules/ignore_user/ignore_user.js?N" type="text/javascript"></script>
+<script src="https://www.askbob.aero/sites/all/modules/openads/openads.js?N" type="text/javascript"></script>
+<script src="https://www.askbob.aero/sites/all/modules/user_relationships/user_relationships_ui/user_relationships_ui.js?N" type="text/javascript"></script>
+<script src="https://www.askbob.aero/themes/askbobc/js/global.js?N" type="text/javascript"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "fivestar": { "titleUser": "Your rating: ", "titleAverage": "Average: ", "feedbackSavingVote": "Saving your vote...", "feedbackVoteSaved": "Your vote has been saved.", "feedbackDeletingVote": "Deleting your vote...", "feedbackVoteDeleted": "Your vote has been deleted." }, "googleanalytics": { "trackOutgoing": 1, "trackMailto": 1, "trackDownload": 1, "trackDownloadExtensions": "7z|aac|avi|csv|doc|exe|flv|gif|gz|jpe?g|js|mp(3|4|e?g)|mov|pdf|phps|png|ppt|rar|sit|tar|torrent|txt|wma|wmv|xls|xml|zip" }, "user_relationships_ui": { "loadingimage": "/sites/all/modules/user_relationships/user_relationships_ui/images/loadingAnimation.gif", "savingimage": "/sites/all/modules/user_relationships/user_relationships_ui/images/savingimage.gif", "position": { "position": "absolute", "left": "0", "top": "0" } } });
+//--><!]]>
+</script>
+</head>
+<body class="not-front not-logged-in page-node node-type-blog two-sidebars node-1546">
+<!--
+-->
+<div id="pagewrapper">
+<div id="leaderboard">
+<div class="defaultblock openads">
+<h2>Advertising</h2>
+<!--block title-->
+<div class="blockcontent">
+<script type="text/javascript"><!--
+      az_adjs(5, '');
+    --></script>
+</div>
+</div>
+</div>
+<div id="utilities">
+<div id="plinks">
+<div class="defaultblock" id="search">
+<div class="blockcontent">
+<form accept-charset="UTF-8" action="/node/1546" id="search-block-form" method="post">
+<div>
+<div class="container-inline">
+<div class="form-item" id="edit-search-block-form-1-wrapper">
+<label for="edit-search-block-form-1">Search this site: </label>
+<input class="form-text" id="edit-search-block-form-1" maxlength="128" name="search_block_form" size="15" title="Enter the terms you wish to search for." type="text" value=""/>
+</div>
+<input class="form-submit" id="edit-submit" name="op" src="https://www.askbob.aero/themes/askbobc/images/button_go.gif" type="image" value="Search"/>
+<input id="form-70cc8e9cbe12108c6968069aaf3acbfe" name="form_build_id" type="hidden" value="form-70cc8e9cbe12108c6968069aaf3acbfe"/>
+<input id="edit-search-block-form" name="form_id" type="hidden" value="search_block_form"/>
+</div>
+</div>
+</form>
+</div>
+</div>
+<ul class="links primary-links">
+<li class="menu-149 first"><a title="AskBob Home Page">Home</a></li>
+<li class="menu-209"><a title="AskBob Experts Blogs">Experts</a></li>
+<li class="menu-150"><a title="Discuss key topics with others">Forums</a></li>
+<li class="menu-250"><a title="Aircraft Maintenance News Feeds">News</a></li>
+<li class="menu-208"><a title="Edit Your Member Details, Locate Other Members">Members</a></li>
+<li class="menu-210"><a title="Aircraft Maintenance Events Calendar">Events</a></li>
+<li class="menu-494"><a title="AskBob Partners Blogs">Partners</a></li>
+<li class="menu-251"><a title="Jobs, Parts Procurement, Supplier Directory, Classifieds">Marketplace</a></li>
+<li class="menu-3907"><a title="">Training</a></li>
+<li class="menu-252 last"><a title="ATP Product Support &amp; F.A.Q.">ATP Support</a></li>
+</ul>
+</div>
+<div class="stopfloat"></div>
+</div>
+<div id="page">
+<div id="header">
+<p class="sitetitle"><a title="Home">AskBob.aero</a></p>
+<p class="slogan">ATP's Online Forum for Maintenance Professionals</p>
+</div>
+<div class="stopfloat"></div>
+<div id="content">
+<!-- left -->
+<div class="lsidebar">
+<div class="view view-blogger view-id-blogger view-display-id-block_1">
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+<div class="defaultblock feat-profile">
+<h2>Blogger Profile</h2>
+<!--block title-->
+<div class="blockcontent">
+<div class="picture">
+<a class="active" title="View Michael Spinks's posts."><img alt="Michael Spinks's picture" src="http://web.archive.org/web/20120223104419im_/http://www.askbob.aero/sites/default/files/pictures/picture-510.jpg" title="Michael Spinks's picture" width="63"/></a>
+</div>
+<div class="name">
+<a>Michael Spinks</a>
+</div>
+<div class="link-profile">
+<a>About this author</a>
+</div>
+<div class="link-rss">
+<a>RSS</a>
+</div>
+<div class="stopfloat"></div>
+<h3>Aircraft Mechanics Examiner</h3>
+<div class="teaser">
+            Michael B. Spinks is an aviation maintenance professional with 30 years experience in the airline industry. He’s a former Human Factors (HF) Specialist for a major U.S. airline and is presently a Program Manager in Quality Assurance &amp; Safety
+           </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="defaultblock popular-posts">
+<h2>Most Popular Posts</h2>
+<!--block title-->
+<div class="blockcontent">
+<ul class="links-popular">
+<div class="views-row views-row-1 views-row-odd views-row-first">
+<li><a>I’m an Aircraft Mechanic - song and video</a></li>
+</div>
+<div class="views-row views-row-2 views-row-even">
+<li><a>Using My Library and Search</a></li>
+</div>
+<div class="views-row views-row-3 views-row-odd">
+<li><a>LSA Repairman: Maintenance or Inspection Rating?</a></li>
+</div>
+<div class="views-row views-row-4 views-row-even">
+<li><a>Paper A&amp;P Certificates to Expire</a></li>
+</div>
+<div class="views-row views-row-5 views-row-odd">
+<li><a>NavigatorV - Simplify Access, Enhance Quality and Reduce Cost</a></li>
+</div>
+<div class="views-row views-row-6 views-row-even">
+<li><a>Rotax Maintenance</a></li>
+</div>
+<div class="views-row views-row-7 views-row-odd">
+<li><a>FAA Clarifies Meaning of ‘Current’ for Mx Programs</a></li>
+</div>
+<div class="views-row views-row-8 views-row-even">
+<li><a>Confused about LSA Maintenance Requirements?</a></li>
+</div>
+<div class="views-row views-row-9 views-row-odd views-row-last">
+<li><a>Recommended or Required?</a></li>
+</div>
+</ul>
+</div>
+</div>
+<div class="defaultblock">
+<h2></h2>
+<!--block title-->
+<div class="blockcontent">
+<p><a><img alt="Go Back to Previous Page" border="0" height="22" src="http://web.archive.org/web/20120223104419im_/http://www.askbob.aero/sites/default/files/image/back.gif" width="20"/></a> <a>Go to Previous Page</a></p>
+</div>
+</div>
+<div class="defaultblock forum">
+<h2>Discussions</h2>
+<!--block title-->
+<div class="blockcontent">
+<div class="item-list">
+<ul>
+<li class="first"><a title="22 comments">Cessna Structural Inspection</a></li>
+<li><a>Troubleshooting Autopilot-Induced Control Surface Oscillations</a></li>
+<li><a>Cessna CE-560XL Tailcone Stinger Drains</a></li>
+<li><a title="4 comments">2012 IA Renewal Training Events By State</a></li>
+<li><a title="1 comment">Cessna Forum: Landing Gear Corrosion</a></li>
+<li><a>525 Series, Airplane on Jacks will Interrupt Interior Power</a></li>
+<li><a>Cessna Prop Aircraft AD 2011-10-09 AMOC</a></li>
+<li class="last"><a>ATP Aviation Hub Announcement Webinar</a></li>
+</ul>
+</div>
+<div class="more-link">
+<a title="Read the latest forum topics.">more</a>
+</div>
+</div>
+</div>
+<div class="defaultblock openads">
+<h2>Advertising</h2>
+<!--block title-->
+<div class="blockcontent">
+<script type="text/javascript"><!--
+      az_adjs(2, '');
+    --></script>
+</div>
+</div>
+<div class="defaultblock">
+<h2>Post Site Feedback</h2>
+<!--block title-->
+<div class="blockcontent">
+<p><a><img alt="Badge_logo_small" border="0" src="http://web.archive.org/web/20120223104419im_/http://getsatisfaction.com/images/badges/badge_logo_small.png"/></a></p>
+</div>
+</div>
+</div>
+<!-- end left -->
+<!-- right -->
+<div class="rsidebar">
+<div class="defaultblock login-links">
+<div class="links">
+<a>Log In</a> | 
+        <a>Register</a>
+</div>
+<div class="welcome">
+        Welcome, Guest
+       </div>
+</div>
+<div class="stopfloat"></div>
+<div class="defaultblock openads">
+<h2>Advertising</h2>
+<!--block title-->
+<div class="blockcontent">
+<script type="text/javascript"><!--
+      az_adjs(1, '');
+    --></script>
+</div>
+</div>
+<div class="defaultblock">
+<h2></h2>
+<!--block title-->
+<div class="blockcontent">
+<div id="twtr-profile-widget">
+          
+        </div>
+<script src="https://widgets.twimg.com/j/1/widget.js"></script>
+<p>
+<link href="http://web.archive.org/web/20120223104419cs_/http://widgets.twimg.com/j/1/widget.css" rel="stylesheet" type="text/css"/></p>
+<script>
+new TWTR.Widget({
+  profile: true,
+  id: 'twtr-profile-widget',
+  loop: true,
+  width: 300,
+  height: 200,
+  theme: {
+    shell: {
+      background: '#292C2E',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#444444',
+      links: '#0535ad'
+    }
+  }
+}).render().setProfile('amt_jobs').start();
+</script>
+</div>
+</div>
+<div class="defaultblock marketplace-block">
+<h2>AskBob Marketplace</h2>
+<!--block title-->
+<div class="blockcontent">
+<ul>
+<li><a target="_self"><strong>Supplier Directory</strong></a></li>
+<li><a target="_self"><strong>Employment</strong></a></li>
+<li><a><strong>Part Procurement</strong></a></li>
+<li><a><strong>Classifieds</strong></a></li>
+<li><a target="_blank"><strong>Aviation Books</strong></a></li>
+</ul>
+</div>
+</div>
+<div class="defaultblock views">
+<h2></h2>
+<!--block title-->
+<div class="blockcontent">
+<div class="defaultblock top-experts">
+<h2>Top Experts</h2>
+<div class="blockcontent">
+<ul>
+<div class="views-row views-row-1 views-row-odd views-row-first">
+<li> <span class="picture"><img height="24" src="http://web.archive.org/web/20120223104419im_/http://www.askbob.aero/sites/default/files/pictures/picture-757.png" width="24"/></span> <span class="name"><a>Rob Taylor</a>, Co-Founder, Aircraft Sales and Parts .Net</span> </li>
+</div>
+<div class="views-row views-row-2 views-row-even">
+<li> <span class="picture"><img height="24" src="http://web.archive.org/web/20120223104419im_/http://www.askbob.aero/sites/default/files/pictures/picture-8.jpg" width="24"/></span> <span class="name"><a>Bob Jones</a>, Product Marketing Specialist, Aircraft Technical Publishers</span> </li>
+</div>
+<div class="views-row views-row-3 views-row-odd">
+<li> <span class="picture"><img height="24" src="http://web.archive.org/web/20120223104419im_/http://www.askbob.aero/sites/default/files/pictures/picture-23.jpg" width="24"/></span> <span class="name"><a>Carol Carpenter</a>, Light Sport Aviation , Rainbow Aviation Services</span> </li>
+</div>
+<div class="views-row views-row-4 views-row-even">
+<li> <span class="picture"><img height="24" src="http://web.archive.org/web/20120223104419im_/http://www.askbob.aero/sites/default/files/pictures/picture-912.jpg" width="24"/></span> <span class="name"><a>Dale A Forton</a>, President, Professional Aviation Maintenance Association (PAMA)</span> </li>
+</div>
+<div class="views-row views-row-5 views-row-odd">
+<li> <span class="picture"><img height="24" src="http://web.archive.org/web/20120223104419im_/http://www.askbob.aero/sites/default/files/pictures/picture-510.jpg" width="24"/></span> <span class="name"><a>Michael Spinks</a>, Quality Assurance/Airworthiness Liaison</span> </li>
+</div>
+<div class="views-row views-row-6 views-row-even">
+<li> <span class="picture"><img height="24" src="http://web.archive.org/web/20120223104419im_/http://www.askbob.aero/sites/default/files/pictures/picture-399.jpg" width="24"/></span> <span class="name"><a>John Schwaner</a>, Owner / Developer Mechanic's Toolbox Software, Sacramento Sky Ranch Inc.</span> </li>
+</div>
+<div class="views-row views-row-7 views-row-odd views-row-last">
+<li> <span class="picture"><img height="24" src="http://web.archive.org/web/20120223104419im_/http://www.askbob.aero/sites/default/files/pictures/picture-22.jpg" width="24"/></span> <span class="name"><a>John Goglia</a>, Consultant</span> </li>
+</div>
+</ul>
+<div class="stopfloat link-more">
+<a>Become an Expert &gt;&gt;</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="defaultblock poll">
+<h2>Industry Pulse</h2>
+<!--block title-->
+<div class="blockcontent">
+<form accept-charset="UTF-8" action="/node/1546" id="poll-view-voting" method="post">
+<div>
+<div class="question">
+           Is aircraft specific training worth the investment?
+          </div>
+<div class="answers">
+<div class="form-radios">
+<div class="form-item" id="edit-choice-0-wrapper">
+<label class="option" for="edit-choice-0"><input class="form-radio" id="edit-choice-0" name="choice" type="radio" value="0"/> Absolutely</label>
+</div>
+<div class="form-item" id="edit-choice-1-wrapper">
+<label class="option" for="edit-choice-1"><input class="form-radio" id="edit-choice-1" name="choice" type="radio" value="1"/> Yes</label>
+</div>
+<div class="form-item" id="edit-choice-2-wrapper">
+<label class="option" for="edit-choice-2"><input class="form-radio" id="edit-choice-2" name="choice" type="radio" value="2"/> It depends on the student</label>
+</div>
+<div class="form-item" id="edit-choice-3-wrapper">
+<label class="option" for="edit-choice-3"><input class="form-radio" id="edit-choice-3" name="choice" type="radio" value="3"/> Not very much</label>
+</div>
+<div class="form-item" id="edit-choice-4-wrapper">
+<label class="option" for="edit-choice-4"><input class="form-radio" id="edit-choice-4" name="choice" type="radio" value="4"/> I am not sure</label>
+</div>
+<div class="form-item" id="edit-choice-5-wrapper">
+<label class="option" for="edit-choice-5"><input class="form-radio" id="edit-choice-5" name="choice" type="radio" value="5"/> No</label>
+</div>
+</div>
+</div>
+<input height="20" id="edit-vote" name="op" src="https://www.askbob.aero/themes/askbobc/images/button_poll_submit.gif" type="image" width="61"/>
+<input id="form-3a547aa9af900c63651302e252387e19" name="form_build_id" type="hidden" value="form-3a547aa9af900c63651302e252387e19"/>
+<input id="edit-poll-view-voting" name="form_id" type="hidden" value="poll_view_voting"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- end right -->
+<div id="primary">
+<!-- Node Type: blog -->
+<!-- Node Path: content/shell-model-foundation-understanding-human-factors-aircraft-maintenance -->
+<div class="defaultblock blog-post">
+<h1 class="page-headline-title">SHELL Model is the foundation to understanding Human Factors in Aircraft Maintenance</h1>
+<div>
+<!-- class="text"-->
+<div class="node blog-post">
+<div class="date-time">
+          Posted by 
+          <span class="author">FlightSafe</span> on 
+          <span class="date">09.24.10 at 09:00 PM</span>
+</div>
+<div class="text">
+<span class="print-link"></span>
+<p>Using models to explain complex systems are useful in giving a visual sense of how elements of these systems interact and affect one another. The cornerstone of <a target="_blank">Human Factors</a> (HF) theory is the <a target="_blank">SHELL Model</a>. The human, or in the case of aircraft maintenance, the aircraft mechanic, is the center of this model.</p>
+<p>Plenty has been written on the <a target="_blank">SHELL Model</a>. As with any theory, concept or model they are limited in their usefulness unless they are put into practice. How the center, human component of this model interface with the various elements and how this interaction with these elements potentially create errors, is the key to understanding it.</p>
+<p><img alt="" src="http://web.archive.org/web/20120223104419im_/http://cdn2-b.examiner.com/sites/default/files/styles/large/hash/1b/3d/1b3d9e7826c14e07339e022ca21092fd.gif"/><br/> SHELL Model<br/> Photo: Edwards modified by Hawkins</p>
+<p>How can the mechanic transform this model into a practical tool that can be used everyday?</p>
+<p>The first step is creating awareness.</p>
+<p>As an example of “S” (software), a poorly written procedure that is sitting on a shelf in a technical library is not doing anything to affect the airworthiness of an aircraft until the mechanic picks it up and begins to use it. This interaction now becomes dynamic and alive, with the potential to induce an error into the system unless recognized, captured and contained before it can result in a negative outcome.</p>
+<p>The “H” (hardware) element could be the aircraft type the mechanic is working on or a piece of test equipment used to troubleshoot a system. Is the mechanic familiar with and properly trained on the equipment? Creating this awareness and taking action is the responsibility of the mechanic. A good tool here would be just to ask for help or if no help is available, do not attempt the job.</p>
+<p>Mechanics do not have much influence over the “E” (environmental) elements they must work in, but they can be made aware of the types of risks that they may face when working in such environments. This could be something as simple as lighting the work area, adding ventilation or wearing a safety harness when working at heights.</p>
+<p>One of the “L” (Liveware) elements is other people. Usually mechanics do not work alone. They interact with other people. Are there communication issues with coworkers, maybe a language or cultural barrier preventing the flow of important information such as a shift turnover or interpreting tech data? Recognizing and then acting on communication issues with others will help prevent errors. Again, awareness is the key.</p>
+<p>The mechanic as the other “L” (Liveware) and center component of this model should be aware that whatever stresses or baggage they carry simply walking into the hangar to begin work has as much impact on the system as the other elements have potential to affect them. These are the natural limitations of every human; it’s what makes us unique individuals. For instance, the mechanic may have a family issue they are dealing with, maybe a sick child, or other family member. A distraction such as this could result in an error being made. Does the mechanic have adequate knowledge, training and experience to perform the task? Is the mechanic fatigued? These types of factors, unless recognized, have the potential to have a negative outcome on the airworthiness of an aircraft.</p>
+<p><a target="_blank">Educating the mechanic</a> and creating an awareness of how these factors influence ones decision making process is the first step. Putting this tool into the hands of the mechanic to practically apply this concept will reduce errors and help prevent accidents and incidents.</p>
+<div class="fivestar-static-form-item">
+<div class="form-item">
+<label>Average: </label>
+<div class="fivestar-widget-static fivestar-widget-static-vote fivestar-widget-static-5 clear-block">
+<div class="star star-1 star-odd star-first">
+<span class="off">0</span>
+</div>
+<div class="star star-2 star-even">
+<span class="off"></span>
+</div>
+<div class="star star-3 star-odd">
+<span class="off"></span>
+</div>
+<div class="star star-4 star-even">
+<span class="off"></span>
+</div>
+<div class="star star-5 star-odd star-last">
+<span class="off"></span>
+</div>
+</div>
+<div class="description">
+<div class="fivestar-summary fivestar-summary-user">
+<span class="user-rating">Your rating: <span>None</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="links">
+<ul class="links inline">
+<li class="print_html first"><a class="print-page" onclick="window.open(this.href); return false" rel="nofollow" title="Display a printer-friendly version of this page.">Printer-friendly version</a></li>
+<li class="blog_usernames_blog"><a title="Read FlightSafe's latest blog entries.">FlightSafe's blog</a></li>
+<li class="comment_add"><a title="Share your thoughts and opinions related to this posting.">Add new comment</a></li>
+<li class="statistics_counter"><span>1896 reads</span></li>
+<li class="forward_links last"><a class="forward-page" title="Forward this page"><img alt="Email this page" class="forward-icon forward-icon-margin" height="16" src="http://web.archive.org/web/20120223104419im_/http://www.askbob.aero/sites/all/modules/forward/forward.gif" title="" width="16"/>Email this page</a></li>
+</ul>
+</div>
+</div>
+<div class="stopfloat"></div>
+</div>
+<div class="defaultblock blog-comments">
+<a name="comments"></a>
+<a id="comment-997"></a>
+<div class="comment">
+<!--<div class="commentTitle"><a href="/content/shell-model-foundation-understanding-human-factors-aircraft-maintenance#comment-997" class="active">I THINK WHAT YOU YOU ARE</a></div> -->
+<div class="name-date">
+          lee dennis (not verified) on Fri, 04/08/2011 - 05:45
+         </div>
+<div class="comment-text">
+<p>I THINK WHAT YOU YOU ARE DOING IS GREAT FOR OUR YOUNG<br/> MECHANIC!!</p>
+<p>DO YOU KNOW OF ANY ENGINE OVERHAUL FACILITY OR MANUFACTURES THAT DONATE ENGINES FOR TRAINING PISTON<br/> OR JETS???.IF NOT WHO WOULD KNOW AND CAN YOU GIVE ME SOME IMFORMATION.</p>
+</div>
+<div class="firma">
+</div>
+<div class="links">
+<ul class="links">
+<li class="comment_reply first last"><a>reply</a></li>
+</ul>
+</div>
+</div>
+<a id="comment-1662"></a>
+<div class="comment">
+<!--<div class="commentTitle"><a href="/content/shell-model-foundation-understanding-human-factors-aircraft-maintenance#comment-1662" class="active">I was just up-dating the EASA</a></div> -->
+<div class="name-date">
+          Anonymous (not verified) on Sun, 01/29/2012 - 21:56
+         </div>
+<div class="comment-text">
+<p>I was just up-dating the EASA mod 9 textbook which I use in the UAE and noticed no mention of the SHELL model.</p>
+<p>Just want you to know that your synopsis was so well written that I am utilizing it in my course notes.</p>
+<p>Thanks for the short and sweet definition.</p>
+</div>
+<div class="firma">
+</div>
+<div class="links">
+<ul class="links">
+<li class="comment_reply first last"><a>reply</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bottom-ads">
+<div class="defaultblock openads">
+<h2>Advertising</h2>
+<!--block title-->
+<div class="blockcontent">
+<script type="text/javascript"><!--
+      az_adjs(3, '');
+    --></script>
+</div>
+</div>
+</div>
+<div class="stopfloat"></div>
+</div>
+<div class="stopfloat"></div>
+</div>
+<!-- Close Page -->
+<div id="footer">
+<ul class="menu">
+<li class="leaf first"><a title="Advertise">Advertise</a></li>
+<li class="leaf"><a title="About AskBob">About AskBob</a></li>
+<li class="leaf"><a title="">Site Map</a></li>
+<li class="leaf"><a title="Terms of Use">Terms of Use</a></li>
+<li class="leaf"><a title="Contact Us">Contact Us</a></li>
+<li class="leaf"><a title="Privacy">Privacy</a></li>
+<li class="leaf last"><a title="ATP web site">ATP.com</a></li>
+</ul>
+<p class="rtecenter" style="clear: both; float: none;">Global Aviation Intelligence Solutions<br/> Copyright © 2010 ATP, Inc. All rights reserved.</p>
+<!-- Start Quantcast tag -->
+<script type="text/javascript">
+_qoptions={
+qacct:"p-33zuMCZqdjNKE"
+};
+</script>
+<script src="https://edge.quantserve.com/quant.js" type="text/javascript"></script>
+<noscript>
+<img alt="Quantcast" border="0" height="1" src="http://web.archive.org/web/20120223104419im_/http://pixel.quantserve.com/pixel/p-33zuMCZqdjNKE.gif" style="display: none;" width="1"/>
+</noscript>
+<!-- End Quantcast tag -->
+<a><img alt="Powered by Drupal, an open source content management system" height="15" src="http://web.archive.org/web/20120223104419im_/http://www.askbob.aero/misc/powered-blue-80x15.png" title="Powered by Drupal, an open source content management system" width="80"/></a>
+</div>
+<div class="user_relationships_ui_popup_form" id="user_relationships_popup_form"></div>
+<script src="https://www.askbob.aero/modules/acquia/google_analytics/googleanalytics.js?N" type="text/javascript"></script>
+<script src="https://www.askbob.aero/sites/all/modules/swftools/onepixelout/onepixelout.js?N" type="text/javascript"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+try{var pageTracker = _gat._getTracker("UA-4341567-2");pageTracker._trackPageview();} catch(err) {}
+//--><!]]>
+</script>
+</div>
+</body>
+</html>

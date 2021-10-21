@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/navigation-menu.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/username.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <title>Settings</title>
+    <script>
+        var url_prefix = {{ url_prefix|tojson }};
+        var username = {{ username|tojson }};
+    </script>
+</head>
+<body>
+     <div id="menu">
+        <i id="menu_icon" class="fas fa-bars"></i>
+    </div>
+    <span id="close_menu"><i class="fas fa-times"></i></span>
+    <div id="menu_overlay">
+        <div id="logo_header">
+            <span class="logo"><i class="fas fa-fist-raised"></i></span>
+        </div>
+        <div>
+            <ul id="toggled_menu">
+                <li id="home" class="menu_element">
+                    <span>Home</span>
+                    <span class="menu_category_icon"><i class="fas fa-home"></i></span>
+                </li>
+                <li id="statistics" class="menu_element">
+                    <span>Statistics</span>
+                    <span class="menu_category_icon"><i class="far fa-chart-bar"></i></span>
+                </li>
+                <li id="leaderboards" class="menu_element">
+                    <span>Leaderboards</span>
+                    <span class="menu_category_icon"><i class="fas fa-list-ol"></i></span>
+                </li>
+                <li id="username" class="menu_element">
+                    <span>Set Username</span>
+                    <span class="menu_category_icon"><i class="fas fa-user-cog"></i></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+     <div id="header"></div>
+     <div id="input_container">
+         <div id="input">
+             <p id="input_header">Change username:</p>
+             <div id="user_input" class="standard">
+                <input id="username_form" type="text" placeholder="My new name...">
+                <p id="length_error" class="error_display">
+                    <i class="fas fa-exclamation-circle alert_icon"></i>
+                    Sorry, this name is too long - max length: 23 character.
+                </p>
+                <p id="empty_error" class="error_display">
+                    <i class="fas fa-exclamation-circle alert_icon"></i>
+                    Your new name must have at least one character.
+                </p>
+                <p id="notification">Changed username successfully.</p>
+                 <p id="taken_error" class="error_display">
+                    <i class="fas fa-exclamation-circle alert_icon"></i>
+                    Sorry, this name is already taken.
+                </p>
+                <input id="submit_button" type="submit" value="Select">
+            </div>
+         </div>
+     </div>
+
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/username.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/navigation-menu.js') }}"></script>
+</body>
+</html>

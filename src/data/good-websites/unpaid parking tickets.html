@@ -1,0 +1,909 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/DTD/strict.dtd">
+
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head id="htmlHead">
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<title>
+	Three Unpaid Parking Tickets? No License!
+ [Michigan Capitol Confidential]
+</title>
+<meta name="keywords"/>
+<script language="JavaScript">
+// Begin Library File: Lib_StdValues.js.
+//
+// An include file for Standard Values such as browser, hidden, object names, etc.
+
+// ***DEFINE BROWSER VARIABLES***
+// 	Lib_IE45, Lib_NS4, Lib_NS6.
+//
+if (document.getElementById){Lib_IE45=0; Lib_NS4=0; Lib_NS6=1}
+if (document.layers)        {Lib_IE45=0; Lib_NS4=1; Lib_NS6=0}
+if (document.all)           {Lib_IE45=1; Lib_NS4=0; Lib_NS6=0}
+
+// ***DEFINE BROWSER DEPENDENT VARIABLES***
+//	 Lib_Hidden, Lib_Visible
+//
+if (Lib_NS4) {
+	var Lib_Hidden = "hide"
+	var Lib_Visible = "show"
+	}
+else if (Lib_NS6) {
+	var Lib_Hidden = "hidden"
+	var Lib_Visible = "visible"
+	}
+else  {
+	// (Lib_IE45) and any others.
+	var Lib_Hidden = "hidden"
+	var Lib_Visible = "visible"
+	}
+
+function Lib_GetObject(strName)
+	{
+		if      (Lib_NS4 ) objTemp = document.layers[strName];
+		else if (Lib_NS6 ) objTemp = document.getElementById(strName).style;
+		else {
+		   	// (Lib_IE45) and any others. 
+			objTemp = document.all[strName].style;
+		     }
+		return objTemp;
+	}
+
+function Lib_GetClass(strName)
+	{	var objClass
+		// not available with NS4
+		if (Lib_NS6 ) objClass = document.getElementById(strName).className;
+		else {
+		   	// (Lib_IE45) and any others. 
+			objClass = document.all[strName].className;
+		     }
+		return objClass;
+	}
+	
+function Lib_SetStyleByID(ID, Property, Value)
+	// Given an element id, style property and value, apply the style.
+	//Property: "visibility"; Values: "hidden" or "visibile".
+	//Property: "display"; Value: "none" or "block"; some "inline" and others.
+	{
+	// document.getElementById(ID).style.getPropertyById(Property) = Value;
+	var n = document.getElementById(ID);
+	n.style[Property] = Value;
+	}
+
+function Lib_MakeArray(n){
+    this.length = n;
+    for (i=1;i<=n;i++){
+        this[i]=0;
+    }
+    return this;
+}
+
+// ***NUMERIC TO NAME MONTH CONVERSION***
+function Lib_DisplayDate(){
+    var this_month = new Lib_MakeArray(12);
+    this_month[0]  = "January";
+    this_month[1]  = "February";
+    this_month[2]  = "March";
+    this_month[3]  = "April";
+    this_month[4]  = "May";
+    this_month[5]  = "June";
+    this_month[6]  = "July";
+    this_month[7]  = "August";
+    this_month[8]  = "September"; 
+    this_month[9]  = "October";
+    this_month[10] = "November";
+    this_month[11] = "December";
+    var today = new Date();
+    var day   = today.getDate();
+    var month = today.getMonth();
+    var year  = today.getYear();
+    if (year < 1900){
+        year += 1900;
+    }
+    return(this_month[month]+" "+day+", "+year);
+}
+
+// ***Div: Expand('block'), Collapse('none') and Toggle. 2007.06.12 SJF***
+function Lib_Div_Collapse(DivID, ImgID, srcExpandImage)
+	{
+	Lib_SetStyleByID(DivID, 'display', 'none');
+  Lib_SetImage    (ImgID, srcExpandImage);
+	}
+
+function Lib_Div_Expand(DivID, ImgID, srcCollapseImage)
+	{
+	Lib_SetStyleByID(DivID, 'display', 'block');
+  Lib_SetImage    (ImgID, srcCollapseImage);
+	}
+
+function Lib_Div_Toggle(DivID, ImgID, srcExpandImage, srcCollapseImage)
+	{
+	var n = document.getElementById(DivID);
+	if (n.style['display'] == 'block') Lib_Div_Collapse(DivID, ImgID, srcExpandImage)
+	else Lib_Div_Expand(DivID, ImgID, srcCollapseImage)
+	}
+// ***POPUP MENU***
+function Lib_PopUp(strURL,intWidth,intHeight) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(strURL, '" + id + "', 'resizable=1,status=0,menubar=0,toolbar=0,scrollbars=1,location=0,directories=0,width=' + intWidth +',height=' + intHeight);");
+}
+
+// ***JAVA REDIRECT***
+// Redirects to the passed URL.
+// Example of use with a selected option with immediate redirect:
+// <select name='ID' size='1' onChange=Lib_Redirect(this[this.selectedIndex].value)>
+// "<option value='/pubs/mer/cover.asp?ID=" & rstMER("ArticleID") & "'>" & rstMER("Title") & "</option>"
+// ie. ~Line 125 of /pubs/mer/article.asp
+function Lib_Redirect (MyURL)
+{
+   location.href=MyURL
+}
+
+function GetRadioValue(rArray)
+//bjm added 04.03.2003
+//pass parameter as form element
+{
+	for (var i=0;i<rArray.length;i++)
+	{
+		if (rArray[i].checked)
+			return rArray[i].value;
+	}
+	
+	return null;
+}
+
+function Lib_Disguise(strName, strDomain, strTop, strDisplay )
+//Disguise an address
+	{
+	document.write("<a href=" + "mail" + "to:" + strName + "@" + strDomain + "." + strTop + ">" + strDisplay + "</a>")
+	}
+
+function Lib_SetImage(img_name,img_src) {
+document[img_name].src=img_src;
+}
+
+	
+//	<!-- Script for blnEditor redirect finding selected text.  See BlankPage.PageBodyEvents. 
+//       Modified by SJF on 2007.01.05.-->
+function Lib_SelectedRedirect(e, strURL, strBookMark)
+  // Redirect for Editing with search for selected text.
+  {
+	  var strSelectedText;
+    var keynum;
+    var keychar;
+    var numcheck;
+
+    if(Lib_IE45) // IE.  Lib_IE45.
+      keynum = e.keyCode;
+    else if(e.which) // Netscape/Firefox/Opera.  Lib_NS6.
+      keynum = e.which;
+    keychar = String.fromCharCode(keynum);
+    numcheck = /\d/;
+
+    if(numcheck.test(keychar))
+      {
+	    strSelectedText = Lib_GetSelection();
+      window.location = strURL + strSelectedText + strBookMark;
+      }
+
+    return keychar;
+  }
+
+function Lib_GetSelection()
+// IE 6; Mozilla 1.75*; Safari 1.3 - from Mid 2005. //Lib_IE45, Lib_NS6.
+{
+	var txt = '';
+	if (window.getSelection)
+	{
+		txt = window.getSelection();
+	}
+	else if (document.getSelection)
+	{
+		txt = document.getSelection();
+	}
+	else if (document.selection)
+	{
+		txt = document.selection.createRange().text;
+	}
+	else return;
+	return txt;
+}
+
+function Lib_SetCursor(frmTarget, intPos)
+{
+  if (Lib_IE45)
+  {
+    var oTxtRange;
+    oTxtRange = frmTarget.createTextRange();
+    //oTxtRange.move("character", intPos);
+    // Mark a range to make the cursor easier to find.
+    oTxtRange.moveStart("character", intPos);
+    oTxtRange.moveEnd("character", intPos+110 - frmTarget.value.length);
+    oTxtRange.select();
+  }
+  else  // Lib_NS6 ?
+  {
+    // Mark a range to make the cursor easier to find.
+    frmTarget.setSelectionRange(intPos, intPos+20);  // StartPos, EndPos.
+
+    // Guess at scroll position.
+    // Estimate Average 70 characters per line in textarea, and 17 pixel line height.
+    frmTarget.scrollTop = Math.floor(intPos/70)*20;  // Firefox OK. Does not work in Safari as of 2007.01.08 - SJF.
+  }
+ frmTarget.focus();
+}
+
+function Lib_LocateCursorIn(frmTarget, strPattern)
+{
+  var intCursorPos;
+  var strText;
+  strText = frmTarget.value;
+  intCursorPos = Lib_InStr(strText, strPattern);
+  // Every line throws the character count off by 1.
+  // Estimate Average 70 characters per line in textarea.
+  intCursorPos = intCursorPos - Math.floor(intCursorPos/70);
+  if (intCursorPos < 0)
+    intCursorPos = 0;
+  Lib_SetCursor(frmTarget, intCursorPos);
+}
+
+// InStr(strSearchIn, strSearchFor) : Returns the first location a substring (strSearchFor) found in the string strSearch.
+//   (If the character is not found, -1 is returned.)
+//                                       
+// InStr function : http://www.expertsforge.com/Web-Development/Tutorial-85.asp
+// Requires use of:
+//     Mid function : below.
+//
+function Lib_InStr(strSearchIn, strSearchFor)
+{
+  for (i=0; i < strSearchIn.length; i++)
+  {
+    if (strSearchFor == Lib_Mid(strSearchIn, i, strSearchFor.length))
+      return i;
+  }
+  return -1;
+}
+
+// Mid(string, start, length): Returns a specified number of characters
+// from a string
+// 
+// IN: str - the string we are LEFTing
+//       start - our string's starting position (0 based!!)
+//       len - how many characters from start we want to get
+// RETVAL: The substring from start to start+len
+// Mid function : http://www.expertsforge.com/Web-Development/Tutorial-86.asp
+// 
+function Lib_Mid(str, start, len)
+{
+// Make sure start and len are within proper bounds
+    if (start < 0 || len < 0) return "";
+    var iEnd, iLen = String(str).length;
+    if (start + len > iLen)
+          iEnd = iLen;
+    else
+          iEnd = start + len;
+    return String(str).substring(start,iEnd);
+}
+
+// End Library File: Lib_StdValues.js.
+</script>
+<meta content="Three Unpaid Parking Tickets? No License!" id="ogTitle" property="og:title"/>
+<meta content="article" id="ogType" property="og:type"/>
+<meta content="http://www.michigancapitolconfidential.com/13237" id="ogURL" property="og:url"/>
+<meta content="http://www.michigancapitolconfidential.com/media/images/common/facebook_MCC.jpg" id="ogImage" property="og:image"/>
+<meta content="en_US" property="og:locale"/>
+<script src="https://apis.google.com/js/plusone.js" type="text/javascript"></script>
+<link href="http://web.archive.org/web/20120308125831cs_/http://www.michigancapitolconfidential.com/include/css/mcc/common.css?version=2012.03.06-15:22" media="screen" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120308125831cs_/http://www.michigancapitolconfidential.com/include/css/mcc/wide.css?version=2012.03.06-15:22" media="screen" rel="stylesheet" type="text/css"/>
+<script src="https://www.michigancapitolconfidential.com/include/functions/common.js" type="text/javascript"></script>
+<link href="https://www.michigancapitolconfidential.com/pubs/mcc/rss.aspx" rel="alternate" title="Michigan Capitol Confidential" type="application/rss+xml"/>
+<link href="https://www.michigancapitolconfidential.com/media/images/common/apple-touch-icon-capcon.png" rel="apple-touch-icon"/>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try {
+var pageTracker = _gat._getTracker("UA-2328488-3");
+pageTracker._trackPageview();
+var pageTracker = _gat._getTracker("UA-2328488-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<meta content="An article on liberty and free markets as sound public policy for Michigan." name="description"/>
+<link href="http://web.archive.org/web/20120308125831cs_/http://www.michigancapitolconfidential.com/include/css/wide.css?version=2012.03.06-15:22" media="screen" rel="stylesheet" type="text/css"/>
+<link href="http://web.archive.org/web/20120308125831cs_/http://www.michigancapitolconfidential.com/include/css/mcc/wide.css?version=2012.03.06-15:22" media="screen" rel="stylesheet" type="text/css"/>
+</head>
+<body id="htmlBody">
+<div id="above-page"></div>
+<div id="facebookCommentsAPI">
+<div id="fb-root"></div>
+<script>	(function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+			fjs.parentNode.insertBefore(js, fjs);
+		} (document, 'script', 'facebook-jssdk'));</script>
+</div>
+<div id="page">
+<div class="w980px" id="masthead">
+<ul id="mastheadSitesNav">
+<li><a><img alt="www.mackinac.org" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/2011/CapConHome2011mcpp.gif"/></a></li>
+<li><a>Mackinac Home</a></li>
+<li><a>CapCon</a></li>
+<li><a>MichiganVotes</a></li>
+<li><a>School Databases</a></li>
+<li><a>Show Michigan the Money</a></li>
+<li><a>The MC Blog</a></li>
+</ul>
+<a> <img alt="Michigan Capitol Confidential" height="84" id="mastheadLogo" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/common/MCC_Masthead2.gif" width="830"/> </a>
+<div id="mastheadNav">
+<div class="shadowTop"></div>
+<ul>
+<li><a>Home</a></li>
+<li><a>About</a></li>
+<li><a>Contact</a></li>
+<li><a>Print Edition</a></li>
+</ul>
+<ul class="categories">
+<li><a>Fiscal</a></li>
+<li><a>Labor</a></li>
+<li><a>Education</a></li>
+</ul>
+<div class="shadowBottom"></div>
+<div class="section" id="mastheadNavAds">
+<div class="body">
+<div class="item">
+<a onclick="pageTracker._trackPageview('/clickf/extf11745/MCC_Ads')"><img alt="Like what your reading?" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/2011/CapConHome2011Reading.gif" width="140"/></a>
+</div>
+</div>
+</div>
+</div>
+<div id="mastheadTagline">
+      A news service for the people of Michigan from the Mackinac Center for Public Policy 
+    </div>
+</div>
+<div id="content">
+<div class="tools" id="toolsDiv">
+<a id="facebookCommentAnchorA"><img alt="Comment" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/common/ToolsComment.png"/></a>
+<a><img alt="Print" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/common/ToolsPrint.gif"/></a>
+<a><img alt="Mail" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/common/ToolsEmail.gif"/></a>
+<a id="downloadAnchorD"></a>
+<a onclick="window.open(this.href, 'MCPPShareWindow', 'toolbar=0,status=0,width=700,height=500'); return false;" target="_blank"><img alt="Share" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/common/ToolsShare.gif"/></a>
+<a onclick="window.open(this.href, 'MCPPShareWindow', 'toolbar=0,status=0,width=700,height=500'); return false;" target="_blank"><img alt="Facebook" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/common/ShareFacebook.gif"/></a>
+<a onclick="window.open(this.href, 'MCPPShareWindow', 'toolbar=0,status=0,width=700,height=500'); return false;" target="_blank"><img alt="Twitter" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/common/ShareTwitter.gif"/></a>
+<a onclick="window.open(this.href, 'MCPPShareWindow', 'toolbar=0,status=0,width=700,height=500'); return false;" target="_blank"><img alt="More" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/common/ToolsMore.gif"/></a>
+<span style="position: relative; top: -4px;">
+<g:plusone href="http%3a%2f%2fwww.michigancapitolconfidential.com%2f13237" size="small"></g:plusone></span>
+<br/>
+<iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://www.facebook.com/plugins/like.php?href=http%3a%2f%2fwww.michigancapitolconfidential.com%2f13237&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=25" style="border:none; overflow:hidden; width:450px; margin: 0 0 -8px -15px; height:25px;"></iframe>
+</div>
+<div class="hgroup">
+<h1 id="titleHeading" style="width:497px;">Three Unpaid Parking Tickets? No License!</h1>
+</div>
+<div class="byline" id="bylineDiv">
+     By 
+     <a>Ken Braun</a> | July 27, 2010
+    </div>
+<div class="media" id="mediaDiv"></div>
+<div class="body" id="bodyDiv">
+<p>Motorist with three or more unpaid parking tickets at one time should be looking warily over their shoulder at what state politicians are doing with legislation that has cleared the Michigan House but come to a stall in the Senate. </p>
+<p><a title="http://www.michiganvotes.org/Legislation.aspx?ID=93005">House Bill 4726</a>, sponsored by Rep. Roy Schmidt, D-Grand Rapids, would have the Secretary of State deny a driver license renewal to any motorist with as few as three unpaid parking tickets.  The bill cleared the Michigan House last October on a vote of <a title="http://www.michiganvotes.org/RollCall.aspx?ID=422851">68-37</a>. But on June 30, when it was brought up for a final passage vote in the Senate, the chamber overwhelmingly rejected it with a vote of <a title="http://www.michiganvotes.org/RollCall.aspx?ID=501791">14-23</a>. </p>
+<p>A motion to reconsider the defeat was then adopted, allowing the Senate to try another vote at a later date.</p>
+<p>Under current law, a local court may refer a motorist with six or more unpaid parking violations to the Michigan Secretary of State. Once alerted, the SOS may not issue a driver license renewal until the person has paid all outstanding parking ticket balances and late fees and paid a $45 "driver license clearance fee." The Schmidt bill would reduce this threshold to three unpaid tickets.</p>
+<p>The real issue appears to be money for municipal governments. </p>
+<p>Albert C. Mooney, Grand Rapids City Treasurer, submitted <a title="http://house.michigan.gov/SessionDocs/2009-2010/Testimony/Committee23-8-20-2009.pdf">supportive testimony</a> regarding HB 4726 to the House committee that first looked at the bill during October 2009. Noting that the city then had more than $3.5 million in uncollected parking fines, he predicted that passage of the bill would boost collections by as much as $500,000 for the first year and then provide more than $250,000 in additional collections for each year after that. </p>
+<p>Summarizing the bill's intent, Mooney states at the outset that "The proposal is very straight forward - the bill helps cash strapped local units by using existing technology to collect parking fines."</p>
+<p>James C. Walker of Ann Arbor, representing the <a title="http://www.motorists.org/">National Motorists Association</a>, submitted testimony expressing his group's opposition to the proposal. Most pointedly, he asserted that the bill would be an expansion of the "punitive regulations" that came with the so-called "<a>driver responsibility fees</a>" imposed by the Legislature in 2003.</p>
+<p>"The Responsibility Fees are a very poor law which led to thousands and thousands of unlicensed and uninsured drivers in the state of Michigan," wrote Walker.  "Parking tickets have no relationship to driving safety."</p>
+<p>According to Walker, demanding that otherwise safe drivers pay parking tickets as a precondition for getting their driver license renewed will instead result in many impoverished motorists that decide to drive without a valid license.  His group believes that the current policy of cutting off renewals after six unpaid parking tickets is already "bad law." </p>
+<p>"Refusing to renew a person's driver's license for non-payment of three parking tickets can have a very negative effect on public safety," he said.</p>
+<p>Unlicensed drivers hitting the roads anyway appears to have been exactly what has happened with the driver responsibility fees. Many lawmakers are now ready to admit that creating the fees was an error. In June of this year, the Michigan Senate began taking testimony on a bill aimed at <a title="http://www.michigancapitolconfidential.com/12976">repealing some of the bad driver fees</a>. </p>
+<p>"They are excessive and punitive," said Michigan Sen. Cameron Brown, R-Fawn River Twp., to the Gongwer News Service (<a title="http://www.gongwer.com/">www.gongwer.com</a>, subscription only).  "They were among the worst decisions our class of lawmakers have voted on and enacted into law." </p>
+<p>Brown, one of the lawmakers voting to create the fees in the first place, is now sponsoring a bill to repeal $45 million in annual driver responsibility fees. </p>
+<p>Berrien County Circuit Court Judge Charles LaSata, also a former lawmaker who voted for the driver responsibility fees, testified to a senate committee that defendants in his court were willfully driving without licenses, and without insurance, and deliberately risking additional fines. He suspects this is happening because these drivers could not afford the added financial burden of the fees, but still need to get to work and go on with their lives.</p>
+<p>Oakland County Clerk Ruth Johnson is a former member of the Michigan House who voted against the driver responsibility fees because she thought them "unfair," "bad law," and motivated purely by state government's desire to "find a pocket to get into." </p>
+<p>Walker of the National Motorists Association offered better alternatives for cities that wish to recover their delinquent parking ticket revenue.</p>
+<p>"Towing the vehicle or increasing the late payment fees are fine," he said. "But refusing to renew a driver's license is not appropriate."</p>
+<p>Regarding the unlicensed drivers already prowling Michigan's roads, he noted that "We do not need to add even one more."</p>
+<p>The Michiganvotes.org roll call votes for House Bill 4726 are noted below. Contact information for all lawmakers is available at <a title="http://www.michcapcon.com/9313">www.MichCapCon.com/9313</a>. </p>
+<p> </p>
+<p align="center">~~~~~</p>
+<p><strong>Lawmakers who voted TO BLOCK DRIVER LICENSE RENEWAL FOR THREE UNPAID PARKING TICKETS:</strong></p>
+<p style="text-align: center;">HOUSE REPUBLICANS (28)</p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td width="132"> <p><a>Ball </a></p> </td>
+<td width="132"> <p><a>Bolger </a></p> </td>
+<td width="132"> <p><a>Booher </a></p> </td>
+<td width="132"> <p><a>Caul </a></p> </td>
+<td width="132"> <p><a>Crawford </a></p> </td>
+</tr>
+<tr>
+<td width="132"> <p><a>DeShazor </a></p> </td>
+<td width="132"> <p><a>Elsenheimer </a></p> </td>
+<td width="132"> <p><a>Haines </a></p> </td>
+<td width="132"> <p><a>Hansen </a></p> </td>
+<td width="132"> <p><a>Haveman </a></p> </td>
+</tr>
+<tr>
+<td width="132"> <p><a>Hildenbrand </a></p> </td>
+<td width="132"> <p><a>Jones, Rick </a></p> </td>
+<td width="132"> <p><a>Knollenberg </a></p> </td>
+<td width="132"> <p><a>Kowall </a></p> </td>
+<td width="132"> <p><a>Lori </a></p> </td>
+</tr>
+<tr>
+<td width="132"> <p><a>Lund </a></p> </td>
+<td width="132"> <p><a>Marleau </a></p> </td>
+<td width="132"> <p><a>Meltzer </a></p> </td>
+<td width="132"> <p><a>Moore </a></p> </td>
+<td width="132"> <p><a>Moss </a></p> </td>
+</tr>
+<tr>
+<td width="132"> <p><a>Pavlov </a></p> </td>
+<td width="132"> <p><a>Pearce </a></p> </td>
+<td width="132"> <p><a>Proos </a></p> </td>
+<td width="132"> <p><a>Rogers </a></p> </td>
+<td width="132"> <p><a>Schmidt, W. </a></p> </td>
+</tr>
+<tr>
+<td width="132"> <p><a>Schuitmaker </a></p> </td>
+<td width="132"> <p><a>Tyler </a></p> </td>
+<td width="132"> <p><a>Walsh </a></p> </td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;">SENATE REPUBLICANS (9)</p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td width="132"> <p><a>Birkholz </a></p> </td>
+<td width="132"> <p><a>Bishop </a></p> </td>
+<td width="132"> <p><a>Cassis </a></p> </td>
+<td width="132"> <p><a>Cropsey </a></p> </td>
+<td width="132"> <p><a>Garcia </a></p> </td>
+</tr>
+<tr>
+<td width="132"> <p><a>Jelinek </a></p> </td>
+<td width="132"> <p><a>Richardville </a></p> </td>
+<td width="132"> <p><a>Stamas </a></p> </td>
+<td width="132"> <p><a>Van Woerkom </a></p> </td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;">HOUSE DEMOCRATS (40)</p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td width="132"> <p><a>Angerer </a></p> </td>
+<td width="132"> <p><a>Brown, T. </a></p> </td>
+<td width="132"> <p><a>Byrnes </a></p> </td>
+<td width="132"> <p><a>Clemente </a></p> </td>
+<td width="132"> <p><a>Constan </a></p> </td>
+</tr>
+<tr>
+<td width="132"> <p><a>Corriveau </a></p> </td>
+<td width="132"> <p><a>Coulouris </a></p> </td>
+<td width="132"> <p><a>Cushingberry </a></p> </td>
+<td width="132"> <p><a>Dean </a></p> </td>
+<td width="132"> <p><a>Donigan </a></p> </td>
+</tr>
+<tr>
+<td width="132"> <p><a>Ebli </a></p> </td>
+<td width="132"> <p><a>Espinoza </a></p> </td>
+<td width="132"> <p><a>Geiss </a></p> </td>
+<td width="132"> <p><a>Gonzales </a></p> </td>
+<td width="132"> <p><a>Haase </a></p> </td>
+</tr>
+<tr>
+<td width="132"> <p><a>Hammel </a></p> </td>
+<td width="132"> <p><a>Haugh </a></p> </td>
+<td width="132"> <p><a>Huckleberry </a></p> </td>
+<td width="132"> <p><a>Kandrevas </a></p> </td>
+<td width="132"> <p><a>Kennedy </a></p> </td>
+</tr>
+<tr>
+<td width="132"> <p><a>LeBlanc </a></p> </td>
+<td width="132"> <p><a>Leland </a></p> </td>
+<td width="132"> <p><a>Lemmons </a></p> </td>
+<td width="132"> <p><a>Lindberg </a></p> </td>
+<td width="132"> <p><a>Lipton </a></p> </td>
+</tr>
+<tr>
+<td width="132"> <p><a>Liss </a></p> </td>
+<td width="132"> <p><a>Mayes </a></p> </td>
+<td width="132"> <p><a>McDowell </a></p> </td>
+<td width="132"> <p><a>Meadows </a></p> </td>
+<td width="132"> <p><a>Melton </a></p> </td>
+</tr>
+<tr>
+<td width="132"> <p><a>Neumann </a></p> </td>
+<td width="132"> <p><a>Polidori </a></p> </td>
+<td width="132"> <p><a>Schmidt, R. </a></p> </td>
+<td width="132"> <p><a>Scripps </a></p> </td>
+<td width="132"> <p><a>Sheltrown </a></p> </td>
+</tr>
+<tr>
+<td width="132"> </td>
+<td width="132"><br/></td>
+<td width="132"><br/></td>
+<td width="132"><br/></td>
+<td width="132"> </td>
+</tr>
+<tr>
+<td width="132"> <p><a>Slavens </a></p> </td>
+<td width="132"> <p><a>Slezak </a></p> </td>
+<td width="132"> <p><a>Spade </a></p> </td>
+<td width="132"> <p><a>Switalski </a></p> </td>
+<td width="132"> <p><a>Womack </a></p> </td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;">SENATE DEMOCRATS (5)</p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td width="132"> <p><a>Basham </a></p> </td>
+<td width="132"> <p><a>Gleason </a></p> </td>
+<td width="132"> <p><a>Jacobs </a></p> </td>
+<td width="132"> <p><a>Olshove </a></p> </td>
+<td width="132"> <p><a>Prusi </a></p> </td>
+</tr>
+</tbody>
+</table>
+<p align="center">~~~~~</p>
+<p><strong>Lawmakers who voted AGAINST BLOCKING DRIVER LICENSE RENEWAL for three unpaid parking tickets:</strong></p>
+<p style="text-align: center;">HOUSE REPUBLICANS (14)</p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td width="132"> <p><a>Agema </a></p> </td>
+<td width="132"> <p><a>Amash </a></p> </td>
+<td width="132"> <p><a>Calley </a></p> </td>
+<td width="132"> <p><a>Daley </a></p> </td>
+<td width="132"> <p><a>Denby </a></p> </td>
+</tr>
+<tr>
+<td width="132"> <p><a>Genetski </a></p> </td>
+<td width="132"> <p><a>Horn </a></p> </td>
+<td width="132"> <p><a>Kurtz </a></p> </td>
+<td width="132"> <p><a>McMillin </a></p> </td>
+<td width="132"> <p><a>Meekhof </a></p> </td>
+</tr>
+<tr>
+<td width="132"> <p><a>Opsommer </a></p> </td>
+<td width="132"> <p><a>Rocca </a></p> </td>
+<td width="132"> <p><a>Scott, P. </a></p> </td>
+<td width="132"> <p><a>Stamas </a></p> </td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;">SENATE REPUBLICANS (12)</p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td width="132"> <p><a>Allen </a></p> </td>
+<td width="132"> <p><a>Brown </a></p> </td>
+<td width="132"> <p><a>George </a></p> </td>
+<td width="132"> <p><a>Gilbert </a></p> </td>
+<td width="132"> <p><a>Hardiman </a></p> </td>
+</tr>
+<tr>
+<td width="132"> <p><a>Jansen </a></p> </td>
+<td width="132"> <p><a>Kahn </a></p> </td>
+<td width="132"> <p><a>McManus </a></p> </td>
+<td width="132"> <p><a>Nofs </a></p> </td>
+<td width="132"> <p><a>Pappageorge </a></p> </td>
+</tr>
+<tr>
+<td width="132"> <p><a>Patterson </a></p> </td>
+<td width="132"> <p><a>Sanborn </a></p> </td>
+<td> <p> </p> </td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;">HOUSE DEMOCRATS (23)</p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td width="132"> <p><a>Barnett </a></p> </td>
+<td width="132"> <p><a>Bauer </a></p> </td>
+<td width="132"> <p><a>Bledsoe </a></p> </td>
+<td width="132"> <p><a>Brown, L. </a></p> </td>
+<td width="132"> <p><a>Byrum </a></p> </td>
+</tr>
+<tr>
+<td width="132"> <p><a>Durhal </a></p> </td>
+<td width="132"> <p><a>Gregory </a></p> </td>
+<td width="132"> <p><a>Griffin </a></p> </td>
+<td width="132"> <p><a>Jackson </a></p> </td>
+<td width="132"> <p><a>Johnson </a></p> </td>
+</tr>
+<tr>
+<td width="132"> <p><a>Jones, Robert </a></p> </td>
+<td width="132"> <p><a>Lahti </a></p> </td>
+<td width="132"> <p><a>Miller </a></p> </td>
+<td width="132"> <p><a>Nathan </a></p> </td>
+<td width="132"> <p><a>Roberts </a></p> </td>
+</tr>
+<tr>
+<td width="132"> <p><a>Scott, B. </a></p> </td>
+<td width="132"> <p><a>Segal </a></p> </td>
+<td width="132"> <p><a>Smith </a></p> </td>
+<td width="132"> <p><a>Stanley </a></p> </td>
+<td width="132"> <p><a>Tlaib </a></p> </td>
+</tr>
+<tr>
+<td width="132"> <p><a>Valentine </a></p> </td>
+<td width="132"> <p><a>Warren </a></p> </td>
+<td width="132"> <p><a>Young </a></p> </td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;">SENATE DEMOCRATS (11)</p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td width="132"> <p><a>Anderson </a></p> </td>
+<td width="132"> <p><a>Barcia </a></p> </td>
+<td width="132"> <p><a>Brater </a></p> </td>
+<td width="132"> <p><a>Cherry </a></p> </td>
+<td width="132"> <p><a>Clark-Coleman </a></p> </td>
+</tr>
+<tr>
+<td width="132"> <p><a>Clarke </a></p> </td>
+<td width="132"> <p><a>Hunter </a></p> </td>
+<td width="132"> <p><a>Scott </a></p> </td>
+<td width="132"> <p><a>Switalski </a></p> </td>
+<td width="132"> <p><a>Thomas </a></p> </td>
+</tr>
+<tr>
+<td width="132"> <p><a>Whitmer </a></p> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<p align="center">~~~~~</p>
+<p><strong>Lawmakers who DID NOT VOTE:</strong></p>
+<p><a>Sen. Kuipers (R)</a>                </p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td width="132"> <p><a>Rep. Bennett (D)</a></p> </td>
+<td width="132"> <p><a>Rep. Dillon (D)</a></p> </td>
+<td width="132"> <p><a>Rep. Green (R)</a></p> </td>
+<td width="132"> <p><a>Rep. Nerat (D)</a></p> </td>
+<td width="132"> <p><a>Rep. Simpson (D)</a></p> </td>
+</tr>
+<tr>
+<td width="132"> </td>
+<td width="132"> </td>
+<td width="132"> </td>
+<td width="132"> </td>
+<td width="132"> </td>
+</tr>
+</tbody>
+</table>
+<p align="center"><strong>~~~~~</strong></p>
+<p><strong><a>House Roll Call 501 on HB 4726</a></strong></p>
+<p><strong><a>Senate Roll Call 338 on HB 4726</a></strong></p>
+<p style="text-align: center;">~~~~~</p>
+<p style="text-align: left;">See also:</p>
+<p><a><strong>Michigan Capitol Confidential Vote History</strong></a></p>
+</div>
+<div id="mccFacebookIcon" style="display: none;">
+<img height="87px" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/common/MiCapConIcon2.jpg" width="125px"/>
+</div>
+<div class="tools" id="navDiv">
+<a id="facebookCommentAnchorB"><img alt="Comment" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/common/ToolsComment.png"/></a>
+<a><img alt="Print" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/common/ToolsPrint.gif"/></a>
+<a><img alt="Mail" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/common/ToolsEmail.gif"/></a>
+<a id="downloadAnchorC"></a>
+<a onclick="window.open(this.href, 'MCPPShareWindow', 'toolbar=0,status=0,width=700,height=500'); return false;" target="_blank"><img alt="Share" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/common/ToolsShare.gif"/></a>
+<a onclick="window.open(this.href, 'MCPPShareWindow', 'toolbar=0,status=0,width=700,height=500'); return false;" target="_blank"><img alt="Facebook" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/common/ShareFacebook.gif"/></a>
+<a onclick="window.open(this.href, 'MCPPShareWindow', 'toolbar=0,status=0,width=700,height=500'); return false;" target="_blank"><img alt="Twitter" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/common/ShareTwitter.gif"/></a>
+<a onclick="window.open(this.href, 'MCPPShareWindow', 'toolbar=0,status=0,width=700,height=500'); return false;" target="_blank"><img alt="More" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/common/ToolsMore.gif"/></a>
+<a><img alt="Top of Page" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/common/ToolsTop.gif" style="margin-left: 14px;"/></a>
+<a><img alt="Home" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/common/ToolsHome.gif"/></a>
+<a><img alt="Search" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/common/ToolsSearch.gif"/></a>
+</div>
+<div class="info" id="infoDiv">
+<div class="section" id="infoDownload"></div>
+<div class="section" id="infoCategory">
+      Tag: 
+      <a>Fiscal Policy</a>
+</div>
+<div class="section">
+</div>
+</div>
+<div id="facebookCommentsDiv">
+<div class="fb-comments" data-href="http://www.michigancapitolconfidential.com/13237" data-num-posts="20" data-width="485"></div>
+</div>
+</div>
+<div id="sidebar">
+<div class="section" id="search">
+<form action="/features/search/search.aspx" id="searchForm" method="GET">
+<input name="Results" type="hidden" value="10"/>
+<input name="Description" type="hidden" value="True"/>
+<input name="Type" type="hidden" value="65"/>
+<input name="PageType" type="hidden" value="65"/>
+<input class="text" id="MCC_SearchInput" name="Text" type="text" value=""/>
+<input alt="Go" class="image" src="https://www.michigancapitolconfidential.com/media/images/common/MCC_Search.gif" type="image"/>
+<script type="text/javascript">
+			var searchInput = document.getElementById('MCC_SearchInput');
+			
+			MCPPAddPlaceholder(searchInput, 'Search', '#999999', false);
+		</script>
+</form>
+</div>
+<div class="section" id="subscribe">
+<ul>
+<li id="subscribeli"><a target="_blank">Subscribe</a></li>
+<li id="email"><a target="_blank">Email</a></li>
+<li id="facebook"><a target="_blank">Facebook</a></li>
+<li id="twitter"><a target="_blank">Twitter</a></li>
+<li id="rss"><a target="_blank">RSS</a></li>
+</ul>
+</div>
+<div class="section" id="video">
+<div class="heading">
+<a><img alt="Featured Video" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/common/MCC_Video.jpg"/></a>
+</div>
+<div class="body item">
+<div class="video_container" id="mccSidebar_video_mcc0Video">
+<iframe allowfullscreen="" frameborder="0" height="164" src="https://www.youtube.com/embed/pUgj0I7nyaM?showinfo=0;controls=0" width="290"></iframe>
+</div>
+<a class="title" id="mccSidebar_video_mcc0VideoTitle" onclick="pageTracker._trackPageview('/clickf/extf12798/MCC_Video')" target="_blank">U-M Graduate Students Blue Over Unionization </a>
+<div class="description" id="mccSidebar_video_mcc0VideoDescription">
+       Are graduate student research assistants at a public university students. ... or government employees? Several hundred GSRAs, many represented by the Mackinac Center Legal Foundation, U-M deans, faculty and the president object to this movement to unionize. A bill to clarify that students are students and not entitled to unionize awaits the governor's signature.
+      </div>
+</div>
+</div>
+<script src="https://www.michigancapitolconfidential.com/include/functions/accounting.js" type="text/javascript"></script>
+<div class="section" id="mccSidebar_counter_counter">
+<div style="text-align: center;">
+<a><img alt="skimTRACKER" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/2012/skimTRACKER.jpg"/></a>
+</div>
+<div class="heading" style="font-size: 13px; color: red; text-align: center;">
+      While People Wait for the Senate,
+      <br/> SEIU TAKES $28M and Counting
+      <br/>FROM Michigan HOME HEALTH CARE AIDES
+     </div>
+<div class="body">
+<div style="text-align: center;">
+<div id="clock1" style="width: 240px; text-align: right; font-size: 28px; color: green;">
+        [clock1]
+       </div>
+<div style="font-size: 12px; color: red;">
+        Skimmed Since 2007
+       </div>
+</div>
+<div style="text-align: center;">
+<div id="clock2" style="width: 240px; text-align: right; font-size: 28px; color: green;">
+        [clock2]
+       </div>
+<div style="font-size: 12px; color: red;">
+        Skimmed Since Arrival in MI Senate in June 2011
+       </div>
+</div>
+<div style="clear: both;">
+<br/> The Service Employees International Union (SEIU) "organized” Michigan's self-employed home health aides for the purpose of skimming dues from their ailing and disabled clients' Medicaid subsidy checks. 
+       <br/>
+<br/> The first counter tallies SEIU dues skimmed since the union and state officials first launched this scheme in 2007. The second shows the amount skimmed since June 9, 2011, when the Michigan House passed and sent to the Senate a bill to ban this and all similar “stealth unionization” efforts. 
+       <br/>
+<br/> For more information, visit: 
+      </div>
+<div class="item">
+<a style="color: blue;">"GOP Senator Tries to Save SEIU Healthcare ‘Employer’"</a>
+</div>
+<div class="item">
+<a style="color: blue;">Video: "The SEIU in Michigan: Home Health Aides"</a>
+</div>
+<div class="item">
+<a style="color: blue;">http://www.michiganvotes.org/2011-HB-4003</a>
+</div>
+<div class="item">
+<a style="color: blue;">'Forced Unionization' Brings In $28 Million For SEIU ... And Climbing</a>
+</div>
+<script language="JavaScript" type="text/javascript">
+
+  var totalMoney = 28089803.00 * 100
+  var totalStartDate = new Date("01/01/2007  12:01 AM -0500");
+  var totalEndDate = new Date("01/01/2012  12:01 AM -0500");
+  ddiff = new Date(totalEndDate - totalStartDate); /* up */
+  gsecs = Math.floor(ddiff.valueOf() / 1000);
+  var moneyPerSecond = totalMoney / gsecs;
+
+  /* Div-Name, Starting Centi-Dollars, Centi-Dollars per second, start date/time. */
+  StartCountUpMoney("clock1", totalMoney, moneyPerSecond, totalEndDate)
+  StartCountUpMoney("clock2", 0, moneyPerSecond, "06/09/2011  12:01 AM -0500")
+
+  /*
+  Author:		Robert Hashemian (http://www.hashemian.com/)
+  Modified by:	Munsifali Rashid (http://www.munit.co.uk/)
+  Modified by:	Tilesh Khatri
+  Adapted by: SJF 2012.01.10
+  */
+
+  function StartCountUpMoney(myDiv, myStartValue, myIncrement, myStartDate) {
+    CountMoney(myDiv, myStartValue, myIncrement, myStartDate);
+  }
+
+  function CalcMoney(amount, num1, num2) {
+    s = ((Math.floor(amount / num1)) % num2).toString();
+    if (s.length < 2) { s = "0" + s; }
+    if (s.length < 2) { s = "0" + s; }
+    return (s);
+  }
+
+  function CountMoney(myDiv, myStartValue, myIncrement, myStartDate) {
+    var dthen = new Date(myStartDate);
+    var dnow = new Date();
+    ddiff = new Date(dnow - dthen); /* up */
+    gsecs = ddiff.valueOf() / 1000;
+    var DisplayStr = "$%%D%%.%%m%%";
+    // DisplayStr = DisplayStr.replace(/%%D%%/g, CalcMoney((myStartValue + gsecs * myIncrement), 100, 1000000000000));
+    // DisplayStr = DisplayStr.replace(/%%m%%/g, CalcMoney((myStartValue + gsecs * myIncrement), 1, 100));
+    DisplayStr = accounting.formatMoney((myStartValue + gsecs * myIncrement) / 100.0, "$", 2, ",", ".", "%s%v")
+    if (gsecs > 0) {
+      document.getElementById(myDiv).innerHTML = DisplayStr;
+      setTimeout("CountMoney('" + myDiv + "', " + myStartValue + ", " + myIncrement + ", '" + myStartDate + "'" + ");", Math.max(150, 1000/myIncrement));
+    }
+    else {
+      document.getElementById(myDiv).innerHTML = "Out of Money";
+    }
+  }
+</script>
+</div>
+</div>
+<div class="section" id="vitalIssues">
+<div class="heading">
+<img alt="Regular Visits" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/common/MCC_VitalIssues.gif"/>
+</div>
+<div class="body">
+<div class="item">
+<a onclick='pageTracker._trackPageview("/clickf/12541/MCC_VitalPolicy")' target=""><strong>Michigan Capitol Confidential Vote History </strong></a>
+</div>
+<div class="item">
+<a onclick='pageTracker._trackPageview("/clickf/14286/MCC_VitalPolicy")' target=""><b>Local Government Stories</b></a>
+</div>
+<div class="item">
+<a onclick='pageTracker._trackPageview("/clickf/12341/MCC_VitalPolicy")' target=""><b>Teacher Contract Analysis</b></a>
+</div>
+<div class="item">
+<a onclick='pageTracker._trackPageview("/clickf/15075/MCC_VitalPolicy")' target=""><b>Coverage of School District Claiming Cuts</b></a>
+</div>
+<div class="item">
+<a onclick='pageTracker._trackPageview("/clickf/14745/MCC_VitalPolicy")' target=""><b>Helpful Facts About Michigan's Public Sector</b></a>
+</div>
+</div>
+</div>
+<div class="section" id="cartoon">
+<div class="heading">
+<a><img alt="Featured Cartoon" src="http://web.archive.org/web/20120308125831im_/http://www.michigancapitolconfidential.com/media/images/common/MCC_Cartoon.jpg"/></a>
+</div>
+<div class="body item">
+<a class="heading" id="mccSidebar_cartoon_mccCartoonLink" onclick="pageTracker._trackPageview('/clickf/extf12754/MCC_Cartoon')" target="_blank"><img height="220" id="mccSidebar_cartoon_mccCartoonImage" src="https://www.michigancapitolconfidential.com/media/images/2012/0227_ObamaAlgaeman_UFSCOLOR.jpg" width="290"/></a>
+<a class="title" id="mccSidebar_cartoon_mccCartoonTitle" onclick="pageTracker._trackPageview('/clickf/extf12754/MCC_Cartoon')" target="_blank">Henry Payne Cartoon - Obama Algaeman</a>
+</div>
+</div>
+</div>
+<div id="footer">
+<p id="mccFooter_joinParagraph">Would you like to see more information like this? <a>Learn how you can help</a> the Mackinac Center<br/> provide incisive, accurate and timely analysis of critical policy issues.</p>
+<p> Copyright © 2010 <a>Mackinac Center for Public Policy</a><br/> <span id="mccFooter_navSpan"><a target="_blank">Terms of Use</a> | <a target="_blank">Contribute</a> | <a>Contact Us</a></span> </p>
+</div>
+</div>
+<div id="below-page"></div>
+</body>
+</html>

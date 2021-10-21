@@ -1,0 +1,710 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<meta content="no-cache" http-equiv="Pragma"/>
+<meta content="no-cache" http-equiv="Cache-Control"/>
+<meta content="-1" http-equiv="Expires"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="en" http-equiv="content-language"/>
+<meta content="allgallbladders...: Gall bladder Polyps and Tips on how to Eliminate These Problems: Gall bladder Polyps and Tips on how to Eliminate These Problems" name="description"/>
+<meta content="Gall, bladder, Polyps, and, Tips, on, how, to, Eliminate, These, Problems" name="keywords"/>
+<title>Gall bladder Polyps and Tips on how to Eliminate These Problems - FC Club (Fortune Connection Club) - Where Fortune Starts!::View Blog</title>
+<link href="http://web.archive.org/web/20120101190939cs_/http://www.fcclub.com/themes/handshakes_plain/gfx/style.css" rel="stylesheet" type="text/css"/>
+<script src="https://www.fcclub.com/jscript/zxml.js" type="text/javascript"></script>
+<script language="JavaScript">
+//<![CDATA[
+var tempTimeout = 0;
+var closeTimeout = null;
+function HS_VChatRequest( type, param )
+{
+	var oXHR = zXmlHttp.createRequest();
+	oXHR.open("post", MainURL+"modules/vchat.php", true);
+	oXHR.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+	oXHR.onreadystatechange = function() {
+		if (oXHR.readyState == 4) {
+			HS_ShowVChatWindow( oXHR.responseText );
+		}
+	}
+	
+	var post = null;
+	
+	switch(type){
+		case 'invite':
+			post = "action=invite&per_id="+param;
+			break;
+		case 'cancel':
+			HS_CloseVChatWindow();
+			post = "action=cancel&session_id="+param;
+			break;
+		case 'accept':
+			HS_CloseVChatWindow();
+			post = "action=accept&session_id="+param;
+			break;
+		case 'decline':
+			HS_CloseVChatWindow();
+			post = "action=decline&session_id="+param;
+			break;
+		case 'ignore':
+			HS_CloseVChatWindow();
+			post = "action=ignore&session_id="+param;
+			break;
+		case 'invited':
+			post = "action=invited&session_id="+param;
+			break;
+		case 'unavailable':
+			post = "action=unavailable&session_id="+param;
+			break;
+		case 'open_invited':
+			post = "action=open_invited&session_id="+param;
+			break;
+		case 'open_invitee':
+			post = "action=open_invitee&session_id="+param;
+			break;
+		case 'declined':
+			post = "action=declined&session_id="+param;
+			break;
+		case 'close':
+			HS_CloseVChatWindow();
+			break;
+	}
+	
+	oXHR.send( post );
+}
+
+function HS_HandleVChatSignal( code )
+{
+	var details = code.split(".");
+	HS_VChatRequest( details[0], details[1] );
+}
+
+function HS_AlignVChatWindow()
+{
+	var ns = (document.layers)?1:0;
+	var Position = new Array;
+	if(ns){
+		Position['Left'] = window.innerWidth + window.pageXOffset - 5;
+		Position['Top']  = window.innerHeight + window.pageYOffset - 5;
+	}//if
+	else{
+		Position['Left'] = document.body.clientWidth + document.body.scrollLeft - 5;
+		Position['Top']  = document.body.clientHeight + document.body.scrollTop - 5;
+	}//else
+	var VChatWindow = document.getElementById("vchat_window");
+	VChatWindow.style.top = (Position['Top']/2) - (VChatWindow.offsetHeight/2);
+	VChatWindow.style.left = (Position['Left']/2) - (VChatWindow.offsetWidth/2);
+	if(tempTimeout)
+		setTimeout( "HS_AlignVChatWindow()", 500 );
+}
+function HS_ShowVChatWindow( content )
+{
+	if(content){
+		var element = document.getElementById( "vchat_window" );
+		element.innerHTML = content;
+		tempTimeout = 1;
+		HS_AlignVChatWindow();
+		element.style.visibility = "visible";
+	}
+}
+
+function HS_CloseVChatWindow()
+{
+	tempTimeout = 0;
+	var element = document.getElementById( "vchat_window" );
+	element.innerHTML = "";
+	element.style.visibility = "hidden";
+}
+
+function HS_LaunchVChat( session_id )
+{
+	HS_CloseVChatWindow();
+	url = MainURL+"modules/vchat.php?action=launch&session_id="+session_id;
+	var newwin = window.open(url, "vchat", "width=550,height=330,scrollbars=no,menubar=no,resizable=no,location=no");
+	newwin.focus();
+}
+
+//]]>
+</script>
+<style type="text/css">
+<!--	
+	#BLIND {
+		position: absolute; 
+		visibility: hidden; 
+		top: 0; 
+		left: 0; 
+		width: 180px;
+		height: 115px;
+		z-index: 1;
+		opacity: 0;
+		-moz-opacity: 0;
+		-khtml-opacity: 0;
+		filter: alpha(opacity=0);
+	}
+	#blinds_panel {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+	#body{
+		position: relative;
+		z-index: 2;
+	}
+	.blind{
+		width: 180;
+		height: 115;
+		opacity: 0;
+		-moz-opacity: 0;
+		-khtml-opacity: 0;
+		filter: alpha(opacity=0);
+	}
+//-->
+</style>
+<script language="JavaScript">
+<!--
+	var NotiTimer = new Array;
+	var BlindIDCount = 0;	
+	function MM_preloadImages() { //v3.0
+		var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+		var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+		if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+	}//MM_preloadImages
+	function HS_LaunchIM(){
+		url = MainURL+"modules/instant_messenger.php?action=launch";   
+		imwin = window.open(url, "HSIM_CONSOLE", "width=250,height=350,scrollbars=no,menubar=no,resizable=no,location=no");
+		imwin.focus();
+	}//HS_LaunchIM
+	function HS_LaunchChat(per_id){
+		url = MainURL+"modules/instant_messenger.php?action=chat&per_id="+per_id;
+		var newwin = window.open(url, per_id, "width=500,height=350,scrollbars=no,menubar=no,resizable=no,location=no");
+		newwin.focus();
+	}//HS_LaunchChat
+	function HS_BuildBlind(){		
+		BlindIDCount++;
+		var BlindID = "BLIND_"+BlindIDCount;
+		var BlindTemplate = document.getElementById("BLIND").innerHTML;
+		var Temp = new Array;
+		Temp = BlindTemplate.split("BLIND");
+		BlindTemplate = Temp.join(BlindID);
+		var BlindContent = "<div class='blind' id='"+BlindID+"'>"+BlindTemplate+"</div>";
+		var BlindsHandler = document.getElementById("blinds_panel");
+		if(BlindsHandler.offsetHeight >= 117){
+			BlindsHandler.style.top = parseInt(BlindsHandler.style.top) - 117;
+		}//if
+		else{
+			BlindsHandler.style.top = parseInt(BlindsHandler.style.top) - 117 + BlindsHandler.offsetHeight;
+		}//else
+		BlindsHandler.innerHTML+= BlindContent;
+		return BlindID;
+	}//HS_BuildBlind
+	function HS_BuildNotification(NotiType,NotiMessage){
+		BlindID = HS_BuildBlind();
+		switch(NotiType){
+			case 'im':
+				var Link = "<a href=\"javascript:HS_LaunchIM();\">"+NotiMessage+"</a>";
+				break;
+			case 'calendar':
+				var Link = "<a href=\"index.php?page=calendar\" target=\"_blank\">"+NotiMessage+"</a>";
+				break;
+			case 'mailbox':
+				var Link = "<a href=\"index.php?page=mailbox&section=inbox\" target=\"_blank\">"+NotiMessage+"</a>";
+				break;
+			case 'view':
+				var Link = "<a href=\"index.php?page=views\" target=\"_blank\">"+NotiMessage+"</a>";
+				break;
+		}//switch
+		var MessageHandler = document.getElementById("notification_message_"+BlindID);
+		MessageHandler.innerHTML = Link;
+		HS_FadeBlind(BlindID,"in");
+		NotiTimer[BlindID] = setTimeout("HS_FadeBlind('"+BlindID+"','out')",10000);
+	}//HS_BuildNotification
+	function HS_FadeBlind(BlindID,Direction){		
+		var Timer = 0;
+		var Speed = 50;		
+		if(Direction == "in"){
+			HS_ChangeAlign('blinds_panel',3);
+			for(var i=10;i<=100;i=i+10){
+				setTimeout("HS_ChangeOpacity(" + i + ",'" + BlindID + "')",(Timer * Speed)); 
+            	Timer++;
+			}//for
+		}//if
+		else if(Direction == "out"){			
+			for(var i=90;i>=0;i=i-10){
+				setTimeout("HS_ChangeOpacity(" + i + ",'" + BlindID + "')",(Timer * Speed)); 				
+            	Timer++;
+			}//for
+			setTimeout("HS_ChangeAlign('blinds_panel',1)",Timer * Speed);
+			setTimeout("HS_RemoveBlind('"+BlindID+"')",Timer * Speed);
+		}//else if
+	}//HS_FadeBlind
+	function HS_ChangeOpacity(OpacityValue,BlindID){		
+		var BlindObjStyle = document.getElementById(BlindID).style;
+    	BlindObjStyle.opacity = (OpacityValue / 100); 
+    	BlindObjStyle.MozOpacity = (OpacityValue / 100); 
+    	BlindObjStyle.KhtmlOpacity = (OpacityValue / 100); 
+    	BlindObjStyle.filter = "alpha(opacity=" + OpacityValue + ")"; 
+	}//HS_ChangeOpacity
+	function HS_PosBlinds(){
+		var ns = (document.layers)?1:0;
+		var Position = new Array;		
+		if(ns){
+			Position['Left'] = window.innerWidth + window.pageXOffset - 5;
+			Position['Top']  = window.innerHeight + window.pageYOffset - 5;
+		}//if
+		else{
+			Position['Left'] = document.body.clientWidth + document.body.scrollLeft - 5;
+			Position['Top']  = document.body.clientHeight + document.body.scrollTop - 5;
+		}//else
+		var BlindsPanel = document.getElementById("blinds_panel");
+		BlindsPanel.style.top = Position['Top'] - BlindsPanel.offsetHeight;
+		BlindsPanel.style.left = Position['Left'] - 180;
+		setTimeout("HS_PosBlinds()",500);
+	}//HS_PosBlinds
+	function HS_ChangeAlign(BlindID,Pos){	
+		var BlindObjStyle = document.getElementById(BlindID).style;
+		BlindObjStyle.zIndex = Pos;
+	}//HS_ChangeAlign
+	function HS_RemoveBlind(BlindID){
+		var BlindObj = document.getElementById(BlindID);
+		BlindObj.innerHTML = "";
+	}//HS_RemoveBlind
+	function HS_CloseNotification(BlindID){
+		clearTimeout(NotiTimer[BlindID]);
+		HS_FadeBlind(BlindID,'out');
+	}//HS_CloseNotification
+//-->
+</script>
+<script src="https://www.fcclub.com/jscript/AC_RunActiveContent.js" type="text/javascript"></script>
+<script src="https://www.fcclub.com/jscript/AC_ActiveX.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function HS_ViewBlogPhoto (blg_id, pst_id){
+   url = MainURL+"index.php?page=blogs&section=photo&blg_id="+blg_id+"&pst_id="+pst_id;   
+   phowin = window.open(url, "PHOTOALBUM", "width=764,height=920,scrollbars=no,menubar=no,resizable=no,location=no");
+   phowin.focus();
+}
+//-->
+</script>
+<link href="https://www.fcclub.com/index.php?handler=rss2&amp;blg_id=108846" rel="alternate" title="Gall bladder Polyps and Tips on how to Eliminate These Problems" type="application/rss+xml"/>
+<script language="JavaScript">
+<!--
+	var MainURL = "/";
+//-->
+</script>
+</head>
+<body onload="HS_PosBlinds();;">
+<div id="BLIND">
+<div class="noti">
+<table border="0" cellpadding="0" cellspacing="0" height="115" width="180">
+<tbody>
+<tr height="20">
+<td align="center" class="noti-header" height="20">Notification [<a>x</a>]</td>
+</tr>
+<tr>
+<td align="center" class="noti-body" style="padding:5px;">
+<div id="notification_message_BLIND"></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="notification_message_BLIND"></div>
+</div>
+<div id="blinds_panel"></div>
+<iframe border="0" frameborder="0" height="0" id="notifications_js" name="notifications_js" scrolling="no" src="https://www.fcclub.com/modules/my_handshakes.php?action=notifications_js" style="border: none" width="0"></iframe>
+<div id="vchat_window"></div>
+<div class="handler">
+<div class="page">
+<div class="top">
+<div class="logo">
+<a><img alt="" border="0" height="40" src="http://web.archive.org/web/20120101190939im_/http://www.fcclub.com/themes/handshakes_plain/gfx/logo.gif" width="140"/></a>
+</div>
+<div style="text-align:right">
+<div class="topmenu">
+<a target="">Mailbox</a> | 
+       <a target="">Calendar</a> | 
+       <a target="">Bookmarks</a> | 
+       <a target="">History</a> | 
+       <a target="">My Profile</a> | 
+       <a target="">Instant Messenger</a> | 
+      </div>
+</div>
+<div style="clear:both"></div>
+</div>
+<div class="menubar">
+<a target="">My Fortune Connection</a> | 
+     <a target="">Events</a> | 
+     <a target="">Clubs</a> | 
+     <a target=""><span class="menubarON">Blogs</span></a> | 
+     <a target="">Classifieds</a> | 
+     <a target="">eCards</a> | 
+     <a target="">Search</a> | 
+     <a target="">Chat</a> | 
+     <a target="">Rate</a> | 
+     <a target="">Music</a> | 
+     <a target="">Videos</a> | 
+     <a target="">Forum</a> | 
+     <a target="">Polls</a>
+</div>
+<div class="banner-header">
+<a target="_blank"><img border="0" height="226" src="http://web.archive.org/web/20120101190939im_/http://www.fcclub.com/ads/98ac9ea88ab6964.jpeg" width="770"/></a>
+</div>
+<style>
+/*
+
+Simplicity Default Template
+By Phillip DZOIC
+
+*/
+
+/* ONLINE ICON */
+.statusonline { 
+	display: block; 
+	background: url('statusonline.gif') no-repeat; 
+	width: 69; 
+	height: 11; 
+}
+
+
+/* OFFLINE ICON */
+.statusoffline { 
+	display: block; 
+	background: url('statusoffline.gif') no-repeat; 
+	width: 69; 
+	height: 11; 
+}
+
+/* TABLE LAYOUT */
+.table{
+	border: 1px dashed #858585;
+	padding: 5px;
+	background-color: #F7F7F7;
+}
+
+.tmiddlep{
+	background-color:	#FFFFFF;
+
+}
+
+/* CONNECTION TABLE */
+.connectionTable{
+	border: 1px dashed #858585;
+	padding: 5px;
+	background-color: #F7F7F7;
+}
+
+/* CONTACT TABLE LAYOUT */
+.contactTable{
+	background-color: #F7F7F7;
+	background-image: url(none);
+	border: 1px dashed #858585;
+	padding: 5px;
+}
+
+/* YOUR PROFILE NAME TEXT */
+.name{
+	font-family: "Tahoma", "Arial", "Helvetica", "sans-serif";
+	font-size: 16pt;
+	color: #000000;
+}
+
+/* PROFILE HEADLINE TEXT */
+.headline{
+	font-family: "Tahoma", "Arial", "Helvetica", "sans-serif";
+	font-size: 8pt;
+	color: #000000;
+}
+
+/* TEXT */
+.heading{
+	font-family: "Arial";
+	font-size: 8pt;
+	font-weight: bold;
+	color: #000000;
+}
+
+/* TEXT LINKS */
+.text{
+	font-family: "Arial";
+	font-size: 8pt;
+	color: #000000;
+}
+
+.text a{
+	text-decoration: none;
+	font-size: 8pt;
+	color: #464D83;
+}
+
+.text a:hover{
+	text-decoration: underline;
+	font-size: 8pt;
+	color: #464D83;
+}
+
+/* TEXT TITLE  */
+.text_title{
+	font-family: "Arial";
+	font-size: 8pt;
+	font-weight: bold;
+	color: #000000;
+}
+
+.text_title a{
+	text-decoration: none;
+	color: #464D83;
+}
+
+.text_title a:hover{
+	text-decoration: underline;
+	color: #464D83;
+}
+
+/* CONTACT TABLE  */
+.text_c{
+	font-family: "Arial";
+	font-size: 8pt;
+	color: #000000;
+}
+
+.text_c a{
+	font-family: "Arial";
+	font-size: 8pt;
+	text-decoration: none;
+	color: #464D83;
+}
+
+.text_c a:hover{
+	font-family: "Arial";
+	font-size: 8pt;
+	text-decoration: underline;
+	color: #464D83;
+}
+
+/* CONNECTION TABLE  */
+.text_conn{
+	font-family: "Arial";
+	font-size: 8pt;
+	color: #000000;
+}
+
+.text_conn a{
+	text-decoration: none;
+	color: #464D83;
+}
+
+.text_conn a:hover{
+	text-decoration: underline;
+	color: #464D83;
+}
+
+.text_title_conn{
+	font-family: "Arial";
+	font-size: 8pt;
+	font-weight: bold;
+	color: #000000;
+}
+
+
+</style>
+<!-- Simplicity Template By Phillip DZOIC -->
+<table align="center" border="0" cellpadding="1" cellspacing="0" id="table1" width="100%">
+<tbody>
+<tr>
+<td valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<table align="center" border="0" cellpadding="5" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td class="name">allgallbladders...</td>
+<td align="right" class="name">Gall bladder Polyps and Tips on how to Eliminate These Problems</td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+</tbody>
+</table>
+<table align="center" border="0" cellpadding="1" cellspacing="0" id="table1" width="100%">
+<tbody>
+<tr>
+<td valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<table align="center" border="0" cellpadding="5" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td valign="top">
+<table border="0" cellpadding="0" cellspacing="0" class="table" id="table1" width="558">
+<tbody>
+<tr>
+<td rowspan="7" style="padding-right: 8px; padding-top: 8px; padding-bottom: 8px" valign="top" width="120px"> <img alt="" border="0" height="122" src="http://web.archive.org/web/20120101190939im_/http://www.fcclub.com/photos/awaiting.gif" width="122"/>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td align="center" class="text"><a>[ View Author's Profile ]</a></td>
+</tr>
+</tbody>
+</table> </td>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" id="table2" width="100%">
+<tbody>
+<tr>
+<td class="text_title">URL:</td>
+<td class="text"> <a>http://www.fcclub.com/blogs/allgallbladdersymptoms2</a> </td>
+</tr>
+<tr>
+<td class="text_title">Posted:</td>
+<td class="text">23/10/2011</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"> </td>
+</tr>
+<tr height="10">
+<td class="text_title" colspan="2" height="20" valign="top">Description</td>
+</tr>
+<tr>
+<td class="text" colspan="2" valign="top">Gall bladder Polyps and Tips on how to Eliminate These Problems</td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+</tbody>
+</table> <br/>
+<!-- PHOTOS -->
+<table border="0" cellpadding="0" cellspacing="0" class="table" id="photos" width="558">
+<tbody>
+<tr>
+<td class="heading" colspan="2">Gall bladder Polyps and Tips on how to Eliminate These Problems</td>
+<td align="right" class="heading">23/10/2011</td>
+</tr>
+<tr>
+<td class="text" colspan="3" valign="top"> Gall bladder Polyps and Tips on how to Eliminate These Problems<br/><br/><br/><br/>A gall bladder is actually a tiny body part situated below the liver. The key work of the gall bladder will be to assist with the digestion of fats. It supports absorbing fats by keeping liquid known as bile. Bile is in fact produced inside the liver and is used in breaking of saturated fats and also for the digestion of the fatty materials in foods. All of the bile that is produced by the liver is sent to the gall bladder which can be later employed whenever needed.<br/><br/>During the previous years a lot of men and women started out developing problems because of 
+                <!--[if gte mso 9]><xml>  <w:WordDocument>   <w:View>Normal</w:View>   <w:Zoom>0</w:Zoom>   <w:PunctuationKerning/>   <w:ValidateAgainstSchemas/>   <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>   <w:IgnoreMixedContent>false</w:IgnoreMixedContent>   <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>   <w:Compatibility>    <w:BreakWrappedTables/>    <w:SnapToGridInCell/>    <w:WrapTextWithPunct/>    <w:UseAsianBreakRules/>    <w:DontGrowAutofit/>   </w:Compatibility>   <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>  </w:WordDocument> </xml><![endif]-->
+<!--[if gte mso 9]><xml>  <w:LatentStyles DefLockedState="false" LatentStyleCount="156">  </w:LatentStyles> </xml><![endif]-->
+<!--[if gte mso 10]> <style>  /* Style Definitions */  table.MsoNormalTable 	{mso-style-name:"Table Normal"; 	mso-tstyle-rowband-size:0; 	mso-tstyle-colband-size:0; 	mso-style-noshow:yes; 	mso-style-parent:""; 	mso-padding-alt:0in 5.4pt 0in 5.4pt; 	mso-para-margin:0in; 	mso-para-margin-bottom:.0001pt; 	mso-pagination:widow-orphan; 	font-size:10.0pt; 	font-family:"Times New Roman"; 	mso-ansi-language:#0400; 	mso-fareast-language:#0400; 	mso-bidi-language:#0400;} </style> <![endif]--><a>Gallbladder disease</a> and therefore began having surgical operations to reduce problems. Gallbladder troubles can take place without notice and also anyplace plus they might become pretty distressing as well as lead to lots of stress to a man or woman. Just one among the principal problems that the gallbladder has is often a increase within the gallbladder. All of these gall bladder polyps build in the wall membrane of the gall bladder. A polyp is an abnormal growth in the muscles or maybe cellular material. These types of polyps are usually principally seen within the stomach area, , plus colon or maybe inside the gall bladder. Just one of the major polyps which increase within the gallbladder is simply called cholesterol sort of polyp. These gall bladder polyps have an effect on more than 6 pct grown-ups each and every year. Nobody really realizes any true reason when it comes to increase of the polyps in the gallbladder. Typically the probabilities concerning gallbladder polyps developing in adult men happen to be much higher as compared to most women. </td>
+</tr>
+<tr>
+<td align="right" class="text" colspan="3"><a> 0 comments</a> | <a>Add Comment</a></td>
+</tr>
+</tbody>
+</table> <br/>
+<!-- PHOTOS --> <br/> </td>
+<td align="right" valign="top">
+<!-- MY OPTIONS -->
+<table border="0" cellpadding="0" cellspacing="0" class="table" id="my_options" width="200">
+<tbody>
+<tr>
+<td class="heading">My Options</td>
+</tr>
+<tr>
+</tr>
+<tr>
+<td class="text" nowrap=""><a>Blogs Home</a></td>
+</tr>
+<tr>
+<td class="text" nowrap=""><a>Browse Blogs</a></td>
+</tr>
+<tr>
+<td class="text" nowrap=""><a>My Blogs</a></td>
+</tr>
+<tr>
+<td class="text" nowrap=""><a>Create Blog</a></td>
+</tr>
+<tr>
+<td class="text" nowrap=""><a>Bookmark Blog</a></td>
+</tr>
+</tbody>
+</table>
+<!-- MY OPTIONS --> <br/>
+<!-- REPORT -->
+<table border="0" cellpadding="0" cellspacing="0" class="table" id="report" width="200">
+<tbody>
+<tr>
+<td class="heading">Report</td>
+</tr>
+<tr>
+</tr>
+<tr>
+<td class="text" nowrap=""><a>Best Of Handshakes</a></td>
+</tr>
+<tr>
+<td class="text" nowrap=""><a>Spam</a></td>
+</tr>
+<tr>
+<td class="text" nowrap=""><a>Mature</a></td>
+</tr>
+</tbody>
+</table>
+<!-- REPORT --> <br/>
+<!-- BLOG PHOTOS -->
+<table border="0" cellpadding="0" cellspacing="0" class="table" id="blog_photos" width="200">
+<tbody>
+<tr>
+<td class="heading">Blog Photos</td>
+</tr>
+<tr>
+</tr>
+</tbody>
+</table>
+<!-- BLOG PHOTOS --> <br/>
+<!-- RSS SUBSCRIBE -->
+<table border="0" cellpadding="0" cellspacing="0" class="table" id="subscribe" width="200">
+<tbody>
+<tr>
+<td class="heading">Subscribe</td>
+</tr>
+<tr>
+<td align="center" class="text" style="padding:5px;"><a type="application/rss+xml"> <img alt="" border="0" height="32" src="http://web.archive.org/web/20120101190939im_/http://www.fcclub.com/themes/handshakes_plain/gfx/icons/feed.gif" width="32"/></a></td>
+</tr>
+</tbody>
+</table>
+<!-- RSS SUBSCRIBE --> <br/>
+<!-- BANNER PLACEMENT -->
+<table border="0" cellpadding="0" cellspacing="0" class="table" id="banner_placement" width="200">
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<!-- BANNER PLACEMENT --> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+</tbody>
+</table>
+<!-- Simplicity Template By Phillip DZOIC -->
+<div style="clear:both;height:5px;">
+<img alt="" border="0" height="1" src="http://web.archive.org/web/20120101190939im_/http://www.fcclub.com/themes/handshakes_plain/gfx/spacer.gif" width="1"/>
+</div>
+<div class="footer">
+<a target="_blank">About Us</a>  |  
+     <a target="_blank">Privacy Policy</a>  |  
+     <a target="_blank">Terms of Use</a>  |  
+     <a target="_blank">Press</a>  |  
+     <a target="_blank">Contact Us</a>  |  
+     <a target="_blank">Member Features</a>
+</div>
+<div class="footer">
+     Copyright 
+     <a target="_blank">fcclub.com</a> 2002- 2007 SHICP:05038944
+    </div>
+</div>
+</div>
+</body>
+</html>

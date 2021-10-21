@@ -1,0 +1,808 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script language="javascript" type="text/javascript">
+	// CODE TO OPEN NEW WINDOW....		
+		function popUp(URL) {
+		day = new Date();
+		id = day.getTime();
+		eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=433,height=592,left=262,top=184');");
+		}
+	//END
+</script>
+<script type="text/javascript">
+	
+	function echeck(str) {
+
+		var at="@";
+		var dot=".";
+		var lat=str.indexOf(at);
+		var lstr=str.length;
+		var ldot=str.indexOf(dot);
+		if (str.indexOf(at)==-1){
+		   alert("Invalid E-mail ID");
+		   return false;
+		}
+
+		if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
+		   alert("Invalid E-mail ID");
+		   return false;
+		}
+
+		if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
+		    alert("Invalid E-mail ID");
+		    return false;
+		}
+
+		 if (str.indexOf(at,(lat+1))!=-1){
+		    alert("Invalid E-mail ID");
+		    return false;
+		 }
+
+		 if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
+		    alert("Invalid E-mail ID");
+		    return false;
+		 }
+
+		 if (str.indexOf(dot,(lat+2))==-1){
+		    alert("Invalid E-mail ID");
+		    return false;
+		 }
+		
+		 if (str.indexOf(" ")!=-1){
+		    alert("Invalid E-mail ID");
+		    return false;
+		 }
+
+ 		 return true;					
+	}
+	
+	function validateContact()
+	{
+		var emailID=document.contact.EmailFrom;
+		if ((emailID.value==null)||(emailID.value=="")){
+		alert("Please Enter Email ID");
+		emailID.focus();
+		return false;
+		}
+		if (echeck(emailID.value)==false){
+			emailID.value="";
+			emailID.focus();
+			return false;
+		}
+		/*if (document.contact.security_code.value == ""){
+			alert("Please enter security code.")
+			document.contact.security_code.focus();
+			return false;
+		}*/
+		
+		return true;
+	}
+	
+	function validateContact_R()
+	{
+		var emailID=document.contact_R.EmailFrom;
+		if ((emailID.value==null)||(emailID.value=="")){
+		alert("Please Enter Email ID");
+		emailID.focus();
+		return false;
+		}
+		if (echeck(emailID.value)==false){
+			emailID.value="";
+			emailID.focus();
+			return false;
+		}
+		/*if (document.contact_R.security_code.value == ""){
+			alert("Please enter security code.")
+			document.contact_R.security_code.focus();
+			return false;
+		}*/
+		
+		document.contact_R.submit();
+	}
+</script>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<!--<title>Private Investigations, Private Detectives, Private Investigators, Private Eye, Detective Agency - Global Investigations</title>
+<meta name="description" content="Global Investigations are a leading detective agency providing private investigations, private detectives, private investigators and private eyes " />
+<meta name="keywords" content="Private Investigations, Private Detectives, Private Investigators, Private Eye, Detective Agency" />
+-->
+<meta content="OSPZmpJI4H9UPVU_bnAKM89yWcOrs_odTmRREJ29b5E" name="google-site-verification"/>
+<meta content="41FC097AFD6E06774C838AC3D486664F" name="msvalidate.01"/>
+<meta content="noodp, noydir" name="robots"/>
+<title>Cheating Wife, Cheating Husband, Cheating Boyfriend, Cheating Spouse, Unfaithful Wife - Global Investigations</title>
+<meta content="Global Investigations are leading specialists in investigating a possible cheating wife, cheating husband, cheating boyfriend, cheating spouse or unfaithful wife" name="description"/>
+<meta content="cheating boyfriend,cheating husband,cheating spouse,cheating wife,unfaithful wife" name="keywords"/>
+<link href="http://web.archive.org/web/20120420175046cs_/http://www.globalinvestigations.co.uk/images/global.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+
+body {
+	background-color: #ECECEC;
+}
+
+</style>
+<script type="text/JavaScript">
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-11016809-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<style type="text/css">
+a.top_link{	padding: 0;}
+a.top_link:hover{	padding: 0;}
+
+.prodrop8 {    font-family: arial,verdana,sans-serif;    height: 36px;    list-style: none outside none;    margin: 0;    padding: 0 0 0 32px;	width: 1000px;    position: relative;    z-index: 500;	margin-left: -34px;}
+
+.prodrop8 li.top {    display: block;    float: left;}.prodrop8 a img{	border:none;}
+
+.prodrop8 li a.top_link {color: #ffffff;    cursor: pointer;    display: block;    float: left;    font-size: 12px;    font-weight: bold;    height: 36px;    line-height: 27px;	border: none;    text-decoration: none;}
+.prodrop8 li a.top_link span {display: block;    float: left;    height: 36px;}
+
+.prodrop8 li a.top_link:hover {no-repeat scroll 0 0 transparent;    color: #000000;    line-height: 25px;}
+
+.prodrop8 li a.top_link:hover span {no-repeat scroll right top transparent;}
+.prodrop8 li:hover > a.top_link {no-repeat scroll 0 0 transparent;    color: #000000;    line-height: 25px;}
+.prodrop8 li:hover > a.top_link span {no-repeat scroll right top transparent;}
+.prodrop8 table {    border-collapse: collapse;    height: 0;    left: 0;    position: absolute;    top: 0;    width: 0;}
+.prodrop8 a:hover {    position: relative;    visibility: visible;    z-index: 200;}
+.prodrop8 li:hover {    position: relative;    z-index: 200;}
+.prodrop8 ul, .prodrop8 iframe {    height: 0;    left: -9999px;    list-style: none outside none;    margin: 0;    padding: 0;    position: absolute;    top: -9999px;    width: 0;}/* Set drop down widths */
+.prodrop8 ul.sub1 {    width: 215px;}
+.prodrop8 ul.sub2 {    width: 215px;}
+.prodrop8 ul.sub3 {    width: 215px;}
+.prodrop8 ul.sub4 {    width: 215px;}
+.prodrop8 ul.sub5 {    width: 215px;}
+.prodrop8 ul.sub6 {    width: 215px;}
+.prodrop8 ul.sub7 {    width: 215px;}
+/* End */
+.prodrop8 *:hover iframe.one {    height: 100px;    left: 0;    top: 35px;    width: 150px;}
+.prodrop8 *:hover iframe.two {    height: 65px;    left: 0;    top: 35px;    width: 100px;}
+.prodrop8 *:hover ul {  background-image:url(images/new1.png) ; background-repeat:no-repeat;  height: 25px;   height: auto;	color: #FFF;    left: 4px;    top: 33px;    white-space: nowrap;    z-index: 300;	border: none;}
+.prodrop8 *:hover ul li { background-image:url(images/new1.png) ; background-repeat:no-repeat;    display: block;    font-weight: normal;    height: 25px;    position: relative;    width: auto;	border-bottom: #FFF 0px solid; padding-bottom:0px;}
+.prodrop8 *:hover ul li a {    color: #FFF;    display: block;    font-size: 12px;    height: 25px;    line-height: 23px;    padding-left: 9px;	font-weight: bold;    text-decoration: none;    width: auto;}
+.prodrop8 *:hover ul li a:hover { background-image:url(images/new.png) ; background-repeat:no-repeat;  color: #FFFFFF;}
+</style>
+<link href="http://web.archive.org/web/20120420175046cs_/http://www.globalinvestigations.co.uk/tabs/ui.tabs.css" rel="stylesheet" type="text/css"/>
+<script src="https://www.globalinvestigations.co.uk/tabs/jquery.min.js" type="text/javascript"></script>
+<script src="https://www.globalinvestigations.co.uk/tabs/jquery-ui.min.js" type="text/javascript"></script>
+<script type="text/JavaScript">
+jQuery.noConflict();
+jQuery(document).ready(function($) {
+	$("#tabs").tabs({
+		event: 'click'
+	});
+});
+</script>
+<script type="text/javascript">
+function confirmRedirect()
+		{
+			if(confirm("Do you want to be redirected to the mobile version?"))
+			{
+			   document.location.href="mobile/index.php";	
+			}
+			else
+			{
+			   return false;	
+			}
+		}
+
+function DetectMobileDevice()
+{
+   var uagent = navigator.userAgent.toLowerCase();
+   var deviceType;
+   if (uagent.search("iphone") > -1){
+      confirmRedirect();
+   }
+   else if (uagent.search("ipod") > -1){
+      confirmRedirect();
+   }
+   else if (uagent.search("android") > -1){
+      confirmRedirect();
+   }
+   else if (uagent.search("windows ce") > -1){
+      confirmRedirect();
+   }
+   else if (uagent.search("blackberry") > -1){
+      confirmRedirect();
+   }
+   else if (uagent.search("palm") > -1){
+      confirmRedirect();
+   }
+   else if (uagent.search("opera mini") > -1){
+      confirmRedirect();
+   }
+   else{
+   	   //confirmRedirect();
+      //document.location.href="mobile/index.php";
+	  deviceType = "Not a mobile device.";
+   }
+   //alert (uagent+" : "+deviceType);
+   //alert (deviceType);
+}
+</script>
+</head>
+<body onload="DetectMobileDevice(), MM_preloadImages('images/tracing1.jpg','images/busines1.jpg','images/convert1.jpg','images/legal1.jpg','images/very1.jpg','images/warning1.jpg','images/case1.jpg','images/dowlode1.jpg')">
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<a name="nogo"></a>
+<form action="mobile/index.php" method="post" name="red_mob">
+</form>
+<script language="JavaScript1.2">mmLoadMenus();</script>
+<div id="main">
+<div id="logo_part">
+<div style="float:right; padding-top:3px; padding-right:10px; color:#FFFFFF; font-size:14px; font-weight:bold;
+
+">
+<a class="top_link">Home</a>  |  
+     <a class="top_link">About Us</a>  |  
+     <a class="top_link">Contact Us</a>  | 
+     <!--&nbsp;<a href="faqs.php" class="top_link">Faqs</a>&nbsp; | --> 
+     <a class="top_link">Testimonial's</a>   
+    </div>
+<div id="Layer1" style="position: relative; width:646px; z-index:0; left: 235px; top: 15px;">
+<a><img alt="Private Investigations" border="0" height="55" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/main_link_bg.png" width="646"/></a>
+</div>
+</div>
+<div class="contact_part">
+<ul class="prodrop8">
+<li class="top"><a class="top_link"><span><img src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/busines1.jpg"/></span>
+<!--[if gte IE 7]><!--></a>
+<!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul class="sub1">
+<li><a class="fly">Competitor Intelligence</a></li>
+<li><a class="fly">Counter Espionage</a></li>
+<li><a class="fly">Bug Sweeping And TSCM Services</a></li>
+<li><a class="fly">Risk Analysis</a></li>
+<li><a class="fly">Copyright Infringement</a></li>
+<li><a class="fly">Employee Absenteeism</a></li>
+<li><a class="fly">Mystery Shopping</a></li>
+<li><a class="fly">Drug Testing</a></li>
+<li><a class="fly">Company Investigations</a></li>
+<li><a class="fly">Credit Checks</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]--> </li>
+<li class="top"><a class="top_link"><span><img src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/convert1.jpg"/></span>
+<!--[if gte IE 7]><!--></a>
+<!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul class="sub2">
+<li><a class="fly">Surveillance</a></li>
+<li><a class="fly">Insurance Enquiries</a></li>
+<li><a class="fly">Fraud Investigations</a></li>
+<li><a class="fly">Vehicle Tracking</a></li>
+<li><a class="fly">Affairs Of The Heart</a></li>
+<li><a class="fly">Dating Fraud</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]--> </li>
+<li class="top"><a class="top_link"><span><img src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/legal1.jpg"/></span>
+<!--[if gte IE 7]><!--></a>
+<!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul class="sub3">
+<li><a class="fly">Process Serving</a></li>
+<li><a class="fly">Taking Statements</a></li>
+<li><a class="fly">Means Enquiries</a></li>
+<li><a class="fly">Doorstep Trace And Contact</a></li>
+<li><a class="fly">Car Repossessions</a></li>
+<li><a class="fly">Card Collections</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]--> </li>
+<li class="top"><a class="top_link"><span><img src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/tracing1.jpg"/></span>
+<!--[if gte IE 7]><!--></a>
+<!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul class="sub4">
+<li><a class="fly">Tracing in the UK</a></li>
+<li><a class="fly">Tracing Overseas</a></li>
+<li><a class="fly">Parent Searching</a></li>
+<li><a class="fly">Employment Tracing</a></li>
+<li><a class="fly">Tracing Heirs</a></li>
+<li><a class="fly">Landlord &amp; Freehold Tracing</a></li>
+<li><a class="fly">Business Tracing &amp; Volume Tracing</a></li>
+<li><a class="fly">Pre Sues And Status Reports</a></li>
+<li><a class="fly">In Depth Pre Sues</a></li>
+<li><a class="fly">Asset Tracing</a></li>
+<li><a class="fly">Overseas Assets</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]--> </li>
+<li class="top"><a class="top_link"><span><img src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/very1.jpg"/></span>
+<!--[if gte IE 7]><!--></a>
+<!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul class="sub5">
+<li><a class="fly">Background Checks</a></li>
+<li><a class="fly">Due Dilligence</a></li>
+<li><a class="fly">Employee Vetting</a></li>
+<li><a class="fly">Nanny Checks</a></li>
+<li><a class="fly">Forensic Investigations</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]--> </li>
+<li class="top"><a class="top_link"><span><img src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/warning1.jpg"/></span>
+<!--[if gte IE 7]><!--></a>
+<!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul class="sub6">
+<li><a class="fly">Infidelity</a></li>
+<li><a class="fly">Kids and Internet</a></li>
+<li><a class="fly">Are you being Bugged</a></li>
+<li><a class="fly">Nanny Checks</a></li>
+<li><a class="fly">Cheque Fraud</a></li>
+<li><a class="fly">Employee Investigations</a></li>
+<li><a class="fly">Choosing a P.I.</a></li>
+<li><a class="fly">Dating Rules</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]--> </li>
+<li class="top"><a class="top_link"><span><img src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/case1.jpg"/></span>
+<!--[if gte IE 7]><!--></a>
+<!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul class="sub7">
+<li><a class="fly">Corporate Requests</a></li>
+<li><a class="fly">Private Clients Requests</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]--> </li>
+<li class="top"><a class="top_link"><span><img src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/dowlode1.jpg"/></span></a></li>
+</ul>
+<div class="date_bg">
+<div style="float:left; padding-left:20px; padding-top:8px; font-size:12px; color:#a73841; font-weight:bold;">
+<script language="javascript" src="https://www.globalinvestigations.co.uk/images/showdate.js" type="text/javascript"></script>
+</div>
+<div style="float:left; padding-top:0px; padding-left:10px; margin-bottom:0px; padding-right:0px;">
+<div style="float:left;">
+<div class="fb-like" data-font="arial" data-href="http://www.globalinvestigations.co.uk/" data-layout="button_count" data-send="false" data-show-faces="false" data-width="90" style="margin-bottom:0px; padding-top:5px; margin-top:0px; padding-bottom:0px;"></div>
+</div>
+<div style="float:left;">
+          
+       <a target="_blank"><img alt="Facebook" border="0" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/facebook.jpg"/></a>  
+       <a target="_blank"><img alt="Twitter" border="0" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/twitter.jpg"/></a>  
+       <a><img alt="Linkedin" border="0" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/linkedin.jpg"/></a>  
+       <a><img alt="Email" border="0" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/email.jpg"/></a>  
+       <img alt="UK" border="0" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/ukflag.jpg"/>  
+       <img alt="India" border="0" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/indiaflag.jpg" style=" border:#686868 1px solid;"/>  
+       <img alt="Pakistan" border="0" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/pakistanflag.jpg" style=" border:#686868 1px solid;"/>  
+       <img alt="Italy" border="0" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/italyflag.jpg" style=" border:#686868 1px solid;"/>  
+       <img alt="Portugal" border="0" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/portugalflag.jpg" style=" border:#686868 1px solid;"/>
+</div>
+<a><img alt="PayPal" border="0" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/paypal-icon.jpg"/></a>
+</div>
+<div style="float:right; padding-top:4px; padding-right:15px;">
+<form action="search.php" method="post" name="searchFrm" style="margin:0px;">
+<input id="search" name="search" onblur="if(this.value==''){this.value='Search';}" onclick="this.autocomplete='off'; if(this.value=='Search'){this.value='';}" style="height:16px; width:170px;" type="text" value="Search"/>
+<input name="go" onclick="this.form.submit();" type="button" value="GO"/>
+</form>
+</div>
+<!--<div style="float:right; padding-top:8px; padding-right:2px;font-weight:bold;font-size:12px;margin:0 10px 0 0">Search</div>-->
+</div>
+<link href="http://web.archive.org/web/20120420175046cs_/http://www.globalinvestigations.co.uk/css/custom-theme/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css"/>
+<script src="https://www.globalinvestigations.co.uk/js/jquery-1.6.2.min.js" type="text/javascript"></script>
+<script src="https://www.globalinvestigations.co.uk/js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+<script type="text/javascript">$.noConflict();jQuery(document).ready(function($) {// Tabs$('#tabs').tabs();});</script>
+<script type="text/javascript">
+  window.___gcfg = {lang: 'en-GB'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+<div class="contact_part1" style="padding-top:10px;">
+<div class="left_part">
+<div class="left_part1">
+<div class="l">
+<img alt="Our Services" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/our_services.jpg"/>
+</div>
+<div class="left_partbg">
+<div style="float:left; width:193px; padding:8px 8px 8px 8px;">
+<div style="float:left; width:193px;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td align="left" style="padding-top:5px;" valign="top" width="8%"><img alt="Tracing Debtors" height="8" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/dote.jpg" width="8"/></td>
+<td align="left" valign="top" width="92%"><a class="ser">Tracing Debtors</a></td>
+</tr>
+<tr>
+<td align="left" colspan="2" style="padding-top:5px;" valign="top"><img alt="line" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/line.jpg"/></td>
+</tr>
+<tr>
+<td align="left" style="padding-top:5px;" valign="top" width="8%"><img alt="Tracing Overseas" height="8" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/dote.jpg" width="8"/></td>
+<td align="left" valign="top" width="92%"><a class="ser">Tracing Overseas</a></td>
+</tr>
+<tr>
+<td align="left" colspan="2" style="padding-top:5px;" valign="top"><img alt="line" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/line.jpg"/></td>
+</tr>
+<tr>
+<td align="left" style="padding-top:5px;" valign="top" width="8%"><img alt="Employment Tracing" height="8" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/dote.jpg" width="8"/></td>
+<td align="left" valign="top" width="92%"><a class="ser">Employment Tracing </a></td>
+</tr>
+<tr>
+<td align="left" colspan="2" style="padding-top:5px;" valign="top"><img alt="line" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/line.jpg"/></td>
+</tr>
+<tr>
+<td align="left" style="padding-top:5px;" valign="top" width="8%"><img alt="Asset Tracing" height="8" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/dote.jpg" width="8"/></td>
+<td align="left" valign="top" width="92%"><a class="ser">Asset Tracing </a></td>
+</tr>
+<tr>
+<td align="left" colspan="2" style="padding-top:5px;" valign="top"><img alt="line" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/line.jpg"/></td>
+</tr>
+<tr>
+<td align="left" style="padding-top:5px;" valign="top" width="8%"><img alt="Status/Means Enq/s" height="8" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/dote.jpg" width="8"/></td>
+<td align="left" valign="top" width="92%"><a class="ser">Status/Means Enq/s</a></td>
+</tr>
+<tr>
+<td align="left" colspan="2" style="padding-top:5px;" valign="top"><img alt="line" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/line.jpg"/></td>
+</tr>
+<tr>
+<td align="left" style="padding-top:5px;" valign="top" width="8%"><img alt="Matrimonial Investigations" height="8" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/dote.jpg" width="8"/></td>
+<td align="left" valign="top" width="92%"><a class="ser">Matrimonial Investigations</a></td>
+</tr>
+<tr>
+<td align="left" colspan="2" style="padding-top:5px;" valign="top"><img alt="line" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/line.jpg"/></td>
+</tr>
+<tr>
+<td align="left" style="padding-top:5px;" valign="top" width="8%"><img alt="Surveillance Operations" height="8" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/dote.jpg" width="8"/></td>
+<td align="left" valign="top" width="92%"><a class="ser">Surveillance Operations </a></td>
+</tr>
+<tr>
+<td align="left" colspan="2" style="padding-top:5px;" valign="top"><img alt="line" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/line.jpg"/></td>
+</tr>
+<tr>
+<td align="left" style="padding-top:5px;" valign="top" width="8%"><img alt="Vehicle Tracking" height="8" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/dote.jpg" width="8"/></td>
+<td align="left" valign="top" width="92%"><a class="ser">Vehicle Tracking</a></td>
+</tr>
+<tr>
+<td align="left" colspan="2" style="padding-top:5px;" valign="top"><img alt="line" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/line.jpg"/></td>
+</tr>
+<tr>
+<td align="left" style="padding-top:5px;" valign="top" width="8%"><img alt="Background Checks" height="8" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/dote.jpg" width="8"/></td>
+<td align="left" valign="top" width="92%"><a class="ser">Background Checks </a></td>
+</tr>
+<tr>
+<td align="left" colspan="2" style="padding-top:5px;" valign="top"><img alt="line" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/line.jpg"/></td>
+</tr>
+<tr>
+<td align="left" style="padding-top:5px;" valign="top" width="8%"><img alt="Due Diligence" height="8" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/dote.jpg" width="8"/></td>
+<td align="left" valign="top" width="92%"><a class="ser">Due Diligence</a></td>
+</tr>
+<tr>
+<td align="left" colspan="2" style="padding-top:5px;" valign="top"><img alt="line" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/line.jpg"/></td>
+</tr>
+<tr>
+<td align="left" style="padding-top:5px;" valign="top" width="8%"><img alt="Competitor Intelligence" height="8" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/dote.jpg" width="8"/></td>
+<td align="left" valign="top" width="92%"><a class="ser">Competitor Intelligence</a></td>
+</tr>
+<tr>
+<td align="left" colspan="2" style="padding-top:5px;" valign="top"><img alt="line" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/line.jpg"/></td>
+</tr>
+<tr>
+<td align="left" style="padding-top:5px;" valign="top" width="8%"><img alt="Company Investigations" height="8" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/dote.jpg" width="8"/></td>
+<td align="left" valign="top" width="92%"><a class="ser">Company investigations </a></td>
+</tr>
+<tr>
+<td align="left" colspan="2" style="padding-top:5px;" valign="top"><img alt="line" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/line.jpg"/></td>
+</tr>
+<tr>
+<td align="left" style="padding-top:5px;" valign="top" width="8%"><img alt="Employee Absenteeism" height="8" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/dote.jpg" width="8"/></td>
+<td align="left" valign="top" width="92%"><a class="ser">Employee Absenteeism</a></td>
+</tr>
+<tr>
+<td align="left" colspan="2" style="padding-top:5px;" valign="top"><img alt="line" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/line.jpg"/></td>
+</tr>
+<tr>
+<td align="left" style="padding-top:5px;" valign="top" width="8%"><img alt="Fraud Investigations" height="8" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/dote.jpg" width="8"/></td>
+<td align="left" valign="top" width="92%"><a class="ser">Fraud Investigations </a></td>
+</tr>
+<tr>
+<td align="left" colspan="2" style="padding-top:5px;" valign="top"><img alt="line" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/line.jpg"/></td>
+</tr>
+<tr>
+<td align="left" style="padding-top:5px;" valign="top" width="8%"><img alt="Romance Investigations" height="8" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/dote.jpg" width="8"/></td>
+<td align="left" valign="top" width="92%"><a class="ser">Romance Investigations</a></td>
+</tr>
+<tr>
+<td align="left" colspan="2" style="padding-top:5px;" valign="top"><img alt="line" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/line.jpg"/></td>
+</tr>
+<tr>
+<td align="left" style="padding-top:5px;" valign="top" width="8%"><img alt="Bug Sweeping" height="8" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/dote.jpg" width="8"/></td>
+<td align="left" valign="top" width="92%"><a class="ser">Bug Sweeping </a></td>
+</tr>
+<tr>
+<td align="left" colspan="2" style="padding-top:5px;" valign="top"><img alt="line" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/line.jpg"/></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="l">
+<img alt="Our Services 2" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/our_services2.jpg"/>
+</div>
+</div>
+<div class="left_part1" style="padding-top:8px;">
+<div class="l">
+<img height="33" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/test.jpg" width="209"/>
+</div>
+<div class="left_partbg">
+<div style="float:left; width:193px; padding:8px 8px 8px 8px;">
+<div style="float:left; width:193px; padding-top:80px;">
+<img src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/tr1.jpg"/> We pride ourselves on retaining the many high profile clients we work for and we continue our success story on the reputation we have achieved, we have reproduced some of our testimonials from our clients who have kindly wrote to us from our various sectors of business and latterly from the public whom we also work for. 
+          <br/>
+<br/> "...Very efficient service....they usually locate the subject in question and we love the fact that they work on a no success no fee basis." High Street Bank 
+          <br/>
+<br/> "We find their service cost-effective and very efficient locating all the cases we give them. We have no hesitation in recommending Global to other organisations who require investigative work done." Government Agency 
+          <br/>
+<br/> "...Since you have contacted us there has been very few worries. You listen to what we need, and respond quickly. We have the added security of knowing that Global are there to support. Your staff are polite, professional and caring..." National Property Company
+          <br/>
+<br/> ÂWe were having multiple problems with various . 
+          <img src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/tr.jpg"/>
+<div style="float:left; text-align:right; width:190px; padding-top:5px;">
+<strong><a class="footer_link"><strong>Read More</strong></a></strong>
+</div>
+</div>
+</div>
+</div>
+<div class="l">
+<img alt="our services 2" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/our_services2.jpg"/>
+</div>
+<div style="clear:both"></div>
+</div>
+</div>
+<div class="be_part">
+<div align="center" class="be_part1" style="padding-bottom:8px;">
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" height="54" width="700"> <param name="movie" value="images/new_quotes_banner.swf"/> <param name="quality" value="high"/> <param name="wmode" value="transparent"/> <embed height="54" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="images/new_quotes_banner.swf" type="application/x-shockwave-flash" width="700" wmode="transparent"/> </object>
+</div>
+<div class="be_part1">
+<img alt="" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/banner.jpg"/>
+</div>
+<div class="be_part1" style="padding-top:8px;">
+<div class="contact_box">
+<div class="contact_box1">
+<div class="l">
+<img alt="Contact Us" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/contact11.jpg"/>
+</div>
+<div class="contact_boxbg">
+<div style="float:left; width:180px; padding:5px 5px 5px 5px;">
+<div style="float:left; width:180px;">
+<table align="center" border="0" cellpadding="0" cellspacing="4" width="100%">
+<form action="contact-us.php" method="POST" name="contact_R"></form>
+<input name="Time" type="hidden" value=""/>
+<input name="Day" type="hidden" value=""/>
+<input name="Company" type="hidden" value=""/>
+<input name="Subject" type="hidden" value="Contact us form details"/>
+<tbody>
+<tr>
+<td align="left" valign="top">Name:</td>
+</tr>
+<tr>
+<td align="left" valign="top"><input name="Name" style="height:14px; width:160px;" type="text" x-autocompletetype="name-full"/></td>
+</tr>
+<!--<tr>
+      <td align="left" valign="top">Company:</td>
+    </tr>
+	<tr>
+      <td align="left" valign="top"><input name="Company" type="text" style="height:14px; width:160px;" /></td>
+    </tr>-->
+<tr>
+<td align="left" valign="top">Email From:* </td>
+</tr>
+<tr>
+<td align="left" valign="top"><input name="EmailFrom" style="height:14px; width:160px;" type="text" x-autocompletetype="email"/></td>
+</tr>
+<tr>
+<td align="left" valign="top">Phone:</td>
+</tr>
+<tr>
+<td align="left" valign="top"><input name="Phone" style="height:14px; width:160px;" type="text" x-autocompletetype="phone-national"/></td>
+</tr>
+<!--<tr>
+      <td align="left" valign="top">Subject: </td>
+    </tr>
+	<tr>
+      <td align="left" valign="top"><input name="Subject" type="text" style="height:14px; width:160px;" /></td>
+    </tr>-->
+<tr>
+<td align="left" valign="top">Comments: </td>
+</tr>
+<tr>
+<td align="left" valign="top"><textarea cols="17" name="Comments" rows="3"></textarea></td>
+</tr>
+<!--<tr>
+      <td align="left" valign="top" style=" font-size:11px">The captcha form below is for spam purposes and help us to Confirm your enquiry is genuine and deserving of our attention </td>
+	</tr>
+	
+	<tr>
+      <td align="left" valign="top" style=" font-size:11px"><img src="CaptchaSecurityImages.php?width=100&height=35&characters=5" alt="captcha" /></td>
+	</tr>s
+	
+	<tr>
+      <td align="left" valign="top" style=" font-size:11px"><input id="security_code1" name="security_code1ss" type="text" style="height:14px; width:160px;" /></td>
+	</tr>-->
+<tr>
+<td align="left" style=" font-size:11px" valign="top"><img alt="Submit" border="0" onclick="validateContact_R()" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/sub.jpg" style="cursor:pointer;s"/></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="l">
+<img src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/contact1.jpg"/>
+</div>
+</div>
+<div class="contact_box1" style="padding-top:8px;">
+<div class="l">
+<img alt="Case Files" height="33" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/ca.jpg" width="190"/>
+</div>
+<div class="contact_boxbg">
+<div style="float:left; width:180px; padding:5px 5px 5px 5px;">
+<div style="float:left; width:180px; padding-top:8px;">
+<img alt="Order" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/order.jpg"/>
+</div>
+<div style="float:left; width:180px; padding-top:8px; text-align:left;">
+<strong>Some examples of typical cases from the last 12 months:</strong>
+<br/>
+<br/> The case files below represent a very small area of business we have undertaken and do not directly identify anyone connected
+            <br/> to the investigations. Permission to reproduce the files has been exclusively granted.
+            <br/>
+</div>
+<div style="float:left; width:180px; padding-top:8px;">
+<strong><a class="footer_link"><strong>Read More</strong></a></strong>
+</div>
+</div>
+</div>
+<div class="l">
+<img src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/contact1.jpg"/>
+</div>
+</div>
+</div>
+<div class="wel">
+<div class="l">
+<img alt="" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/wel.jpg"/>
+</div>
+<div class="wel_bg">
+<div style="float:left; width:544px; padding:0px 10px 8px 10px;">
+<div style="float:left; width:544px;">
+<span class="hadding_text_w"><h1 style="font-size:28px; font-family: helvetica, arial;">Affairs Of The Heart</h1></span>
+</div>
+<div style="float:left; width:544px;">
+<p><img align="left" alt="" border="0" hspace="5" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/blurryman.gif" vspace="5" width="120"/> <img align="right" alt="" border="0" hspace="5" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/blurrywoman.gif" vspace="5" width="120"/> The decision to employ an investigator for relationship problems is always a difficult one. However, not knowing things that could profoundly affect your life can be even more traumatic. At Global we can offer you peace of mind by either confirming or denying suspicions and give you an accurate picture of the facts to help you move on.</p>
+<p>We propose various ways to investigate the situation for you and will look at your personal circumstances and advise accordingly. Some suggestions will use background checks, covert surveillance and tried and trusted in-house techniques.</p>
+<p> </p>
+<p class="hadding_text1">Taking the next steps:</p>
+<p>If your partner is being unfaithful then you certainly have the right to know. Maybe you are planning to commit further in your relationship? Rest assured that we will endeavour to provide the answers you may be looking for. In most cases it is changes in attitude and behaviour that cause suspicion. We can help you to confirm whether these suspicions are founded or not. Take a look at our Infidelity section in the Warning Signs page of our site for more examples of the signs to look out for.</p>
+<p class="hadding_text1">Cost Concerns:</p>
+<p>This is a predominantly asked question by our clients and we obviously have set rates that apply. We ensure that money spent must be money well spent and the avenues we undertake must justify the expenditure. We never undertake work for our clients that has not been previously authorised or budgeted for.</p>
+<p>It is paramount to us that your relationship and the confidential issues surrounding it are very precious to you and we appreciate that at all costs.</p>
+<p>Our in-house rates start from <strong>Â£20</strong> per hour per person and our surveillance rates start from <strong>Â£40</strong> per Agent per hour.</p>
+<p>If you feel you are ready to get in touch please either call us on: <strong>0208 287 7770</strong> to speak to a member of our friendly and considerate customer service team or email us via our contact page.</p>
+<p>If you prefer you can state in the <a class="footer_link"><strong>message box</strong></a> a time you would like us to call you back and always be assured we will act with the utmost discretion.</p>
+<p>See also our:  <a class="footer_link"><strong>Surveillance </strong></a> &gt; <a class="footer_link"><strong>Vehicle tracking</strong></a> &gt; <a class="footer_link"><strong>Background checks </strong></a></p>
+<p>If you require more details regarding this service or would like to speak to one of our team please email us direct on: <a class="footer_link"><strong>info@tracing.com</strong></a> where someone with experience in the matter can assist you more.</p>
+<div style="float:left;width:100%;height:200px;overflow:scroll;">
+<h2>Could You be with a Cheating Spouse?</h2>
+<p>If you are worried that your partner may be a cheating spouse then we at Global Investigations might be able to help. We have helped thousands of our clients identify whether or not they are married to a cheating husband or wife, or are in a relationship with an unfaithful boyfriend or girlfriend.</p>
+<h2>Are You Married to an Unfaithful Wife or Cheating Husband?</h2>
+<p>If you believe you are in a relationship with a cheating spouse then it is important to identify whether or not your partner is actually committing adultery. Here at Global Investigations we can provide you with an investigator who is committed to finding out whether or not you are in a relationship with a cheating wife, husband or boyfriend. We understand that the thought of an unfaithful wife or cheating boyfriend might be too much to bear, which is why we can help you find out the truth so you can move on with your life.</p>
+<h2>Cheating Spouse Investigation Techniques</h2>
+<p>We can provide you with answers regarding the suspected cheating husband or unfaithful wife. If your partner has given you reason to think that they maybe a cheating wife or boyfriend, we can help you determine whether or not you had reason to doubt their fidelity. We will examine your personal circumstances to identify the best course of action to take when investigating a potential cheating spouse. Some of our suggestions may include <a class="footer_link"><strong>background checks</strong></a>, covert surveillance or other tried and tested techniques. </p>
+<h2>Worried You Might be Involved with a Cheating Boyfriend?</h2>
+<p>If you are worried your partner might be a cheating boyfriend or girlfriend, you can come to us here at Global Investigations. We can provide you with the information you need to make an informed decision about the future of your relationship, and help you find out the truth about your potential cheating boyfriend or girlfriend.</p>
+<h2>Private Unfaithful Wife and Husband Investigations</h2>
+<p>We are here to help you find out the truth about a potential unfaithful husband or cheating wife, which is why you can rest assured that we will do our best to provide you with the facts. An investigation into a potential unfaithful wife or cheating husband will remain in our strictest confidence, so your information will never be divulged to anyone else.</p>
+<p>You can contact us regarding a cheating wife, husband, boyfriend or girlfriend on 0208 287 7770 or you can fill in the 'contact us' section on our website and we will call you back. You can rest assured that our investigators are extremely experienced in covertly indentifying whether you are with a cheating spouse and providing you with the facts you need regarding your relationships.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="l">
+<img alt="" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/wel2.jpg"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="l">
+<img alt="Footer1" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/footer1.jpg"/>
+</div>
+<div class="footerbg">
+<div style="float:left; width:966px; padding:0px 10px 0px 10px;">
+<div style="float:left; width:966px;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td align="center" valign="top"><img alt="Association of British Investigators" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/p3.jpg"/>  <img alt="British Agents" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/p5.jpg"/>  <img alt="csa" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/p1.jpg"/>    <img alt="Private Eye" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/p4.jpg"/>   <img alt="napbs" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/p7.jpg"/>   <img alt="nciss" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/p8.jpg"/>  <img alt="International Association for Asset Recovery" height="61" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/p9.jpg" width="233"/>    <img alt="logo" height="58" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/p13.jpg" width="62"/><img alt="Payment Methods" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/p12.jpg"/></td>
+</tr>
+<tr>
+<td align="center" valign="top">
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td align="right" valign="middle" width="30%"><img alt="becca" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/p14.jpg"/> <img alt="becca" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/becca.jpg"/></td>
+<td align="left" valign="middle" width="9%"><img alt="PayPal Verified" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/p11.jpg"/></td>
+<td align="left" valign="top" width="17%"> <span id="siteseal"> <script src="https://seal.godaddy.com/getSeal?sealID=Gnj8BojhqX02tUGWNFfzwNjzU6KnSxnwa0K5bVevo3xrSLs5HUzeTgL" type="text/javascript"></script> </span>
+<!--OLD <script charset="UTF-8" src="https://seal.godaddy.com/getSeal?sealID=23821159106086b20b12711bb396798717f5b02088902385647456568" type="text/javascript"></script>--> </td>
+<td align="left" style="padding-top:30px;" valign="top" width="33%"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" height="80" width="155"> <param name="movie" value="images/minigi3.swf"/> <param name="quality" value="high"/> <embed height="80" pluginspage="http://get.adobe.com/flashplayer/otherversions/" quality="high" src="images/minigi3.swf" type="application/x-shockwave-flash" width="155"/> </object></td>
+<td width="11%"> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<tr>
+<td align="center" valign="top"> <a class="footer_link">Tracing Debtors</a> | <a class="footer_link">Tracing Overseas</a> | <a class="footer_link">Employment Tracing</a> | <a class="footer_link">Asset Tracing</a> | <a class="footer_link">Matrimonial Investigations</a> | <a class="footer_link">Surveillance Operations </a> | <a class="footer_link">Vehicle Tracking</a> | <a class="footer_link">Background Checks</a> <br/> <a class="footer_link">Due Diligence</a> | <a class="footer_link">Competitor Intelligence</a> | <a class="footer_link">Company investigations</a> | <a class="footer_link">Employee Absenteeism</a> | <a class="footer_link">Fraud Investigations</a> | <a class="footer_link">Romance Investigations</a> | <a class="footer_link">Bug Sweeping</a> <br/><a class="footer_link" rel="nofollow" target="_blank">Webdesign &amp; development by sdssoftwares.co.uk</a> <p><a class="footer_link">HTML Sitemap</a> | <a class="footer_link">XML Sitemap</a></p> </td>
+</tr>
+</tbody>
+</table>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-24717839-6");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</div>
+</div>
+<div class="l">
+<img alt="Footer" src="http://web.archive.org/web/20120420175046im_/http://www.globalinvestigations.co.uk/images/footer3.jpg"/>
+</div>
+<!--Facebook Code-->
+<script type="text/javascript">
+       (function() {
+              var scr = document.createElement('script');
+              scr.type = 'text/javascript';
+              scr.async = true;
+              scr.src = 'https://www.facebook.com/profile.php?id=100002522266847';
+              scr.onload = (function() { _gaq.push(['_trackEvent', 'Facebook', 'Status', 'Logged In', 1, true]); })
+              scr.onerror = (function() { _gaq.push(['_trackEvent', 'Facebook', 'Status', 'Not Logged In', 1, true]); })
+              var s = document.getElementsByTagName('head')[0];
+              s.parentNode.insertBefore(scr, s);
+       })();
+</script>
+</div>
+</div>
+<div class="clr"></div>
+</div>
+</body>
+</html>

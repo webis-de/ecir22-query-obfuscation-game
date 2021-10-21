@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Bebas+Neue&family=Orbitron:wght@400;900&family=Permanent+Marker&family=Press+Start+2P&family=Righteous&family=Staatliches&family=Train+One&display=swap');
+
+html {
+    min-height: 100%;
+}
+
+body {
+    background: #05131B;
+    padding-top: 10px;
+    font-family: 'Orbitron';
+}
+
+/* Design for the menu */
+#close_menu {
+    color: white;
+    font-size: 40px;
+    position: fixed;
+    margin: 10px 0px 0px 510px;
+    display: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Container for the charts */
+#stats_container {
+    margin: 20px 20px 20px 60px;
+}
+
+/* Headline for the statistics */
+#header {
+    margin: 20px 0px 60px 60px;
+    font-size: 60px;
+    color: white;
+    margin-left: 37%;
+}
+
+/* Design for the bar charts */
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #cccccc;
+    shape-rendering: crispEdges;
+}
+
+text {
+    fill: #cccccc;
+}
+
+/* General design for the charts */
+.charts {
+    text-align: center;
+    padding: 50px 0px 0px 0px;
+}
+
+/* Design for the piecharts */
+#piecharts {
+    padding: 100px 0px 0px 50px;
+}
+
+#queries {
+    margin: 0px 0px 0px 100px;
+}
+
+/* Design for the tooltip of the charts */
+.tooltip{
+    position: absolute;
+    text-align: center;
+    width: 150px;
+    height: fit-to-content;
+    padding: 5px 5px 5px 5px;
+    font: 16px sans-serif;
+    background: #99ffcc;
+    border: 0px;
+    border-radius: 8px;
+    color: black;
+    box-shadow: -3px 3px 15px #888888;
+    opacity:0;
+}
+
+/* Headline for the charts */
+.queriesHeader {
+    font-size: 32px;
+    color: white;
+    margin: 0px 0px -10px 50px;
+}
+
+#queries_header_container {
+    margin-top: 200px;
+}
+
+/* Design to separate the bar charts from the pie charts */
+.divisionLine {
+    width: calc(100% - 100px);
+    border-width: 4px;
+    color: white;
+}
+
+/* Design for the scrollbar */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: #103b56;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #99ffcc;
+  border-radius: 40px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #4dffa6;
+  cursor: pointer;
+}

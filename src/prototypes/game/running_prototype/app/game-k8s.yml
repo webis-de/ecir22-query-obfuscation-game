@@ -1,0 +1,74 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: wstud-thesis-libera
+spec:
+  selector:
+    app: wstud-thesis-libera
+  ports:
+    - port: 5000
+      targetPort: 5000
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wstud-thesis-libera
+spec:
+  selector:
+    matchLabels:
+      app: wstud-thesis-libera
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: wstud-thesis-libera
+    spec:
+      containers:
+      - name: wstud-thesis-libera
+        image: mam10eks/tmp-l-p:0.0.11
+        command: ['sh', '-c', 'ls -lha /lucene-index/ && echo "tbd...." && ls -lha /lucene-index/current-index && flask run --host 0.0.0.0']
+        volumeMounts:
+        - mountPath: "/lucene-index/"
+          name: index
+          readOnly: false
+        - mountPath: "/app/config.py"
+          name: config
+          subPath: wstud-thesis-libera-config.py
+        - mountPath: "/var/log/thesis-libera/"
+          name: logs
+      - name: wstud-thesis-libera-mongodb
+        image: mongo:4.4
+        volumeMounts:
+        - mountPath: "/data/db"
+          name: db-data
+      initContainers:
+      - name: copy-resources
+        image: eeacms/rsync:2.3
+        command: ['sh', '-c', "rsync -a /src/indexes/lucene-index.cw12-documents-v1.pos+docvectors /target && rm -f /target/current-index && cd /target/ && ln -s lucene-index.cw12-documents-v1.pos+docvectors current-index && ls -lha && ls -lha current-index/"]
+        volumeMounts:
+        - mountPath: "/src/"
+          name: wstud-thesis-libera-data-in-progress
+          readOnly: true
+        - mountPath: "/target/"
+          name: index
+          readOnly: false
+      volumes:
+      - name: wstud-thesis-libera-data-in-progress
+        hostPath:
+          path: /mnt/ceph/storage/data-in-progress/data-teaching/theses/wstud-thesis-libera/
+          type: Directory
+      - name: logs
+        hostPath:
+          path: /mnt/ceph/storage/data-in-progress/data-teaching/theses/wstud-thesis-libera/app-data/logs/
+          type: Directory
+      - name: db-data
+        hostPath:
+          path: /mnt/ceph/storage/data-in-progress/data-teaching/theses/wstud-thesis-libera/app-data/mongodb
+          type: Directory
+      - name: config
+        configMap:
+          name: wstud-thesis-libera-config
+      - name: index
+        emptyDir: {}
+

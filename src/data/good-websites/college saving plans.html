@@ -1,0 +1,700 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="http://web.archive.org/web/20120506003400cs_/http://s3.amazonaws.com/degreesexcite/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://degreesexcite.s3.amazonaws.com/images/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="https://degreesexcite.s3.amazonaws.com/images/favicon.ico" rel="icon" sizes="16x16"/>
+<script src="https://s3.amazonaws.com/degreesexcite/js/jquery-1.4.2.min.js" type="text/JavaScript"></script>
+<script src="https://degreesexcite.s3.amazonaws.com/js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="https://excite.com/education/js/AskAQuestiion.js" type="text/javascript"></script>
+<script src="https://excite.com/education/js/xmlhttp.js" type="text/javascript"></script>
+<link href="http://web.archive.org/web/20120506003400cs_/http://degreesexcite.s3.amazonaws.com/css/colorbox.css" rel="stylesheet" type="text/css"/>
+<script src="https://degreesexcite.s3.amazonaws.com/js/jquery.colorbox-min.js" type="text/JavaScript"></script>
+<script type="text/javascript"> 
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12687380-2']);
+  _gaq.push(['_setDomainName', '.excite.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']); 
+
+  (function() {
+
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+
+  })(); 
+  </script>
+<!-- Google Analytics Social Button Tracking -->
+<!--[if IE 9]>
+    <style type="text/css">
+    .gradient {
+    filter: none;
+    }
+    </style>
+    <![endif]-->
+<!--[if lt IE 9]>
+    <style type="text/css">
+    .gradient {
+    background-color:#737373 !important; overflow-x:hidden: overflow-y:hidden;
+    }
+    </style>
+    <![endif]-->
+<script language="JavaScript" type="text/javascript">
+
+/*--CSS Browser Selector v0.4.0--*/
+function css_browser_selector(u){var ua=u.toLowerCase(),is=function(t){return ua.indexOf(t)>-1},g='gecko',w='webkit',s='safari',o='opera',m='mobile',h=document.documentElement,b=[(!(/opera|webtv/i.test(ua))&&/msie\s(\d)/.test(ua))?('ie ie'+RegExp.$1):is('firefox/2')?g+' ff2':is('firefox/3.5')?g+' ff3 ff3_5':is('firefox/3.6')?g+' ff3 ff3_6':is('firefox/3')?g+' ff3':is('gecko/')?g:is('opera')?o+(/version\/(\d+)/.test(ua)?' '+o+RegExp.$1:(/opera(\s|\/)(\d+)/.test(ua)?' '+o+RegExp.$2:'')):is('konqueror')?'konqueror':is('blackberry')?m+' blackberry':is('android')?m+' android':is('chrome')?w+' chrome':is('iron')?w+' iron':is('applewebkit/')?w+' '+s+(/version\/(\d+)/.test(ua)?' '+s+RegExp.$1:''):is('mozilla/')?g:'',is('j2me')?m+' j2me':is('iphone')?m+' iphone':is('ipod')?m+' ipod':is('ipad')?m+' ipad':is('mac')?'mac':is('darwin')?'mac':is('webtv')?'webtv':is('win')?'win'+(is('windows nt 6.0')?' vista':''):is('freebsd')?'freebsd':(is('x11')||is('linux'))?'linux':'','js']; c = b.join(' '); h.className += ' '+c; return c;}; css_browser_selector(navigator.userAgent);
+/*------*/
+$(function() {
+
+$(".hv").click(function(){
+$(".hv").parent().show();
+$(this).parent().hide();
+
+});
+});
+
+// -->
+(function($){
+$.fn.list_ticker = function(options){
+var defaults = {
+speed:4000,
+effect:'slide',
+run_once:false
+};
+var options = $.extend(defaults, options);
+return this.each(function(){
+var obj = $(this);
+var list = obj.children();
+var count = list.length - 1;
+list.not(':first').hide();
+var interval = setInterval(function(){
+list = obj.children();
+list.not(':first').hide();
+var first_li = list.eq(0)
+var second_li = list.eq(1)
+if(options.effect == 'slide'){
+first_li.slideUp();
+second_li.slideDown(function(){
+first_li.remove().appendTo(obj);
+});
+} else if(options.effect == 'fade'){
+first_li.fadeOut(function(){
+obj.css('height',second_li.height());
+second_li.fadeIn();
+first_li.remove().appendTo(obj);
+});
+}
+count--;
+if(count == 0 && options.run_once){
+clearInterval(interval);
+}
+}, options.speed)
+});
+};
+})(jQuery);
+
+$(document).ready(function(){
+$('.left-testi').list_ticker({
+speed:8000,
+effect:'slide'
+});
+
+document.domain="excite.com"; //for crossdomain iframes
+});
+
+	
+
+
+	
+	//-------------------
+	</script>
+<script language="JavaScript" type="text/javascript">
+    
+$(document).ready(function(){
+
+$(".search iframe").attr("src","http://degrees.excite.com?parent="+window.location.href);
+$(".simple_t").attr('src','http://www.excite.com/education/tution.html');
+$(".car_qdf").attr('src','http://excitedegrees.elearners.com/qdfIframe.aspx?tsource=ccdec2&cssurl=http://s3.amazonaws.com/degreesexcite/css/iframe-widget-rec2.css');
+$(".footer_search iframe").attr("src","http://excitedegrees.elearners.com/qdfIframe.aspx?tsource=ccdec2&cssurl=http://s3.amazonaws.com/degreesexcite/css/iframe-widget.css");
+});
+function limitChars(textarea, limit)
+
+
+{
+
+ var text = textarea.value; 
+ var textlength = text.length;
+ if(textlength > limit)
+ {
+ textarea.value = text.substr(0,limit);
+return false;
+ }
+ else
+ { //alert('You have '+ (limit - textlength) +' characters left.');
+
+ return true;
+}
+
+ }
+        function mainmenu() {
+      
+            $(" #topnav li").hover(function() {
+                $(this).find('div:first').css({ visibility: "visible", display: "none" }).slideDown(300);
+            }, function() {
+                $(this).find('div:first').css({ visibility: "hidden" });
+
+            });
+            }
+    
+
+        $(document).ready(function() {
+        /*shahab code*/
+        $("p.qtn span").html("Q:");
+         $("p.ans span").html("A:");
+       /**/
+        $(".uni_listing li:last-child").css('border', '0px');
+        
+            mainmenu();
+        });
+var pid ='Deg_'
+var cid ='Cat_0';// 'Cat_9';
+var sid = 'Con_0';
+$(document).ready(function(){
+$('.fb_ltr').attr("src","http://www.excite.com/education/fb.html?src="+window.location);
+chk_OC(cid,sid);
+	if(pid != 0)
+	{
+		$('#'+pid).addClass("selected");
+		$('#'+pid).find('a').css('font-weight','bold');
+        $("#"+pid).prev().css("border-bottom","none");
+		}
+
+});
+
+
+function openClose(theID) {
+if (document.getElementById(theID).style.display == "block") {
+
+// $("#"+theID).slideUp("fast");
+document.getElementById(theID).style.display = "none";
+$("#bul_"+theID).removeClass("less");
+$("#bul_"+theID).addClass("more");
+$("#bul_"+theID).next().css('font-weight','normal');
+}
+else {
+// $("#"+theID).slideDown("fast");
+document.getElementById(theID).style.display = "block";
+$("#"+theID).addClass("selected");
+$("#bul_"+theID).removeClass("more");
+$("#bul_"+theID).addClass("less");
+$("#bul_"+theID).next().css('font-weight','bold');
+}
+}
+
+function chk_OC(cid1,sid){
+var main_cat = cid;
+var sub_cat = sid;
+
+if(main_cat != 0 )
+{
+$("#"+cid).addClass("selected");
+$("#bul_a_"+cid).addClass("less");
+$("#bul_a_"+cid).next().css('font-weight','bold');
+$("#a_"+cid).show();
+//$("#"+cid).next(2).css('font-weight','bold');
+}
+if(sub_cat != 0 )
+{
+$("#"+cid).addClass("selected");
+$("#a_"+cid).show();
+$("#"+sid).addClass("selected");
+$("#"+sid).prev().css("border-bottom","none");
+$("#"+sid).find('a').css('font-weight','bold');
+}
+}
+
+    </script>
+<script language="JavaScript" type="text/javascript">
+        function checkEmail() {
+            var emailAddr = document.getElementById("emailAddr");
+            if(emailAddr.value.length == 0)
+            {
+            alert("Please enter your email Address");
+            return false;
+            }
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailAddr.value)) {
+                openWindow('http://www.excite.com/education/action.aspx?email=' + emailAddr.value, 'popupWin', 600, 300);
+                emailAddr.value = "";
+                return false;
+            }
+            alert("Invalid E-mail Address! Please re-enter.")
+            return (false)
+        }
+        function openWindow(url, wname, width, height) {
+            window.open(url, wname, "height=" + height + ",width=" + width + "location = 0, status = 1, resizable = 0, scrollbars=1,left=200, top =200, toolbar = 0");
+            return true;
+        }
+// JScript File
+ 
+    
+
+    </script>
+<script type="text/javascript">
+      
+
+function expand(){
+$(document).ready(function(){
+var chk_w = $(".showhide").height();
+if (chk_w > "300"){
+$("#more_w").html("Read More");
+$("#more_w").parent().css('background-position','left -14px');
+//---footer content only for aiu----
+$("#more_w1").html("Read More");
+$("#more_w1").parent().css('background-position','left -14px');
+//--------
+$(".showhide").css('height','300px');}
+if (chk_w == "300"){
+$("#more_w").html("Read Less");
+$("#more_w").parent().css('background-position','left top');
+$("#more_w1").html("Read Less");
+$("#more_w1").parent().css('background-position','left top');
+$(".showhide").css('height','auto');
+}});}
+
+
+
+ 
+
+
+    </script>
+<script language="javascript" type="text/javascript">
+    function OpenformWindowForStartNow(  sURL)
+    {
+   // alert (sURL);
+       var winForm = window.open(sURL, '1', 'width=900,scrollbars,resizable,titlebar=1,menubar=1');
+              winForm.focus();
+              return false;
+    
+    }
+    
+    </script>
+<!--[if lt IE 7]>
+<script>
+   function mainmenu() {
+            //$(" #nav ul ").css({display: "none"}); // Opera Fix
+            $(" #topnav li").hover(function() {
+                $(this).find('div:first').css({ visibility: "visible", display: "none" }).slideDown(300);
+                if ($(this).find('div:first').attr("id") == "1") {
+
+                    $("div.left-wrap iframe").css("visibility", "hidden");
+					
+                }
+				
+            }, function() {
+                $(this).find('div:first').css({ visibility: "hidden" });
+                if ($(this).find('div:first').attr("id") == "1") {
+
+                    $("div.left-wrap iframe").css("visibility", "visible");
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            mainmenu();
+        });
+</script>
+<![endif]-->
+<script language="javascript" type="text/javascript">
+</script>
+<meta content="College Savings Plan, Online  College Savings Plan." name="keywords"/>
+<meta content="You will find information you need on College Savings Plan here. Our list of College Savings Plan can help you look through the best available options." name="description"/>
+<title>
+	College Savings Plan, Online College Savings Plan
+</title>
+</head>
+<body>
+<noscript>
+<div class="noscripterr">
+    Your browser does not support JavaScript,Please enable Javascript,otherwise many features of site will be disabled!
+   </div>
+</noscript>
+<form action="http://www.excite.com/education/financial-aid/college-savings-plan" id="aspnetForm" method="post" name="aspnetForm" onkeypress="return   clickButton(event);">
+<input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="/wEPDwUKMTExOTA4NzExMQ9kFgJmD2QWAgIDDxYCHgZhY3Rpb24FQmh0dHA6Ly93d3cuZXhjaXRlLmNvbS9lZHVjYXRpb24vZmluYW5jaWFsLWFpZC9jb2xsZWdlLXNhdmluZ3MtcGxhbhYEAgkPZBYCAgkPFgIeBXN0eWxlBQ5kaXNwbGF5OmJsb2NrO2QCCw9kFgZmDxYCHgRUZXh0BRRDb2xsZWdlIFNhdmluZ3MgUGxhbmQCAQ8WAh8CBZ8RPHRhYmxlIGNlbGxzcGFjaW5nPSIwIiBjZWxscGFkZGluZz0iMCIgYm9yZGVyPSIwIiBjbGFzcz0ib25saW5lX3NjaG9vbCI+PHRib2R5Pjx0cj48dGQgd2lkdGg9IjI3JSI+PGltZyBzcmM9Imh0dHA6Ly93d3cuZXhjaXRlLmNvbS9lZHVjYXRpb24vZGVncmVlcy5leGNpdGUucGljcy8xMjAvMTIwL2thcGxhbi11bml2ZXJzaXR5XzIuanBnIj48L3RkPiZuYnNwOyZuYnNwOzx0ZCB3aWR0aD0iNzYlIj48aDM+PGEgY2xhc3M9InNjaC1oZWFkaW5nIiBocmVmPSJodHRwOi8vd3d3LmV4Y2l0ZS5jb20vZWR1Y2F0aW9uL2thcGxhbi11bml2ZXJzaXR5LW9ubGluZSI+S2FwbGFuIFVuaXZlcnNpdHkgT25saW5lPC9hPjwvaDM+PGEgcmVsPSJub2ZvbGxvdyIgb25jbGljaz0icGFnZVRyYWNrZXIuX3RyYWNrUGFnZXZpZXcoJ0JvZHlCdXR0b24uaHRtbCcpOyIgaHJlZj0iaHR0cDovL2VkdWNhdGlvbi5leGNpdGUuY29tL2xlYWRzL2thcGxhbi5hc3B4IiBjbGFzcz0icm1pIj48L2E+PC90ZD4NCjwvdHI+DQo8L3Rib2R5Pg0KPC90YWJsZT4NCg0KPHRhYmxlIGNlbGxzcGFjaW5nPSIwIiBjZWxscGFkZGluZz0iMCIgYm9yZGVyPSIwIiBjbGFzcz0ib25saW5lX3NjaG9vbCI+PHRib2R5Pjx0cj48dGQgd2lkdGg9IjI3JSI+PGltZyBzcmM9Imh0dHA6Ly93d3cuZXhjaXRlLmNvbS9lZHVjYXRpb24vZGVncmVlcy5leGNpdGUucGljcy8xMjAvMTIwL3dhbGRlbi11bml2ZXJzaXR5LW9ubGluZS1sLmpwZyI+PC90ZD4mbmJzcDsmbmJzcDs8dGQgd2lkdGg9Ijc2JSI+PGgzPjxhIGNsYXNzPSJzY2gtaGVhZGluZyIgaHJlZj0iaHR0cDovL3d3dy5leGNpdGUuY29tL2VkdWNhdGlvbi93YWxkZW4tdW5pdmVyc2l0eS1vbmxpbmUiPldhbGRlbiBVbml2ZXJzaXR5IE9ubGluZTwvYT48L2gzPjxhIHJlbD0ibm9mb2xsb3ciIG9uY2xpY2s9InBhZ2VUcmFja2VyLl90cmFja1BhZ2V2aWV3KCdCb2R5QnV0dG9uLmh0bWwnKTsiIGhyZWY9Imh0dHA6Ly9lZHVjYXRpb24uZXhjaXRlLmNvbS9sZWFkcy93YWxkZW4uYXNweCIgY2xhc3M9InJtaSI+PC9hPjwvdGQ+DQo8L3RyPg0KPC90Ym9keT4NCjwvdGFibGU+DQoNCjx0YWJsZSBjZWxsc3BhY2luZz0iMCIgY2VsbHBhZGRpbmc9IjAiIGJvcmRlcj0iMCIgY2xhc3M9Im9ubGluZV9zY2hvb2wiPjx0Ym9keT48dHI+PHRkIHdpZHRoPSIyNyUiPjxpbWcgc3JjPSJodHRwOi8vd3d3LmV4Y2l0ZS5jb20vZWR1Y2F0aW9uL2RlZ3JlZXMuZXhjaXRlLnBpY3MvMTIwLzEyMC9BbWVyaWNhbiUyMEludGVyQ29udGluZW50YWwtVW5pdmVyc2l0eS1PbmxpbmUtTC5qcGciPjwvdGQ+Jm5ic3A7Jm5ic3A7PHRkIHdpZHRoPSI3NiUiPjxoMz48YSBjbGFzcz0ic2NoLWhlYWRpbmciIGhyZWY9Imh0dHA6Ly93d3cuZXhjaXRlLmNvbS9lZHVjYXRpb24vYW1lcmljYW4taW50ZXJjb250aW5lbnRhbC11bml2ZXJzaXR5LW9ubGluZSI+QW1lcmljYW4gSW50ZXJjb250aW5lbnRhbCBVbml2ZXJzaXR5IE9ubGluZTwvYT48L2gzPjxhIHJlbD0ibm9mb2xsb3ciIG9uY2xpY2s9InBhZ2VUcmFja2VyLl90cmFja1BhZ2V2aWV3KCdCb2R5QnV0dG9uLmh0bWwnKTsiIGhyZWY9Imh0dHA6Ly9leGNpdGVkZWdyZWVzLmVsZWFybmVycy5jb20vYWl1Lmh0bT90c291cmNlPWNjZWQxIiBjbGFzcz0icm1pIj48L2E+PC90ZD4NCjwvdHI+DQo8L3Rib2R5Pg0KPC90YWJsZT4NCg0KPHRhYmxlIGNlbGxzcGFjaW5nPSIwIiBjZWxscGFkZGluZz0iMCIgYm9yZGVyPSIwIiBjbGFzcz0ib25saW5lX3NjaG9vbCI+PHRib2R5Pjx0cj48dGQgd2lkdGg9IjI3JSI+PGltZyBzcmM9Imh0dHA6Ly93d3cuZXhjaXRlLmNvbS9lZHVjYXRpb24vZGVncmVlcy5leGNpdGUucGljcy8xMjAvMTIwL0NhcGVsbGEtVW5pdmVyc2l0eS1MLmpwZyI+PC90ZD4mbmJzcDsmbmJzcDs8dGQgd2lkdGg9Ijc2JSI+PGgzPjxhIGNsYXNzPSJzY2gtaGVhZGluZyIgaHJlZj0iaHR0cDovL3d3dy5leGNpdGUuY29tL2VkdWNhdGlvbi9jYXBlbGxhLXVuaXZlcnNpdHkiPkNhcGVsbGEgVW5pdmVyc2l0eTwvYT48L2gzPjxhIHJlbD0ibm9mb2xsb3ciIG9uY2xpY2s9InBhZ2VUcmFja2VyLl90cmFja1BhZ2V2aWV3KCdCb2R5QnV0dG9uLmh0bWwnKTsiIGhyZWY9Imh0dHA6Ly9leGNpdGVkZWdyZWVzLmVsZWFybmVycy5jb20vY3UuaHRtP3Rzb3VyY2U9Y2NlZDEiIGNsYXNzPSJybWkiPjwvYT48L3RkPg0KPC90cj4NCjwvdGJvZHk+DQo8L3RhYmxlPg0KDQpkAgYPD2QWAh4Hb25jbGljawW9AXJldHVybiAgVmFsaWRhdGVJbnB1dEZvckFza0FRdWVzdGlvbignY3RsMDBfQ29udGVudFBsYWNlSG9sZGVyMV9MYmxFcnJvcicsJ2N0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfZm5hbWV0eHQnLCdjdGwwMF9Db250ZW50UGxhY2VIb2xkZXIxX2ZlbWFpbHR4dCcsJ2N0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfcXVlc3Rpb250eHQnKWRkuqn1LzfPBgLIJtjhsOM8jhr0184="/>
+<input id="__EVENTVALIDATION" name="__EVENTVALIDATION" type="hidden" value="/wEWCAKzr+y1DQLlq8X7DwL+0deDAgKc+tDgBQL/veSzDALBibTJDAL40JWiCgL+mfmnBeSW9NR3seDmpfo+DIDkuGmhzqGd"/>
+<div id="wraper">
+<!-- <div class="s_cont">
+<div class="site-search">
+<table width="" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="ss-left">&nbsp;</td>
+<td class="ss-middle"><input class="ss-txtfld" type="text" /></td>
+<td class="ss-right"><a href="#" class="ss-go">&nbsp;</a></td>
+</tr>
+</table>
+
+</div>
+</div>-->
+<!-- Head start -->
+<div style="width: 115px; position: absolute; right: 65px; top: 39px; z-index: 8888;">
+<a target="_blank"> <img alt="McAfee SECURE sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams" border="0" height="32" oncontextmenu="alert('Copying Prohibited by Law - McAfee Secure is a Trademark of McAfee, Inc.'); return false;" src="http://web.archive.org/web/20120506003400im_/http://images.scanalert.com/meter/degrees.excite.com/12.gif" width="115"/></a>
+</div>
+<div id="header">
+<div class="">
+<a class="logo" title="Excite Education helps you to find the best online education programs">Online Education Programs</a>
+</div>
+<div class="s_cont">
+<div class="site-search">
+<script language="javascript" type="text/javascript">
+                                        
+                        function clickButton(e ) 
+                        {
+
+                            var evt = e ? e : window.event;
+                            if (evt.keyCode == 13)
+                                 {
+                                     // alert("keyevent");
+                                     onSearchButtonclick();
+
+                                    return false;
+                                }        
+                        }
+                        
+                        function onSearchButtonclick()
+                        {
+                        var q= document.getElementById('ctl00_searchKeyword');
+                         
+                         if (q.value.length > 0)
+                        window.location.href = 'http://education.excite.com/SearchResults.aspx?q='+q.value;
+                        }
+                        </script>
+<table border="0" cellpadding="0" cellspacing="0" width="">
+<tbody>
+<tr>
+<td class="ss-left">  </td>
+<td class="ss-middle"> <input class="ss-txtfld" id="ctl00_searchKeyword" name="ctl00$searchKeyword" type="text"/></td>
+<td class="ss-right"> <a class="ss-go" onclick="javascript:onSearchButtonclick();"> </a> </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="top_right_w">
+<table align="right" border="0" cellpadding="0" cellspacing="0" style="width: auto">
+<tbody>
+<tr>
+<td class="tn_left" width="34">  </td>
+<td id="bg_w"> <span><a>FAQ</a> </span>| <span><a>Contact</a> </span> </td>
+<td class="bg_w">
+<g:plusone size="medium"></g:plusone> <script type="text/javascript">
+                                (function() {
+                                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                                po.src = 'https://apis.google.com/js/plusone.js';
+                                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                                })();
+                                </script> </td>
+<td class="tn_right" width="34">   </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="nav">
+<ul id="topnav">
+<li class="img"><a class="home_img"></a></li>
+<li><a class="tm1" onclick="_gaq.push(['_trackPageview', 'menuclick.html']);"> Degrees by Subjects</a>
+<div class="sub_menu" id="1">
+<div class="bg">
+<ul>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Criminal Justice Degrees</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Business Degrees</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Nursing Degrees</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Technology Degrees</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Education Teaching Degrees</a></li>
+<li class="heading"><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">View All</a></li>
+</ul>
+<ul>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Crime Scene Degrees</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Accounting Degrees</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">RN Degrees</a></li>
+</ul>
+</div>
+</div> </li>
+<li class="nav_sep"> </li>
+<li><a onclick="_gaq.push(['_trackPageview', 'menuclick.html']);">Degrees by Programs</a>
+<div class="sub_menu">
+<div class="bg">
+<ul>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Bachelors Programs</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Masters Programs</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">MBA Programs</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Doctoral</a></li>
+<li class="heading"><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">View All</a></li>
+</ul>
+<ul>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Bachelor in Accounting</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Masters in Criminal Justice</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Finance MBA</a></li>
+</ul>
+</div>
+</div> </li>
+<li class="nav_sep"> </li>
+<li><a onclick="_gaq.push(['_trackPageview', 'menuclick.html']);">Schools</a>
+<div class="sub_menu">
+<div class="bg">
+<ul>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">American InterContinental University Online</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Kaplan University Online</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Walden University Online</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Liberty University Online</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">The College of Health Care Professions</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">University of Phoenix</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Penn Foster Career School</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Devry University</a></li>
+<li class="heading"><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">View All</a></li>
+</ul>
+</div>
+</div> </li>
+<li class="nav_sep"> </li>
+<li><a onclick="_gaq.push(['_trackPageview', 'menuclick.html']);">States</a> </li>
+<li class="nav_sep"> </li>
+<li><a onclick="_gaq.push(['_trackPageview', 'menuclick.html']);">Careers</a>
+<div class="sub_menu">
+<div class="bg">
+<ul>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">How to Become a Private Investigator</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">How to Become a Nurse</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">How to Become a Midwife</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">How to Become a Nurse Practitioner</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">How to Become a Police Officer</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">How to Become a Forensic Scientist</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">How to Become a Lawyer</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">How to Become a Crime Scene Investigator</a></li>
+<li class="heading"><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">View All</a></li>
+</ul>
+</div>
+</div> </li>
+<li class="nav_sep"> </li>
+<li><a onclick="_gaq.push(['_trackPageview', 'menuclick.html']);">Financial Aid</a>
+<div class="sub_menu">
+<div class="bg">
+<ul>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Education Grants</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Grants for Single Moms</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">GI Bill</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Need Based Grants</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Pell Grant</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Private Student Loan</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Student Loan</a></li>
+<li class="heading"><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">View All</a></li>
+</ul>
+</div>
+</div> </li>
+<li class="nav_sep"> </li>
+<li><a onclick="_gaq.push(['_trackPageview', 'menuclick.html']);">Education Resources</a>
+<div class="sub_menu">
+<div class="bg">
+<ul>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Accounting Schools</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Criminal Justice Courses</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">How To Become a Paralegal</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">How To Become a Corrections Officer</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Nursing School</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">Business Administration Courses</a></li>
+<li class="heading"><a onclick="_gaq.push(['_trackPageview','menuclick.html']);">View All</a></li>
+</ul>
+</div>
+</div> </li>
+<li class="ft_img"><a class="ft" rel="nofollow" target="_blank" title="Follow us on Twitter"></a><a class="ft" rel="nofollow" target="_blank" title="Find us on facebook"></a></li>
+</ul>
+</div>
+</div>
+<!-- Head Finishs-->
+<div id="content">
+<div class="cont-body">
+<!-- left Finishs-->
+<div class="left-wrap" id="ctl00_Master_left_NavBar">
+<div class="qdf" id="ctl00_qdf">
+<div class="sf">
+<a class="df-a hv"></a>
+<span class="df-a ds-a"></span>
+<h3>Quick School Finder</h3>
+<h5>Take 3 easy steps to discover your online college</h5>
+<iframe allowtransparency="true" class="qdf-ifr" frameborder="0" id="ctl00_Iframe_qfd" scrolling="no" src="https://education.excite.com/degreefinder/default.aspx?src=sf"> </iframe>
+</div>
+<div class="df">
+<span class="df-a"></span>
+<a class="df-a ds-a hv"></a>
+<h3>Quick Degree Finder</h3>
+<h5>Take 3 easy steps to find your degree</h5>
+<iframe allowtransparency="true" class="qdf-ifr" frameborder="0" id="ctl00_Iframe_df" scrolling="no" src="https://education.excite.com/degreefinder/default.aspx?src=df"> </iframe>
+</div>
+</div>
+<!--LEFT MENU is moved from left to right-->
+<div class="left-menu ccbox">
+<div class="left-heading">
+          Financial Aid Resources 
+        </div>
+<ul class="left-nav">
+<li><a>Pell Grant</a></li>
+<li><a>Private Student Loans</a></li>
+<li><a>Scholarships For Single Moms</a></li>
+<li><a>Scholarships For Women</a></li>
+<li><a>Student Loans</a></li>
+<li><a>GI Bill Tuition Assistance</a></li>
+<li><a>Fafsa Independent</a></li>
+</ul>
+</div>
+<div class="left-menu-top ccbox" id="ctl00_topProgramsall" style="display:block;">
+<div class="left-heading-top">
+          Top Programs 
+        </div>
+<ul class="left-nav">
+<li><a onclick="_gaq.push(['_trackPageview','topprograms_left.html']);">Online CNA Degree</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','topprograms_left.html']);">MBA in Finance</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','topprograms_left.html']);">MBA in Marketing</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','topprograms_left.html']);">Becoming a CIA Agent</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','topprograms_left.html']);">Bachelor in Nursing</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','topprograms_left.html']);">Bachelor in Accounting</a></li>
+<li><a onclick="_gaq.push(['_trackPageview','topprograms_left.html']);">Cyber Security Degrees</a></li>
+</ul>
+</div>
+<!-- Note to Self: Other Degrees section for new pages -->
+<!--Note to Self: Search By Subject  -->
+<!-- <div class="left-menu ccbox"></div>-->
+<!--Note to Self: Search By Degree  -->
+<div class="left-menu ccbox" id="ctl00_searchByDegree" style="display:none;">
+<input id="ctl00_frameval" name="ctl00$frameval" type="hidden"/>
+</div>
+<!-- Note to Self: Other Nursing Resources section for new pages -->
+<div class="left-menu ccbox" id="ctl00_testi" style="display:none;">
+<div class="left-heading">
+          Success Stories 
+        </div>
+<ul class="left-testi">
+<li>With the hectic work schedule it was impractical for me to opt for the traditional classrooms. Online education provided me the leverage to study comprehensive higher education while working full time. Gaining a top notch degree has never been so affordable and flexible before… <br/><span>Julia Green</span></li>
+<li>Thanks to the list of online schools on Excite Education, I have been able to find the perfect degree program for career progression. Being a single parent means a lot of challenges and time constraints. The distance learning program has been nothing short of a blessing to me!<br/><span>Dean Bayton</span></li>
+<li>Contrary to what my friends told me about online classes, I have found them as comprehensive and effective as the campus-based ones. In fact, it is just what I needed, since I do not have any quality school near my residence. With the help of Excite Education I am on course to completing a highly acclaimed degree.<span>Bill Smith</span></li>
+</ul>
+</div>
+</div>
+<!-- left Finishs-->
+<!-- body and Right start -->
+<div class="breadcrumb" id="ctl00_Div_breadcrumb">
+<a>Home</a> » 
+       <a>Financial Aid</a>» College Savings Plan 
+      </div>
+<div class="body">
+<div class="fin-aid">
+<iframe allowtransparency="true" class="simple_taid" frameborder="0" height="295" id="iframe_aidpages" scrolling="no" src="https://www.excite.com/education/tution_faid.html" width="245"></iframe>
+</div>
+<h1> College Savings Plan </h1>
+<p>In today’s increasingly competitive job market, a college degree is absolutely essential in order to obtain a well-paying, respectable job that offers chances of further advancement. College graduates, on average, make about 74 percent more than high school graduates annually. Going to college also allows you to pursue your interests, increase your knowledge in a particular field and develop the skills required to succeed in the workplace. Simply put, investing in a higher education is investing a better future for yourself or your kids. In the past decade or so, however, the average tuition costs at public institutions have gone up by nearly 51 percent. These costs will continue to rise, and the turbulent economy isn’t helping anyone either.<br/> <br/></p>
+<div class="comp_lw">
+<h3 class="co">Compare loans from these <span>Featured Lenders</span> and more!</h3>
+<div class="logos_cont">
+<ul class="clearfix">
+<li> <a alt="Citi Private Loan" class="lender-img" onclick="_gaq.push(['_trackPageview', 'ApplyLenders']);" style="width:100px; height:45px; background:url('http://www.simpletuition.com/images/lenders/4_featured.png') no-repeat; background-position:-0px 0px;" target="_blank" title="Citi Private Loan"> </a> <a class="btn apply-link" id="hp-apply-btn" onclick="_gaq.push(['_trackPageview', 'ApplyLenders']);" target="_blank" title="Apply" value=""> <span class="top">-</span> <span class="ctn"><b> </b>Apply</span> <span class="btm">-</span> </a> </li>
+<li> <a alt="Wells Fargo Bank, N.A. Private Loan" class="lender-img" onclick="_gaq.push(['_trackPageview', 'ApplyLenders']);" style="width:100px; height:45px; background:url('http://www.simpletuition.com/images/lenders/4_featured.png') no-repeat; background-position:-100px 0px;" target="_blank" title="Wells Fargo Bank, N.A. Private Loan"> </a> <a class="btn apply-link" id="A1" onclick="_gaq.push(['_trackPageview', 'ApplyLenders']);" target="_blank" title="Apply" value=""> <span class="top">-</span> <span class="ctn"><b> </b>Apply</span> <span class="btm">-</span> </a> </li>
+<li> <a alt="Union Federal Private Loan" class="lender-img" onclick="_gaq.push(['_trackPageview', 'ApplyLenders']);" style="width:100px; height:45px; background:url('http://www.simpletuition.com/images/lenders/4_featured.png') no-repeat; background-position:-500px 0px;" target="_blank" title="Union Federal Private Loan"> </a> <a class="btn apply-link" id="A2" onclick="_gaq.push(['_trackPageview', 'ApplyLenders']);" target="_blank" title="Apply" value=""> <span class="top">-</span> <span class="ctn"><b> </b>Apply</span> <span class="btm">-</span> </a> </li>
+<li> <a alt="SunTrust Bank Private Loan" class="lender-img" onclick="_gaq.push(['_trackPageview', 'ApplyLenders']);" style="width:100px; height:45px; background:url('http://www.simpletuition.com/images/lenders/4_featured.png') no-repeat; background-position:-400px 0px;" target="_blank" title="SunTrust Bank Private Loan"> </a> <a class="btn apply-link" id="A3" onclick="_gaq.push(['_trackPageview', 'ApplyLenders']);" target="_blank" title="Apply" value=""> <span class="top">-</span> <span class="ctn"><b> </b>Apply</span> <span class="btm">-</span> </a> </li>
+<li> <a alt="Discover Student Loans Private Loan" class="lender-img" onclick="_gaq.push(['_trackPageview', 'ApplyLenders']);" style="width:100px; height:45px; background:url('http://www.simpletuition.com/images/lenders/4_featured.png') no-repeat; background-position:-300px 0px;" target="_blank" title="Discover Student Loans Private Loan"> </a> <a class="btn apply-link" id="A4" onclick="_gaq.push(['_trackPageview', 'ApplyLenders']);" target="_blank" title="Apply" value=""> <span class="top">-</span> <span class="ctn"><b> </b>Apply</span> <span class="btm">-</span> </a> </li>
+<li> <a alt="PNC Bank Private Loan" class="lender-img" onclick="_gaq.push(['_trackPageview', 'ApplyLenders']);" style="width:100px; height:45px; background:url('http://www.simpletuition.com/images/lenders/4_featured.png') no-repeat; background-position:-200px 0px;" target="_blank" title="PNC Bank Private Loan"> </a> <a class="btn apply-link" id="A5" onclick="_gaq.push(['_trackPageview', 'ApplyLenders']);" target="_blank" title="Apply" value=""> <span class="ctn"><b> </b>Apply</span> </a> </li>
+</ul>
+</div>
+</div>
+<p class="txt"> Having a <strong>college savings plan</strong> is guaranteed to help you when it comes to covering the cost of tuition and other expenses. Saving even a little can go a long way as long as you set aside a certain amount regularly. A <strong>529 college savings plan</strong> is a specially designed, tax advantaged plan designed to help families save enough money to meet future college expenses. These plans allow your investment to increase tax-free, and provide a number of other benefits including income tax breaks and state tax benefits. As a participant in a <strong>529 college savings plan</strong>, you retain complete control of funds and can withdraw the amount at any time. You can also move your investment to a different type of plan, or to a different state’s program. Each state offers specially designed 529 savings plan that have their individual benefits.<br/> <br/> <strong>Saving for college </strong>is no longer a tedious task thanks to <strong>529 college savings plans</strong>. Joining such a program is as easy as one-two-three. Just fill out a simple form, make a sign up contribution and then forget about it! There are no income restrictions with some states having minimum monthly payment limits of just $15. Most importantly, 529 savings plan allow you to finance an education at nearly every accredited college in the country. All in all, <strong>college savings </strong>plans are a great way to cover college costs and allow you to make the most important investment in your and your children’s lives. </p>
+<p></p>
+<table border="0" cellpadding="0" cellspacing="0" class="online_school">
+<tbody>
+<tr>
+<td width="27%"><img src="http://web.archive.org/web/20120506003400im_/http://www.excite.com/education/degrees.excite.pics/120/120/kaplan-university_2.jpg"/></td>  
+          <td width="76%"><h3><a class="sch-heading">Kaplan University Online</a></h3><a class="rmi" onclick="pageTracker._trackPageview('BodyButton.html');" rel="nofollow"></a></td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" class="online_school">
+<tbody>
+<tr>
+<td width="27%"><img src="http://web.archive.org/web/20120506003400im_/http://www.excite.com/education/degrees.excite.pics/120/120/walden-university-online-l.jpg"/></td>  
+          <td width="76%"><h3><a class="sch-heading">Walden University Online</a></h3><a class="rmi" onclick="pageTracker._trackPageview('BodyButton.html');" rel="nofollow"></a></td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" class="online_school">
+<tbody>
+<tr>
+<td width="27%"><img src="http://web.archive.org/web/20120506003400im_/http://www.excite.com/education/degrees.excite.pics/120/120/American%20InterContinental-University-Online-L.jpg"/></td>  
+          <td width="76%"><h3><a class="sch-heading">American Intercontinental University Online</a></h3><a class="rmi" onclick="pageTracker._trackPageview('BodyButton.html');" rel="nofollow"></a></td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" class="online_school">
+<tbody>
+<tr>
+<td width="27%"><img src="http://web.archive.org/web/20120506003400im_/http://www.excite.com/education/degrees.excite.pics/120/120/Capella-University-L.jpg"/></td>  
+          <td width="76%"><h3><a class="sch-heading">Capella University</a></h3><a class="rmi" onclick="pageTracker._trackPageview('BodyButton.html');" rel="nofollow"></a></td>
+</tr>
+</tbody>
+</table>
+<div class="ae_box ae_fw">
+<div class="qas" style="display :none">
+</div>
+<div class="ask_box">
+<h4> <span class="arrow"></span>Ask your Question</h4>
+<input class="fbg finput_name finput_name_fw" id="ctl00_ContentPlaceHolder1_fnametxt" maxlength="100" name="ctl00$ContentPlaceHolder1$fnametxt" onblur="if(this.value==''){this.value='Name'}" onfocus="if(this.value=='Name'){this.value=''}" type="text" value="Name"/>
+<input class="fbg finput_email finput_email_fw" id="ctl00_ContentPlaceHolder1_femailtxt" maxlength="150" name="ctl00$ContentPlaceHolder1$femailtxt" onblur="if(this.value==''){this.value='Email'}" onfocus="if(this.value=='Email'){this.value=''}" type="text" value="Email"/>
+<textarea class="fbg ftarea ftarea_fw" cols="20" id="ctl00_ContentPlaceHolder1_questiontxt" name="ctl00$ContentPlaceHolder1$questiontxt" onblur="if(this.value==''){this.value='Type your Question'}" onfocus="if(this.innerHTML==innerHTML){this.innerHTML=''}" onkeyup="limitChars(this,1000);" rows="2">Type your Question</textarea>
+<br/>
+<span class="err" id="ctl00_ContentPlaceHolder1_LblError">* All Fields are Required</span>
+<br/>
+<input class="fsubmit" id="ctl00_ContentPlaceHolder1_btnSubmit" name="ctl00$ContentPlaceHolder1$btnSubmit" onclick="return  ValidateInputForAskAQuestion('ctl00_ContentPlaceHolder1_LblError','ctl00_ContentPlaceHolder1_fnametxt','ctl00_ContentPlaceHolder1_femailtxt','ctl00_ContentPlaceHolder1_questiontxt');" type="submit" value="Submit"/>
+</div>
+</div>
+</div>
+<!-- body and Right  Finishs-->
+</div>
+<!-- Footer Finishs-->
+</div>
+<div id="ctl00_footer_cont_all">
+<div id="footer-cont">
+<div class="footer">
+<div class="footer_search" id="ctl00_footersearchwidget" style="display:none;">
+<iframe allowtransparency="true" frameborder="0" height="135" id="footer_frame" scrolling="no" width="100%"> </iframe>
+</div>
+<div style="width: 788px; padding-top: 58px; text-align: center; margin: 0 0 0 14px">
+<a target="_blank"> <img alt="McAfee SECURE sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams" border="0" height="32" oncontextmenu="alert('Copying Prohibited by Law - McAfee Secure is a Trademark of McAfee, Inc.'); return false;" src="http://web.archive.org/web/20120506003400im_/http://images.scanalert.com/meter/degrees.excite.com/12.gif" width="115"/></a>
+</div>
+<p> <a>Eddirect Education Blog</a> | <a>Nursing Administration Degrees</a> | <a>Nursing Administration Jobs</a> | <a>MBA Degrees</a> </p>
+<p> © <script language="javascript">
+                        var today = new Date();
+                        var year = today.getYear();
+                        if(year > 2000){
+                        document.write(year); }
+                        else {
+                        year = year + 1900;
+                        document.write(year); }
+                        </script> Education @ Excite.com - All Rights Reserved</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Finishs-->
+<!--      <input name="ctl00$TxtIsNewLayoutPage" type="text" id="ctl00_TxtIsNewLayoutPage" style="display:none;" />
+          -->
+</form>
+<input id="firstnamemaster" name="firstnamemaster" type="hidden"/>
+<input id="phonemaster" name="phonemaster" type="hidden"/>
+<input id="zipmaster" name="zipmaster" type="hidden"/>
+<input id="emailmaster" name="emailmaster" type="hidden"/>
+<input id="addressmaster" name="addressmaster" type="hidden"/>
+<input id="edulevelmaster" name="edulevelmaster" type="hidden"/>
+<input id="programmaster" name="programmaster" type="hidden"/>
+<input id="militarymaster" name="militarymaster" type="hidden"/>
+<input id="yearmaster" name="yearmaster" type="hidden"/>
+<input id="enrollmaster" name="enrollmaster" type="hidden"/>
+<input id="agemaster" name="agemaster" type="hidden"/>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <!-- Bootsrap stuff -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Stuff for the introduction -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/4.1.0/intro.min.js" integrity="sha512-vpRYyG0wwpTzFdMa1fWEV6GLWfJiiKG1W7dCPuIuvm2kbZMUA8jnokV84rdUft8AF6ih83/ItbmP/fDzNjVxsA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/4.1.0/introjs-rtl.min.css" integrity="sha512-VwsKKwi99ZnRScgAkJ+ISGNolfoq+ic/mzJfhZWQ1xwfcbLZzLnHDoERYEppL25Okf+wEI/nDhHogudTa/YkWA==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/4.1.0/introjs.min.css" integrity="sha512-631ugrjzlQYCOP9P8BOLEMFspr5ooQwY3rgt8SMUa+QqtVMbY/tniEUOcABHDGjK50VExB4CNc61g5oopGqCEw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/intro.js/themes/introjs-modern.css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/navigation-menu.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/game-style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/tooltip.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>City of Rebellion</title>
+    <script>
+        var file_name = {{ file_name|tojson }};
+        var forbidden_words = {{ forbidden_words|tojson }};
+        var category = {{ category|tojson }};
+        var query = {{ query|tojson }};
+        var keywords = {{ keywords|tojson }};
+        var game_round = {{ game_round|tojson }};
+        var points = {{ points|tojson }};
+        var level = {{ level|tojson }};
+        var url_prefix = {{ url_prefix|tojson }};
+        var introduction = {{ introduction|tojson }};
+    </script>
+</head>
+<body>
+    <div class="lds-ripple"><div></div><div></div></div>
+     <div id="menu">
+        <i id="menu_icon" class="fas fa-bars"></i>
+    </div>
+    <span id="close_menu"><i class="fas fa-times"></i></span>
+    <div id="menu_overlay">
+        <div id="logo_header">
+            <span class="logo"><i class="fas fa-fist-raised"></i></span>
+        </div>
+        <div>
+            <ul id="toggled_menu">
+                <li id="home" class="menu_element">
+                    <span>Home</span>
+                    <span class="menu_category_icon"><i class="fas fa-home"></i></span>
+                </li>
+                <li id="statistics" class="menu_element">
+                    <span>Statistics</span>
+                    <span class="menu_category_icon"><i class="far fa-chart-bar"></i></span>
+                </li>
+                <li id="leaderboards" class="menu_element">
+                    <span>Leaderboards</span>
+                    <span class="menu_category_icon"><i class="fas fa-list-ol"></i></span>
+                </li>
+                <li id="username" class="menu_element">
+                    <span>Set Username</span>
+                    <span class="menu_category_icon"><i class="fas fa-user-cog"></i></span>
+                </li>
+                <li id="help" class="menu_element">
+                    <span>Help</span>
+                    <span class="menu_category_icon"><i class="fas fa-question"></i></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="intro_overlay">
+        <p id="intro_text">
+            The task: <br>
+            You are supposed to retrieve a specific website with a search engine. <br>
+            This search engine has access to the web of our time but to protect it's users <br>
+            it only allows queries that obfuscate their private information need. <br>
+            Your task now is to help users to obfuscate the original search query that belongs to the wanted website. <br>
+            For that, you are shown the website, the original search query, and a list of auxiliary words. <br>
+            Note that you can use any words or phrases for the task, except the ones that make up the original
+            query.
+        </p>
+        <div id="icon_container">
+            <i id="next_icon" class="far fa-arrow-alt-circle-right continue"></i>
+        </div>
+    </div>
+
+    <div id="points_overlay">
+        <div id="points_header">
+            <p>Points</p>
+        </div>
+        <div id="points_container">
+            <ul id="point_categories_column" class="points_list">
+                <li id="document_pos_intro">Points Document Position:</li>
+                <li id="num_related_intro">Points Number Related Documents:</li>
+                <li id="pos_related_intro">Points Position Related Documents:</li>
+                <li id="length_intro">Points Query Length:</li>
+                <li class="chameleon_points">Points Used Keywords from List:</li>
+            </ul>
+            <ul id="computed_points" class="points_list">
+                <li><span id="document_position">0</span><span class="max_points">/200</span></li>
+                <li><span id="number_related_documents">0</span><span class="max_points">/150</span></li>
+                <li><span id="average_position_related_documents">0</span><span class="max_points">/100</span></li>
+                <li><span id="query_length">0</span><span class="max_points">/50</span></li>
+                <li class="chameleon_points"><span id="keywords_usage" >0</span><span class="max_points">/-550</span></li>
+            </ul>
+        </div>
+        <hr id="break_line">
+        <div id="total_points_container">
+            <span id="max_total"><span id="total_points_round">0</span><span>/500</span></span>
+            <span id="sum_icon"><i class="fas fa-plus"></i></span>
+        </div>
+        <div id="final_total_points_display" class="accumulated_points">
+            <span>Total Points:</span>
+            <span id="final_total_points">0</span>
+        </div>
+        <div id="next_game_button_container">
+            <button id="continue_game" class="button"><span id="next_button_text">Next</span><span id="continue_icon" class="button_icon"><i class="fas fa-angle-right"></i></span></button>
+        </div>
+        <div id="retry_button_container">
+            <button id="retry" class="button"><span>Retry</span><span id="retry_icon" class="button_icon"><i class="fas fa-redo"></i></span></button>
+        </div>
+    </div>
+
+    <div id="website_overlay">
+        <div class="pdf_tools">
+                    <div class="full_screen">
+                        <i class="fas fa-expand tool_icon"></i>
+                    </div>
+                    <div  class="small_screen">
+                        <i class="fas fa-compress tool_icon"></i>
+                    </div>
+        </div>
+        <div id="zoomed_document_container">
+            <embed id="zoomed_website_pdf" src="" type="application/pdf"/>
+        </div>
+    </div>
+    <div id="header">
+        <div id="category_header_container">
+            <span id="category_icon"></span>
+            <span id="category_header"></span>
+        </div>
+        <div id="total_points_display" class="accumulated_points">
+            <span>Total Points:</span>
+            <span id="total_points_game">0</span>
+        </div>
+    </div>
+    <div id="gaming_container">
+        <div id="information_container">
+            <div id="website">
+                <div id="pdf_tools_container" class="pdf_tools">
+                    <div  class="full_screen">
+                        <i class="fas fa-expand tool_icon"></i>
+                    </div>
+                    <div  class="small_screen">
+                        <i class="fas fa-compress tool_icon"></i>
+                    </div>
+                </div>
+                <div id="document_container">
+                    <embed id="website_pdf" src="" type="application/pdf"/>
+                </div>
+            </div>
+            <div id="keywords">
+                <div id="query_container">
+                    <h2 id="query">{{query}}</h2>
+                </div>
+                <ul id="keywords_list">
+                    {% for keyword in keywords %}
+                        <li>{{ keyword }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div id="search_container">
+            <div id="search_input">
+                <span id="user_input">
+                    <input id="search_form" type="text" placeholder="Search...">
+                </span>
+                <span id="search_icon_container">
+                    <i id="search_icon" class="fas fa-search"></i>
+                </span>
+            </div>
+
+            <div class="box">
+                <span><i id="alert_icon" class="fas fa-exclamation-circle"></i></span>
+                <span id="alert_content"></span>
+            </div>
+
+        </div>
+    </div>
+    <div id="footer">
+        <div id="progressbar_container">
+            <ul id="progress_bar">
+                <span id="progress_percentage">0&#37;</span>
+            </ul>
+      </div>
+        <div id="footer_buttons">
+        <div id="exit_button">
+            <button id="exit_game" class="button">
+                <span>Quit Game</span>
+                <span class="button_icon"><i class="fas fa-sign-out-alt"></i></span>
+            </button>
+        </div>
+        <div id="continue_button">
+            <button id="next_round" class="button skip" disabled><span>Skip Query</span><span class="button_icon"><i class="fas fa-arrow-circle-right"></i></span></button>
+        </div>
+            </div>
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/navigation-menu.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/game-script.js') }}"></script>
+</body>
+
+</html>

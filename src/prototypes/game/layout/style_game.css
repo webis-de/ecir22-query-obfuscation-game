@@ -1,0 +1,86 @@
+body {
+	background-color: #001a4d;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+#container {
+	padding-left: 40%;
+	padding-top: 20%;
+}
+
+.category_icon {
+	color: #001a4d;
+	margin-top: 170px;
+	font-size: 120px;
+}
+
+#timer_container {
+	width: 25%;
+	height: 50px;
+	background-color: #2196F3;
+	margin: 0 auto;
+}
+
+
+#label_timer {
+    transform: translate(19%, 20%);
+    font-size: 1.5em;
+}
+
+#progress_bar_container {
+	padding: 0.3% 1% 0.3% 0%;
+}
+
+#progress_bar {
+	font-size: 12px;
+}
+
+#search_container {
+	padding-top: 3%;
+}
+
+#search_icon {
+	float: right;
+	font-size: 20px;
+}
+
+#inner_search {
+	margin: 0 auto;
+	color: #595959;
+}
+
+
+#search_bar {
+	background-color: #f1f1f1;
+	border-radius: 16px;
+	width: 30%;
+	height: 30px;
+	padding: 3px 10px 0px 15px;
+	margin: 0 auto;
+
+}
+
+#stats {
+	display: inline-block;
+	background-color: #f1f1f1;
+	width: 29%;
+	float: right;
+	height: 550px;
+	padding: 5px 10px 5px 10px;
+}
+
+#website {
+	width: 100%;
+	height: 100%;
+	border: none;
+	display: block;
+}
+
+#website_frame {
+	background-color: #f1f1f1;
+	padding: 1% 1% 1% 1%;
+	width: 70%;
+	height: 550px;
+	display: block;
+}

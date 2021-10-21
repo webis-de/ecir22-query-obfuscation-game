@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+
+body {
+	background-color: #05131B;
+}
+
+#progressbar_container {
+	width: 800px;
+	height: 100px;
+}
+
+#progress_bar li {
+	display:inline-block;
+	vertical-align: top;
+	list-style-type:none;
+    width:6px;
+    height:20px;
+    position:absolute;
+    background: #f8f8f8;
+    transform: skew(-35deg);
+}
+
+#progress_percentage {
+	color: white;
+	font-family: 'Share Tech Mono',sans-serif;
+	font-size: 20px;
+	position:absolute;
+	display:inline-block;
+	vertical-align: top;
+	transform: translate(-20px, -5px);
+	/*transform: translate();*/
+}
