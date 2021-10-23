@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 author: Nicola Lea Libera (117073)
-description: Server for the game "City of Rebellion" that was developed for
+description: Server for the game "City of Disguise" that was developed for
             the Bachelor thesis "Gamification in Information Retrieval".
 """
 

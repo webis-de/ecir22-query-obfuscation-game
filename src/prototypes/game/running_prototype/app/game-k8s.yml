@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: city-of-disguise
-        image: mam10eks/tmp-l-p:0.0.11
+        image: webis/city-of-disguise:0.0.1
         command: ['sh', '-c', 'ls -lha /lucene-index/ && echo "tbd...." && ls -lha /lucene-index/current-index && flask run --host 0.0.0.0']
         volumeMounts:
         - mountPath: "/lucene-index/"

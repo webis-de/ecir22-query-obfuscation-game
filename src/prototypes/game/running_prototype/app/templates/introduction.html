@@ -9,7 +9,7 @@
         crossorigin="anonymous" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/introduction.css') }}">
-    <title>City of Rebellion</title>
+    <title>City of Disguise</title>
     <script>
         var url_prefix = {{ url_prefix|tojson }};
         var provide_introduction = {{ provide_introduction|tojson }};
@@ -21,7 +21,7 @@
             <div id="header">
                 <p id="first" class="game_name">City</p>
                 <p id="second" class="game_name">of</p>
-                <p id="third" class="game_name">Rebellion</p>
+                <p id="third" class="game_name">Disguise</p>
             </div>
             <div id="button_container">
                 <button id="introduction">
@@ -39,19 +39,17 @@
             </div>
             <div id="story_container">
                 <div id="story">
-                    <p>Welcome to the rebellion! <br>
-                        From now on, you are part of our resistance movement against the
+                    <p>Welcome! <br>
+                        From now on, you are part of our movement against the
                         dystopia we are currently living in. <br>
                         As you know, a few years ago the government passed a law
                         that changed our time radically.
-                        The law abolished data protection completely, and our nation
-                        became a police state.
-                        They even keep a watch on every search query people submit to search engines.
-                        To prevent this from going on, our resistance group is secretly
-                        helping web users to obfuscate their private search queries, rendering the surveillance of the
-                        government useless.
+                        The law abolished data protection completely.
+                        Every search query people submit is monitored.
+                        To prevent this from going on, our group is
+                        helping web users to obfuscate their private search queries, rendering logging useless.
                         We will need all the help and creativity we can get.<br>
-                        Let the rebellion start!
+                        Let the fun start!
                     </p>
                 </div>
                 <div id="icon_container">

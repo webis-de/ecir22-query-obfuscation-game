@@ -19,16 +19,16 @@ kubectl -n webisstud logs pod/wstud-thesis-libera-6f6448fc9f-7g2x6 -c wstud-thes
 
 Build the docker image:
 ```
-docker build -t mam10eks/tmp-l-p:0.0.11 .
-docker tag mam10eks/tmp-l-p:0.0.11 mam10eks/tmp-l-p:latest
+docker build -t webis/city-of-disguise:0.0.1 .
+docker tag webis/city-of-disguise:0.0.1 webis/city-of-disguise:latest
 ```
 
 Push the docker image:
 
 ```
 docker login
-docker push mam10eks/tmp-l-p:0.0.11
-docker push mam10eks/tmp-l-p:latest
+docker push webis/city-of-disguise:0.0.1
+docker push webis/city-of-disguise:latest
 ```
 
 ```
@@ -42,8 +42,8 @@ docker run --rm -ti --net=host -v /home/maik/workspace/finalize-tables-cikm2020/
 Deploy it in kubernetes:
 
 ```
-kubectl -n webisstud apply -f game-k8s.yml
-kubectl -n webisservices apply -f
+kubectl -n services-demos apply -f game-k8s.yml
+kubectl -n services-demos apply -f services-demo-service-k8s.yml
 ```
 
 ```
