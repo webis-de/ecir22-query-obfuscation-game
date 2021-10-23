@@ -47,7 +47,6 @@ kubectl -n webisservices apply -f
 ```
 
 ```
-kubectl -n webisstud create configmap wstud-thesis-libera-config --from-file=wstud-thesis-libera-config.py
+kubectl -n services-demos create configmap city-of-disguise-config --from-file=city-of-disguise-config.py
 ```
-
 

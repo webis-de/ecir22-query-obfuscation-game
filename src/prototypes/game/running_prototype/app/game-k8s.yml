@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: wstud-thesis-libera
+  name: city-of-disguise
 spec:
   selector:
-    app: wstud-thesis-libera
+    app: city-of-disguise
   ports:
     - port: 5000
       targetPort: 5000
@@ -13,19 +13,19 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: wstud-thesis-libera
+  name: city-of-disguise
 spec:
   selector:
     matchLabels:
-      app: wstud-thesis-libera
+      app: city-of-disguise
   replicas: 1
   template:
     metadata:
       labels:
-        app: wstud-thesis-libera
+        app: city-of-disguise
     spec:
       containers:
-      - name: wstud-thesis-libera
+      - name: city-of-disguise
         image: mam10eks/tmp-l-p:0.0.11
         command: ['sh', '-c', 'ls -lha /lucene-index/ && echo "tbd...." && ls -lha /lucene-index/current-index && flask run --host 0.0.0.0']
         volumeMounts:
@@ -34,7 +34,7 @@ spec:
           readOnly: false
         - mountPath: "/app/config.py"
           name: config
-          subPath: wstud-thesis-libera-config.py
+          subPath: city-of-disguise-config.py
         - mountPath: "/var/log/thesis-libera/"
           name: logs
       - name: wstud-thesis-libera-mongodb
@@ -68,7 +68,7 @@ spec:
           type: Directory
       - name: config
         configMap:
-          name: wstud-thesis-libera-config
+          name: city-of-disguise-config
       - name: index
         emptyDir: {}
 
