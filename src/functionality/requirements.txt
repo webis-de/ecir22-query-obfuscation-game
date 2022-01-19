@@ -39,7 +39,7 @@ MarkupSafe==1.1.0
 monotonic==1.5
 netifaces==0.10.4
 nltk==3.6.5
-numpy==1.20.1
+numpy==1.21.0
 oauthlib==3.1.0
 olefile==0.46
 paramiko==2.6.0
