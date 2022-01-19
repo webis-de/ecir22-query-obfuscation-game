@@ -64,7 +64,7 @@ PyYAML==5.4
 rados==2.0.0
 rbd==2.0.0
 regex==2020.11.13
-reportlab==3.5.34
+reportlab==3.5.55
 requests==2.25.1
 requests-unixsocket==0.2.0
 scipy==1.6.1
