@@ -39,6 +39,7 @@ spec:
           name: logs
       - name: wstud-thesis-libera-mongodb
         image: mongo:4.4
+        command: ['sh', '-c', 'mongod --bind_ip_all -repair && mongod --bind_ip_all']
         volumeMounts:
         - mountPath: "/data/db"
           name: db-data
