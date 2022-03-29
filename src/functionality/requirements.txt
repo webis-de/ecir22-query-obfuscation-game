@@ -42,7 +42,7 @@ nltk==3.6.6
 numpy==1.21.0
 oauthlib==3.1.0
 olefile==0.46
-paramiko==2.6.0
+paramiko==2.10.1
 pexpect==4.6.0
 Pillow==9.0.1
 prettytable==0.7.2
