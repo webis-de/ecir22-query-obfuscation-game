@@ -64,9 +64,7 @@ spec:
           path: /mnt/ceph/storage/data-in-progress/data-teaching/theses/wstud-thesis-libera/app-data/logs/
           type: Directory
       - name: db-data
-        hostPath:
-          path: /mnt/ceph/storage/data-in-progress/data-teaching/theses/wstud-thesis-libera/app-data/mongodb
-          type: Directory
+        emptyDir: {}
       - name: config
         configMap:
           name: city-of-disguise-config
